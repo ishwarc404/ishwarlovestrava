@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ishwarlovestrava/static/css/main.290fe888.css",
+    "main.js": "/ishwarlovestrava/static/js/main.f3076612.js",
+    "static/js/787.772d3d10.chunk.js": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js",
+    "index.html": "/ishwarlovestrava/index.html",
+    "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
+    "main.290fe888.css.map": "/ishwarlovestrava/static/css/main.290fe888.css.map",
+    "main.f3076612.js.map": "/ishwarlovestrava/static/js/main.f3076612.js.map",
+    "787.772d3d10.chunk.js.map": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.290fe888.css",
+    "static/js/main.f3076612.js"
+  ]
+}
