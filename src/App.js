@@ -1,7 +1,13 @@
-import { color } from '@mui/system';
 import './App.css';
 
+
 function App() {
+
+  // handleClick = () => {
+    
+  // };
+
+
   return (
     <div className="App">
 
@@ -15,7 +21,14 @@ function App() {
       </div>
 
       <div className='header_2'>
-
+        Hi there, <span className='highlight_block'>I'm Ishwar</span>, and this is my resume for the intern position
+        at Strava. 
+        <br></br>
+        I hope you give me a chance to show you why I would be a 
+        great fit as part of your <br></br><span className='highlight_block'>engineering team and community.</span>
+        <br></br>
+        <br></br>
+        Thanks :)
       </div>
 
 
