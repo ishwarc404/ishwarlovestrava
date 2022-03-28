@@ -1,0 +1,6 @@
+.AboutMe{
+    font-family: 'Maison Neue', sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;
+    background-color: #ff602f;	
+    height: 100vh;
+}
