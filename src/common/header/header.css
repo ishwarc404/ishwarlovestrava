@@ -1,0 +1,37 @@
+.header_1 
+{
+    border-bottom: 4px solid #FFF;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* position: fixed;  */
+    /* Set the navbar to fixed position */
+    /* top: 0; 
+    Position the navbar at the top of the page */
+    /* width: 100%;  */
+    /* Full width */
+    height: 6vh;
+}
+
+.header_content_1
+{
+    padding-left: 30px;
+    font-size: 40px;
+}
+
+.ishwar_image{
+    width:150px;
+}
+.x_image{
+    padding-left: 10px;
+    padding-right: 10px;
+    width:60px;
+}
+.strava_image{
+    width:150px;
+}
+.header_content_2
+{
+    padding-right: 30px;
+    font-size: 40px;
+
+}

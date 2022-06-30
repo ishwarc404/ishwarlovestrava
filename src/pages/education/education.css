@@ -1,18 +1,16 @@
-.Home{
+.Education{
     font-family: 'Maison Neue', sans-serif;
-    cursor: url('../../../public/assets/badge.svg'), auto;	
-    background-color: rgb(247, 247, 250);
+    cursor: url('../../../public/assets/badge.svg'), auto;
+    overflow: hidden;
     height: 100vh;
-    overflow: hidden
 }
+    
 
-.bodycontent{
-height: 100vh;
-
+.bodycontent
+{
+    overflow-y: hidden;
 }
-
-
-.header_2
+.header_2_education
 {
     /* height: 80vh; */
     padding: 10%;
@@ -24,13 +22,12 @@ height: 100vh;
     transition: all 0.3s ease-in-out;
 }
 
-.highlight_block {
+.highlight_block_education {
     transition: all 0.3s ease-in-out;
 }
 
 
-
-.header_content_all:hover .highlight_block{
+.header_content_all:hover .highlight_block_education{
     /* font-size: 102px; */
     background-color: #ffea00;
     color: #000;
@@ -49,40 +46,9 @@ height: 100vh;
 }
 
 
-.highlight_block {
+.highlight_block_education {
     /* border: 4px solid #FC4C02; */
-    background-color: #ffea00;
+    background-color: rgb(100, 193, 154);
     color: #000;
     padding: 5px;
 }
-
-
-
-.email_href{
-    color: #FC4C02;   
-}
-
-/* visited link */
-a:visited {
-    color: #FC4C02;
-  }
-  
-/* mouse over link */
-a:hover {
-color: #FC4C02;
-cursor: url('../../../public/assets/badge.svg'), auto;	
-}
-
-/* selected link */
-a:active {
-color: #FC4C02;
-}
-
-
-
-.body_content_1{
-    background-color: #FC4C02;
-}
-
-
-
