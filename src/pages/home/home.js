@@ -7,8 +7,6 @@ import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 
 function Home() {
-
-
   return (
     <div className="Home">
      
