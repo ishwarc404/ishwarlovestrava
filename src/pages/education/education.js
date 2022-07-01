@@ -25,6 +25,7 @@ function Education(props) {
     else if (data === 'fulltime'){
       information = 'Working as a front end developer with Angular uFEs';
     }
+    else information = 'Hover over the experience to view more information';
 
     setState({});
    }
@@ -38,22 +39,22 @@ function Education(props) {
       
       <div className='d-flex justify-content-start'>
         <div className='header_2_education'>
-            <span onMouseOver={() => changeInfo('btech')} className='highlight_block_education'><b>Bachelor's in Computer Science</b>
+            <span onMouseOver={() => changeInfo('btech')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Bachelor's in Computer Science</b>
             <br></br>
-            <b>PES University, Bangalore ['17-'21]</b></span>
-            <br></br>
-            <br></br>
-            <span onMouseOver={() => changeInfo('ms')} className='highlight_block_education'><b>Master's of Computer Science</b>
-            <br></br>
-            <b>University of Colorado, Boulder ['22-'24]</b></span>
+            <b>PES University, Bangalore ['21]</b></span>
             <br></br>
             <br></br>
-            <span onMouseOver={() => changeInfo('internship')} className='highlight_block_education'><b>Bot Mantra, DeltaX</b>
+            <span onMouseOver={() => changeInfo('ms')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Master's of Computer Science</b>
+            <br></br>
+            <b>University of Colorado, Boulder  ['24]</b></span>
+            <br></br>
+            <br></br>
+            <span onMouseOver={() => changeInfo('internship')}  onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Bot Mantra, DeltaX</b>
             <br></br>
             <b>Software Developer Intern ['19-'21]</b></span>
             <br></br>
             <br></br>
-            <span onMouseOver={() => changeInfo('fulltime')} className='highlight_block_education'><b>Infoblox Inc.</b>
+            <span onMouseOver={() => changeInfo('fulltime')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Infoblox Inc.</b>
             <br></br>
             <b>Software Developer ['21-'22]</b></span>
         </div>
