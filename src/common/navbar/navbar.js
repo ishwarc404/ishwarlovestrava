@@ -9,13 +9,13 @@ function Navbar() {
   let navigate = useNavigate();
 
   function clicked(path){
-    if(path === 'aboutme'){
+    if(path === 'home'){
       pathValue = 1;
     }
     else if(path === 'education'){
       pathValue = 2;
     }
-    else if(path === 'technicalprowess'){
+    else if(path === 'skills'){
       pathValue = 3;
     }
     else if(path === 'achievements'){
@@ -31,28 +31,28 @@ function Navbar() {
 
   return (
     <div className='navigation-bar d-flex justify-content-center'>
-    <div id="aboutme" className={'body_content_1 body_content_all' + (pathValue === 1 ? ' orange' : ' ')}>
-      <div onClick={() => { navigate('/aboutme'); clicked('aboutme') }}><b>Home</b></div>
+    <div id="home" className={'body_content_1 body_content_all' + (pathValue === 1 ? ' orange' : ' ')}>
+      <div onClick={() => { navigate('/home'); clicked('home') }}>Home</div>
     </div>
 
     <div id="education" className={'body_content_2 body_content_all' + (pathValue === 2 ? ' orange' : ' ')}>
-      <div onClick={() => {  navigate('/education'); clicked('education') }}><b>Education & Experience</b></div>
+      <div onClick={() => {  navigate('/education'); clicked('education') }}>Education & Experience</div>
     </div> 
 
-    <div id="technicalprowess" className={'body_content_3 body_content_all' + (pathValue === 3 ? ' orange' : ' ')}>
-      <div onClick={() => {  navigate("/technicalprowess"); clicked('aboutme') }}><b>Technical "prowess"</b></div>
+    <div id="skills" className={'body_content_3 body_content_all' + (pathValue === 3 ? ' orange' : ' ')}>
+      <div onClick={() => {  navigate("/skills"); clicked('skills') }}>Skills</div>
     </div>
 
     <div id="achievements" className={'body_content_3 body_content_all' + (pathValue === 4 ? ' orange' : ' ')}>
-      <div onClick={() => {  navigate("/achievements"); clicked('acheivements') }}><b>Achievements</b></div>
+      <div onClick={() => {  navigate("/achievements"); clicked('acheivements') }}>Achievements</div>
     </div>
 
     <div id="whyme" className={'body_content_4 body_content_all' + (pathValue === 5 ? ' orange' : ' ')}>
-      <div onClick={() => {  navigate("/whyme"); clicked('whyme') }}><b>Why me?</b></div>
+      <div onClick={() => {  navigate("/whyme"); clicked('whyme') }}>Why me?</div>
     </div>
 
     <div id="mystrava" className={'body_content_5 body_content_all' + (pathValue === 6 ? ' orange' : ' ')}>
-      <div onClick={() => {  navigate("/mystrava"); clicked('mystrava') }}><b>my Strava</b></div>
+      <div onClick={() => {  navigate("/mystrava"); clicked('mystrava') }}>my Strava</div>
     </div>
   </div>
 

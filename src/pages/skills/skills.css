@@ -1,0 +1,76 @@
+.Skills{
+    font-family: 'Maison Neue', sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;
+    overflow: hidden;
+    height: 100vh;
+}
+   
+.bodycontent
+{
+    overflow-y: hidden;
+    z-index: -10;
+}
+
+.technical {
+    width: 60vw;
+    height: 100vh;
+    opacity: 100%;
+    background-color: #fff;
+    padding-top: 3%;
+    /* border-top: solid 2px #FC4C02; */
+} 
+
+.highlight_block_technical {
+    /* border: 4px solid #FC4C02; */
+    /* background-color: rgb(38,107,246);ß */
+    background-color: #000;
+    color: #fff;
+    font-size: 40px;
+    padding: 1%;
+    transition: all 0.2s ease-in-out;
+}
+.highlight_block_technical_content {
+    /* border: 4px solid #FC4C02; */
+    /* background-color: rgb(38,107,246);ß */
+    background-color: rgb(255,255,255);
+    color: #000;
+    font-size: 30px;    
+    padding: 1%;
+    transition: all 0.2s ease-in-out;
+    width: 50vw;
+}
+
+.highlight_block_technical_content_sub {
+    /* border: 4px solid #FC4C02; */
+    /* background-color: rgb(38,107,246);ß */
+    border-bottom: solid 2px #000; 
+
+}
+
+
+
+.nontechnical {
+    /* margin-top: 2%; */
+    margin-right: 2%;
+    width: 40vw;
+    height:45vw;
+    background-color: #fff;
+    border-radius: 1%;
+    opacity: 100%;
+
+}
+
+
+
+/* .highlight_block_skills:hover{
+    border-left: solid 10px rgb(38,107,246);
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transition: all 0.1s ease-in-out;
+} */
+
+
+.breakdiv {
+    height: 2vh;
+}

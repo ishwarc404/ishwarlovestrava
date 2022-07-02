@@ -6,7 +6,7 @@ import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 
 import background from '../../assets/squiggly6_greeen.png';
-import ssu from '../../assets/ssu.jpg';
+
 
 
 var information= 'Graduated with GPA of 8.74/10';
@@ -41,7 +41,7 @@ function Education(props) {
    }
 
   return (
-    <div className="Education">
+  <div className="Education">
       <Header/>
       <div className='bodycontent' style={{ backgroundImage:`url(${background})`,
         backgroundRepeat: 'repeat',
@@ -49,37 +49,33 @@ function Education(props) {
       
       <div className='d-flex justify-content-start'>
         <div className='header_2_education'>
-            <span onMouseOver={() => changeInfo('btech')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Bachelor's in Computer Science</b>
+            <span onMouseOver={() => changeInfo('btech')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'>Bachelor's in Computer Science
             <br></br>
-            <b>PES University, Bangalore ['21]</b></span>
-            <br></br>
-            <br></br>
-            <span onMouseOver={() => changeInfo('ms')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Master's of Computer Science</b>
-            <br></br>
-            <b>University of Colorado, Boulder  ['24]</b></span>
+            PES University, Bangalore ['21]</span>
             <br></br>
             <br></br>
-            <span onMouseOver={() => changeInfo('internship')}  onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Bot Mantra, DeltaX</b>
+            <span onMouseOver={() => changeInfo('ms')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'>Master's in Computer Science
             <br></br>
-            <b>Software Developer Intern ['19-'21]</b></span>
+            University of Colorado, Boulder  ['24]</span>
             <br></br>
             <br></br>
-            <span onMouseOver={() => changeInfo('fulltime')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'><b>Infoblox Inc.</b>
+            <span onMouseOver={() => changeInfo('internship')}  onMouseLeave={() => changeInfo('')} className='highlight_block_education'>Bot Mantra, DeltaX
             <br></br>
-            <b>Software Developer ['21-'22]</b></span>
+            Software Developer Intern ['19-'21]</span>
+            <br></br>
+            <br></br>
+            <span onMouseOver={() => changeInfo('fulltime')} onMouseLeave={() => changeInfo('')} className='highlight_block_education'>Infoblox Inc.
+            <br></br>
+            Software Developer ['21-'22]</span>
         </div>
         <div className={'information_box' + (isInformationVisible ? '' : ' information_box_invisible')}>
         <span className='highlight_block_information'>{information}</span>
             <br></br>
         </div>
       </div>
-
-
-        </div> 
-
-      {/* <img className="ssu" src={ssu} /> */}
-      <Navbar/>
-    </div>
+    </div> 
+    <Navbar/>
+  </div>
   );
 }
 

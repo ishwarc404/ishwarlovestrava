@@ -19,6 +19,10 @@ function Header() {
         </div>
         <div className="header_content_2">
           <a className="email_href" href=''>email</a>
+          <span> | </span>
+          <a className="email_href" href=''>resume</a>
+          <span> | </span>
+          <a className="email_href" href=''>more</a>
         </div>
       </div>
     </div>
