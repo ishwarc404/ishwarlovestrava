@@ -90,6 +90,26 @@
     font-size: 15px;
     border: solid black 1px;
     color: #000;
+    border-right: 0px;
+
+    /* border-bottom-right-radius: 7%;
+    border-top-right-radius: 7%; */
+    background-color: #FFF;
+    /* color: #97c1a9; */
+    /* height: 20vh; */
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all .5s ease-in-out;
+}
+
+.body_content_6{
+    /* padding-top: 1%; */
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    border: solid black 1px;
+    color: #000;
     border-bottom-right-radius: 7%;
     border-top-right-radius: 7%;
     background-color: #FFF;

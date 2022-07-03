@@ -1,0 +1,51 @@
+.Achievements{
+    font-family: 'Maison Neue', sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;
+    overflow: hidden;
+    height: 100vh;
+    background-color: rgb(247, 247, 250);
+
+}
+
+.hackathon_container {
+    /* padding: 5%; */
+    width: 50vw;
+    margin: 5%;
+    margin-top: 8%;
+    flex-wrap: wrap;
+}
+
+.competition_container {
+    margin:10px;
+    border: solid 1px #fff;
+    background-color: #fff;
+    border-radius: 3%;
+    padding: 1%;
+    text-align: center;
+
+}
+
+.competition_name {
+    margin:15px;
+    /* margin-top:5%; */
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.trophy_icon {
+    margin-top: 10px;
+    margin-left: 10px;
+    /* display: inline-block; */
+}
+
+.info_container{
+    margin: 5%;
+    margin-top: 5%;
+    margin-left: 0%;
+    height: 70vh;
+    width: 70vw;
+    border: solid 1px #fff;
+    background-color: #fff;
+    border-radius: 1%;
+    padding: 3%;
+}

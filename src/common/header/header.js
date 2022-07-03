@@ -4,16 +4,13 @@ import ishwarname from '../../assets/ishwar.png';
 import xletter from '../../assets/x.png';
 import strava from '../../assets/b&w.png';
 
-
-
 function Header() {
-
 
   return (
     <div className='header_1'>
       <div className="d-flex justify-content-between">
         <div className="header_content_1">
-          <img className="ishwar_image"src={ishwarname} />
+          <img className="ishwar_image" src={ishwarname} />
           <img className="x_image" src={xletter} />
           <img className="strava_image" src={strava} />
         </div>
