@@ -24,7 +24,7 @@
 .x_image{
     padding-left: 10px;
     padding-right: 10px;
-    width:60px;
+    width:40px;
 }
 .strava_image{
     width:150px;
@@ -32,6 +32,7 @@
 .header_content_2
 {
     padding-right: 30px;
-    font-size: 40px;
+    padding-top: 1vh;
+    font-size: 30px;
 
 }

@@ -18,7 +18,7 @@ function Skills() {
       <div className='d-flex justify-content-end'>
         <div className='technical'>
           <span className='highlight_block_technical'>
-            Technical Skills
+            Technical
           </span> 
           <br></br>
           <p className='highlight_block_technical_content'>
@@ -31,11 +31,11 @@ function Skills() {
           <br></br>
           <br></br>
           <span className='highlight_block_technical'>
-            Non - technical Skills
+            Non - technical
           </span> 
           <br></br>
           <p className='highlight_block_technical_content'>
-          <span className='highlight_block_technical_content_sub'>Ever-evolving knowledge</span>: Final Cut Pro X, Adobe Suite, Digital design, Sound design.
+          Final Cut Pro X, Adobe Suite, Digital design, Sound design.
           </p> 
         </div>
       </div>
