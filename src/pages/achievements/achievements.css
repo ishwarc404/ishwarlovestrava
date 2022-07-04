@@ -9,26 +9,31 @@
 
 .hackathon_container {
     /* padding: 5%; */
-    width: 50vw;
+    width: 40vw;
     margin: 5%;
-    margin-top: 8%;
+    /* margin-bottom: 0%; */
+    margin-top: 10vh;
     flex-wrap: wrap;
+    background-color: rgb(255, 255, 255,0.55);
+    border-radius: 1%;
+    margin-bottom: 70%;
+
 }
 
 .competition_container {
     margin:10px;
-    border: solid 1px #fff;
-    background-color: #fff;
-    border-radius: 3%;
+    /* border: solid 1px #fff; */
+    /* background-color: rgb(255, 255, 255,0.4); */
     padding: 1%;
+    border-radius: 1%;
     text-align: center;
-
+    /* margin-bottom:0px; */
 }
 
 .competition_name {
     margin:15px;
     /* margin-top:5%; */
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -44,8 +49,105 @@
     margin-left: 0%;
     height: 70vh;
     width: 70vw;
-    border: solid 1px #fff;
-    background-color: #fff;
+    /* border: solid 1px #fff; */
+    /* background-color: #fff; */
     border-radius: 1%;
-    padding: 3%;
+    padding: 1%;
 }
+
+.last_competition{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.achievements_highlight_block_information {
+    /* border: 4px solid #FC4C02; */
+    /* background-color: rgb(255,234,0,1); */
+    background-color:  #FC4C02;
+    color: #FFF;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.highlight_block_information_sub {
+    /* border: 4px solid #FC4C02; */
+    /* background-color: rgb(255,234,0,1); */
+    background-color:  #fff;
+    color: #000;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    padding: 1px;
+}
+
+.youtube_video{
+    border: 0;
+    border-radius: 2%;
+}
+
+.competition_container:hover {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_1 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_2 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_3 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_4 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_5 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_6 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+.competition_container_7 {
+    background-color: rgb(255, 255, 255,1);
+}
+
+
+.achievement_visible_1 {
+    visibility: visible;
+}
+
+.achievement_visible_2 {
+    visibility: visible;
+}
+
+.achievement_visible_3 {
+    visibility: visible;
+}
+
+.achievement_visible_4 {
+    visibility: visible;
+}
+
+.achievement_visible_5 {
+    visibility: visible;
+}
+
+.achievement_visible_6 {
+    visibility: visible;
+}
+
+.achievement_visible_7 {
+    visibility: visible;
+}
+
+
+.achievement_not_visible {
+    visibility: hidden;
+    display: none;
+}
+
