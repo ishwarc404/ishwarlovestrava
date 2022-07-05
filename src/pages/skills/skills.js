@@ -42,7 +42,7 @@ function Skills() {
               </p>
             </div>
           </div>
-          <Navbar />
+          <Navbar path={3}/>
         </div>
       </div>
       <Discussion />

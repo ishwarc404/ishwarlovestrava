@@ -1,15 +1,18 @@
 import './header.css';
+import { useNavigate } from 'react-router-dom';
+
 
 import ishwarname from '../../assets/ishwar.png';
 import xletter from '../../assets/x.png';
 import strava from '../../assets/b&w.png';
 
 function Header() {
+  let navigate = useNavigate();
 
   return (
     <div className='header_1'>
       <div className="d-flex justify-content-between">
-        <div className="header_content_1">
+        <div className="header_content_1" onClick={()=>{navigate('/home');}}>
           <img className="ishwar_image" src={ishwarname} />
           <img className="x_image" src={xletter} />
           <img className="strava_image" src={strava} />

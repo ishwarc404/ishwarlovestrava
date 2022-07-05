@@ -12,7 +12,7 @@
     width: 40vw;
     margin: 5%;
     /* margin-bottom: 0%; */
-    margin-top: 10vh;
+    margin-top: 5vh;
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255,0.55);
     border-radius: 1%;
@@ -45,12 +45,12 @@
 
 .info_container{
     margin: 5%;
-    margin-top: 5%;
+    margin-top: 5vh;
     margin-left: 0%;
-    height: 70vh;
+    height: 100%;
     width: 70vw;
     /* border: solid 1px #fff; */
-    /* background-color: #fff; */
+    background-color: rgb(255, 255, 255,0.55);
     border-radius: 1%;
     padding: 1%;
 }
@@ -61,18 +61,21 @@
 }
 
 .achievements_highlight_block_information {
-    /* border: 4px solid #FC4C02; */
+    /* border: 4px solid #fc5200; */
     /* background-color: rgb(255,234,0,1); */
-    background-color:  #FC4C02;
-    color: #FFF;
-    font-size: 30px;
+    /* background-color:  #fc5200; */
+    /* color: #fc5200; */
+        color: #fff;
+
+    font-size: 45px;
+    font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
 .highlight_block_information_sub {
-    /* border: 4px solid #FC4C02; */
+    /* border: 4px solid #fc5200; */
     /* background-color: rgb(255,234,0,1); */
-    background-color:  #fff;
+    /* background-color:  #fff; */
     color: #000;
     font-size: 20px;
     transition: all 0.3s ease-in-out;
@@ -151,6 +154,10 @@
     display: none;
 }
 
+.highlight_block_information_sub {
+    /* background-color: #FFF; */
+}
+
 .github_button {
     background-color: #fc5200;
     border-color: #fc5200;
@@ -165,6 +172,6 @@
 }
 
 .github_button_without_video {
-    margin-top: 10px;
+    /* margin-top: 1px; */
 }
 

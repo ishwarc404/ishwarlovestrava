@@ -1,13 +1,21 @@
 import './home.css';
 
 
+import React, {useState, useEffect} from 'react';
+
 import heatmap from '../../assets/heatmaporiginal.png';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
 
+
 function Home() {
+
+  // useEffect(() => {
+    
+  // })
+
   return (
     <div>
       <div className="Home">
@@ -33,7 +41,7 @@ function Home() {
             Thanks!
           </div>
 
-          <Navbar />
+          <Navbar path={1}/>
         </div>
       </div>
       <Discussion />

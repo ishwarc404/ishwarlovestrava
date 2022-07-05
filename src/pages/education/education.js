@@ -83,7 +83,7 @@ function Education(props) {
             </div>
           </div>
         </div>
-        <Navbar />
+        <Navbar path={2}/>
       </div>
       <Discussion />
     </div>

@@ -3,7 +3,7 @@ import './achievements.css';
 import React, { useState } from 'react';
 
 
-import achievements from '../../assets/darkmountain.jpeg';
+import achievements from '../../assets/darkmountain2.png';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
@@ -103,12 +103,13 @@ function Acheivements() {
                             <div className={'achievements' + (pathValue === 1 ? ' achievement_visible_1' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Kaamdey - Text based hiring system </span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                     A simple WhatsApp bot service & a web-based VueJs application that provides an online platform to represent the lower working class, in search of jobs.
                                     <br></br>
                                     Integrated the Twilio APIs into the message serving backend, that has been coded in Python. The database employed is a simple JSON-server.
                                     <br></br>
-                                    A Vue application present, provides an alternative to the Whatsapp service which employs design principles of conditional rendering of data and also custom URL generation based upon search via WhatsApp. </span>
+                                    A Vue application present, provides an alternative to the Whatsapp service which employs design principles of conditional rendering of data and also custom URL generation based upon search via WhatsApp. 
+                                    </div>
                                 <br></br>
                                 <br></br>
                                 <iframe className='youtube_video' width="400" height="300"
@@ -120,48 +121,48 @@ function Acheivements() {
                             <div className={'achievements' + (pathValue === 2 ? ' achievement_visible_2' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Public resource management system</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                     One of the main problems faced by villagers is the lack of knowledge about the availability of resources such as water, electricity, and ration. The entire delivery system right now is riddled with corruption and many more problems that devoid the villagers of these resources.
                                     <br></br>
                                     Hence with the help of a partner, we designed a de-centralized full-stack system that will allow the authorities to update the status of any resources or help communicate any information with the villagers; and would also allow the citizens to track the resources.
-                                </span>
+                                </div>
                                 <br></br>
                                 <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 3 ? ' achievement_visible_3' : ' achievement_not_visible')}>
-                                <span className='achievements_highlight_block_information'>Industrial intruction doc to JSON convertor</span>
+                                <span className='achievements_highlight_block_information'>Intruction doc to JSON convertor</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                     Worked on developing a tool for Honeywell, that converts industrial manufacturing instructions documents into 
                                     a multi-level nested JSON that can be accessed and edited at any level via CRUD operations in real time.
                                     <br></br>
                                     Also, implemented an algorithm that generated HTML elements to visualise and work on this JSON via a VueJs website.
-                                </span>
+                                </div>
                                 <br></br>
                                 <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 4 ? ' achievement_visible_4' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Capture the Flag hackathon</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                  The hackathon organised by the Centre for Information Security, Forensics and Cyber Resilience at PES University
                                     <br></br>
                                  We worked on solving riddles in their network sandbox to crack codes as we proceeded to the next level. Took around 6 hours 
                                  totally to crack all the puzzles and find all the flags hidden across the sandbox.
-                                </span>
+                                </div>
                                 <br></br>
                                 <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 5 ? ' achievement_visible_5' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Hurricane Prediction using NOAA data</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                 Using NOAA data archives for past hurricane and hurricane-like events, such as location pressure data, wind flow and various other factors, we acquired useful features using various ML and Deep learning algorithms.
                                     <br></br>
                                     We then correlated this information with live NOAA and BOA data, which we procured via web scraping, to predict the possibility of a hurricane, mainly by monitoring certain hot-spots in a hurricane prone region for any anomaly in the live data. If any anomaly was noticed, then the region was flagged and continuously monitored.
                                     <br></br>
                                     Further extended this project, as part of a course requirement.
-                                </span>
+                                </div>
                                 <br></br>
                                 <br></br>
                                 <iframe className='youtube_video' width="400" height="300"
@@ -173,24 +174,24 @@ function Acheivements() {
                             <div className={'achievements' + (pathValue === 6 ? ' achievement_visible_6' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Converting human emotions into music</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                 Developed a system, that takes in a paragraph as user input, analyses the text present to understands the emotions conveyed.
                                 Further it generates music, from scratch, that compliments the emotions understood. 
                                 <br></br>
                                 Worked with a fellow musician friend of mine. We integrated our NLP model with Magenta, which is an ML model that can be modelled to generate musical notes based off on several parameters.
-                                </span>
+                                </div>
                                 <br></br>
                                 <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 7 ? ' achievement_visible_7' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Lip movement to text conversion</span>
                                 <br></br>
-                                <span className='highlight_block_information_sub'>
+                                <div className='highlight_block_information_sub'>
                                 Worked on this project as my semester long final year project while pursuing my Bachelor's in Computer Science. The goal was to convert lip movement to text using OpenCV image preprocessing tools such as a 68-point facial landmark detection model. 
                                 <br></br>
                                 We then use those results and feed them into an ensemble of machine Learning models to predict the word. We were able to achieve around 67% accuracy for sentence-level prediction for a combination of 4 words.
                                 Unfortunately these results were not as useful, as the parameters were highly limited and recordings done in a controlled environment. 
-                                </span>
+                                </div>
                                 <br></br>
                                 <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
@@ -206,7 +207,7 @@ function Acheivements() {
                     {/* 3 */}
                     {/* <br></br> */}
                     {/* <svg fill="#FEC835" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="80" height="80"><path d="M19.67 2.29V.33H4.33v1.96h-4v3.55a2.756 2.756 0 001.13 2.58c.29.2.92.56 1.6.93V7.81c-.37-.21-.672-.387-.84-.5-.5-.332-.55-.73-.55-1.47v-2.2h2.66v7.5c.002.242.029.483.08.72a4.571 4.571 0 001.99 2.86l3.23 1.84c.552.315 1.12.602 1.7.86v2.57L6.92 22.3v1.37h10.16V22.3l-4.41-2.35v-2.46c.32-.15.83-.42 1.72-.93l3.22-1.84a4.54 4.54 0 001.99-2.81c.059-.252.09-.51.09-.77l-.02-7.5h2.66v2.2c0 .74-.06 1.13-.55 1.47-.16.11-.46.29-.83.49v1.54c.68-.37 1.3-.72 1.59-.92a2.757 2.757 0 001.13-2.58V2.29h-4zm-5.21 4.04a2.1 2.1 0 01-.13.67 2.06 2.06 0 01-.36.67 1.82 1.82 0 01-.29.33 2.431 2.431 0 01.79 1.8v.9a2.47 2.47 0 11-4.94 0h1.35a1.12 1.12 0 002.24 0v-.9A1.127 1.127 0 0012 8.67h-1.2V7.33H12a1.121 1.121 0 001.11-1c.026-.1.01-.667.01-1.03a1.12 1.12 0 10-2.24 0H9.53a2.5 2.5 0 01.27-1.12 2.38 2.38 0 01.51-.67 2.44 2.44 0 013.38 0c.209.191.381.418.51.67a2.5 2.5 0 01.27 1.12c0 .34.016.924-.01 1.03z" fill=""></path></svg>           */}
-                    <Navbar />
+                    <Navbar path={4}/>
                 </div>
             </div>
             <Discussion />

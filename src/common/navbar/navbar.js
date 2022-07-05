@@ -1,16 +1,76 @@
 import './navbar.css';
 import { useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 
 var pathValue = 1;
-
-function Navbar() {
+var newPath = '';
+function Navbar(props) {
   const [, setState] = useState();
   let navigate = useNavigate();
 
+  // useEffect(() => {
+    pathValue = props.path;
+  // })
+
   function clicked(path) {
-    pathValue = path;
+    // pathValue = path;
   }
+  document.onkeydown = checkKey;
+
+  function checkKey(e) {
+      e = e || window.event;
+      //right
+    if (e.keyCode == '39') {
+        newPath = pathValue+1;
+        pathValue = newPath;
+        if(newPath==2){
+          navigate('/education');
+        }
+        if(newPath==3){
+          navigate('/skills');
+        }
+        if(newPath==4){
+          navigate('/achievements');
+        }
+        if(newPath==5){
+          navigate('/whyme');
+        }
+        if(newPath==6){
+          navigate('/mystrava');
+        }
+        if(newPath>6){
+          navigate('/mystrava');
+          newPath = 6;
+        }
+      }
+      //left
+      else if (e.keyCode == '37') {
+        newPath = pathValue-1;
+        if(newPath==1){
+          navigate('/home');
+        }
+        if(newPath==2){
+          navigate('/education');
+        }
+        if(newPath==3){
+          navigate('/skills');
+        }
+        if(newPath==4){
+          navigate('/achievements');
+        }
+        if(newPath==5){
+          navigate('/whyme');
+        }
+        if(newPath==6){
+          navigate('/mystrava');
+        }
+        if(newPath==7){
+          navigate('/mystrava');
+          newPath = 6;
+        }
+      }
+
+  } 
 
   return (
     <div className='navigation-bar d-flex justify-content-center'>
