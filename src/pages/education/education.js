@@ -10,8 +10,9 @@ import Discussion from '../../common/discussion/discussion';
 
 
 
-var information = 'Graduated with GPA of 8.74/10';
-var isInformationVisible = false;
+var information = 'Graduated with GPA of 8.74/10, and worked on multiple genres of projects. During this time, I fell in love with the field of Cloud Computing and full stack product development.';
+
+var isInformationVisible = true;
 var pathValue  = 1;
 
 function Education(props) {

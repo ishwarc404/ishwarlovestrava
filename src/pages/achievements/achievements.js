@@ -111,12 +111,11 @@ function Acheivements() {
                                     A Vue application present, provides an alternative to the Whatsapp service which employs design principles of conditional rendering of data and also custom URL generation based upon search via WhatsApp. 
                                     </div>
                                 <br></br>
-                                <br></br>
-                                <iframe className='youtube_video' width="400" height="300"
-                                    src="https://www.youtube.com/embed/Yn965DAKQ8k?autoplay=0&mute=1">
-                                </iframe>
+                                <div className='d-flex'>
+                                <button className='github_button'>Demo Video</button>
                                 <br></br>
                                 <button className='github_button'>GitHub</button>
+                                </div>
                             </div>
                             <div className={'achievements' + (pathValue === 2 ? ' achievement_visible_2' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Public resource management system</span>
@@ -164,12 +163,12 @@ function Acheivements() {
                                     Further extended this project, as part of a course requirement.
                                 </div>
                                 <br></br>
-                                <br></br>
-                                <iframe className='youtube_video' width="400" height="300"
-                                    src="https://www.youtube.com/embed/Yny1YIfMtXE?autoplay=0&mute=1">
-                                </iframe>
+                                <div className='d-flex'>
+                                <button className='github_button'>Demo Video</button>
                                 <br></br>
                                 <button className='github_button'>GitHub</button>
+                                </div>
+
                             </div>
                             <div className={'achievements' + (pathValue === 6 ? ' achievement_visible_6' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Converting human emotions into music</span>
