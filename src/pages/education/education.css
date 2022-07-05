@@ -38,6 +38,18 @@
     transition: all 0.1s ease-in-out;
 }
 
+.educationhighlight_container_1{
+    border-left: solid 10px rgb(38,107,246);
+}
+.educationhighlight_container_2{
+    border-left: solid 10px rgb(38,107,246);
+}
+.educationhighlight_container_3{
+    border-left: solid 10px rgb(38,107,246);
+}
+.educationhighlight_container_4{
+    border-left: solid 10px rgb(38,107,246);
+}
 
 
 .information_box {
