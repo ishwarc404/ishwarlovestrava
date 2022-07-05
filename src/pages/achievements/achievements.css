@@ -151,3 +151,20 @@
     display: none;
 }
 
+.github_button {
+    background-color: #fc5200;
+    border-color: #fc5200;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: small;
+    padding: 5px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.github_button_without_video {
+    margin-top: 10px;
+}
+

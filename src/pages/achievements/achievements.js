@@ -114,6 +114,8 @@ function Acheivements() {
                                 <iframe className='youtube_video' width="400" height="300"
                                     src="https://www.youtube.com/embed/Yn965DAKQ8k?autoplay=0&mute=1">
                                 </iframe>
+                                <br></br>
+                                <button className='github_button'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 2 ? ' achievement_visible_2' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Public resource management system</span>
@@ -124,8 +126,7 @@ function Acheivements() {
                                     Hence with the help of a partner, we designed a de-centralized full-stack system that will allow the authorities to update the status of any resources or help communicate any information with the villagers; and would also allow the citizens to track the resources.
                                 </span>
                                 <br></br>
-                                
-                                <br></br>
+                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 3 ? ' achievement_visible_3' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Industrial intruction doc to JSON convertor</span>
@@ -136,6 +137,8 @@ function Acheivements() {
                                     <br></br>
                                     Also, implemented an algorithm that generated HTML elements to visualise and work on this JSON via a VueJs website.
                                 </span>
+                                <br></br>
+                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 4 ? ' achievement_visible_4' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Capture the Flag hackathon</span>
@@ -146,6 +149,8 @@ function Acheivements() {
                                  We worked on solving riddles in their network sandbox to crack codes as we proceeded to the next level. Took around 6 hours 
                                  totally to crack all the puzzles and find all the flags hidden across the sandbox.
                                 </span>
+                                <br></br>
+                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 5 ? ' achievement_visible_5' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Hurricane Prediction using NOAA data</span>
@@ -162,6 +167,8 @@ function Acheivements() {
                                 <iframe className='youtube_video' width="400" height="300"
                                     src="https://www.youtube.com/embed/Yny1YIfMtXE?autoplay=0&mute=1">
                                 </iframe>
+                                <br></br>
+                                <button className='github_button'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 6 ? ' achievement_visible_6' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Converting human emotions into music</span>
@@ -172,6 +179,8 @@ function Acheivements() {
                                 <br></br>
                                 Worked with a fellow musician friend of mine. We integrated our NLP model with Magenta, which is an ML model that can be modelled to generate musical notes based off on several parameters.
                                 </span>
+                                <br></br>
+                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 7 ? ' achievement_visible_7' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Lip movement to text conversion</span>
@@ -181,8 +190,9 @@ function Acheivements() {
                                 <br></br>
                                 We then use those results and feed them into an ensemble of machine Learning models to predict the word. We were able to achieve around 67% accuracy for sentence-level prediction for a combination of 4 words.
                                 Unfortunately these results were not as useful, as the parameters were highly limited and recordings done in a controlled environment. 
-                                <br></br>
                                 </span>
+                                <br></br>
+                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                         </div>
                     </div>
