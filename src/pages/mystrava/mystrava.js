@@ -46,19 +46,19 @@ function Mystrava() {
                     78 kudos
                    </div>
                    <div className='grid-item grid-item-5'>
-                    Abhinav
+                    Ishwar
                    </div>
                    <div className='grid-item grid-item-6'>
                     21.3
                    </div>
                    <div className='grid-item grid-item-7'>
-                    Run
+                    Run 1
                    </div>
-                   <div className='grid-item grid-item-7'>
-                    Run
+                   <div className='grid-item grid-item-8'>
+                    Run 2
                    </div>
-                   <div className='grid-item grid-item-7'>
-                    Run
+                   <div className='grid-item grid-item-9'>
+                    Run 3
                    </div>
 
                 </Masonry>

@@ -7,34 +7,71 @@
 }
 
 .bodycontent {
-    padding: 30px;
+    padding:100px;
+
 }
 
 .grid-item {
-    background-color: rgb(174, 35, 35);
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 15px;
     width: auto;
 }
 
 .grid-item-1 { 
     font-size: 150px;
+    background-color: rgb(86, 93, 51);
+    color: #ffffff;
+
 }
 .grid-item-2 { 
     font-size: 100px;
+    background-color: rgb(245, 192, 238);    
+    color: #000000;
+
+
 }
 .grid-item-3 { 
     font-size: 90px;
+    background-color: rgb(244, 244, 90);
+
 }
 .grid-item-4 { 
-    font-size: 130px;
+    font-size:90px;
+    background-color: rgb(17, 52, 88);
+    color: #ffffff;
+
+
 }
 .grid-item-5 { 
     font-size: 60px;
+    background-color: #fc5200;
+    color: #ffffff;
+
 }
 .grid-item-6 { 
     font-size: 90px;
+    background-color: rgb(86, 93, 51);
+    color: #ffffff;
+
 }
+.grid-item-7 { 
+    font-size: 90px;
+    background-color: rgb(245, 192, 238);    
+    color: #000000;
+
+
+}
+.grid-item-8 { 
+    font-size: 90px;
+    background-color: rgb(244, 244, 90);
+
+}
+.grid-item-9 { 
+    font-size: 90px;
+    background-color: rgb(17, 52, 88);
+    color: #ffffff;
+}
+
 
 
