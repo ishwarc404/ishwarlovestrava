@@ -6,6 +6,7 @@ import Home from './pages/home/home';
 import Education from './pages/education/education';
 import Skills from './pages/skills/skills';
 import Achievements from './pages/achievements/achievements';
+import MyStrava from './pages/mystrava/mystrava';
 
 function App() {
   return (
@@ -17,8 +18,7 @@ function App() {
             <Route path="/education" element={<Education/>}/>
             <Route path="/skills" element={<Skills/>}/>
             <Route path="/achievements" element={<Achievements/>}/>
-            <Route path="/whyme" element={<Home/>}/>
-            <Route path="/mystrava" element={<Home/>}/>
+            <Route path="/mystrava" element={<MyStrava/>}/>
         </Routes>
       </Router>
   );

@@ -20,8 +20,8 @@
     padding-right: 10px;
     font-size: 15px;
      border: none;
-    border-bottom-left-radius: 7%;
-    border-top-left-radius: 7%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
     border-right: 0px;
     background-color: #FFF;
     /* color: #fc5200; */
@@ -110,8 +110,8 @@
     font-size: 15px;
      border: none;
     color: #000;
-    border-bottom-right-radius: 7%;
-    border-top-right-radius: 7%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
     background-color: #FFF;
     /* color: #97c1a9; */
     /* height: 20vh; */

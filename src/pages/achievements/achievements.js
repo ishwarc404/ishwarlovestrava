@@ -171,7 +171,7 @@ function Acheivements() {
 
                             </div>
                             <div className={'achievements' + (pathValue === 6 ? ' achievement_visible_6' : ' achievement_not_visible')}>
-                                <span className='achievements_highlight_block_information'>Converting human emotions into music</span>
+                                <span className='achievements_highlight_block_information'>Creating music from human emotions</span>
                                 <br></br>
                                 <div className='highlight_block_information_sub'>
                                 Developed a system, that takes in a paragraph as user input, analyses the text present to understands the emotions conveyed.

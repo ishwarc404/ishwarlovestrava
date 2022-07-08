@@ -32,20 +32,21 @@ function Navbar(props) {
         if(newPath==4){
           navigate('/achievements');
         }
+        // if(newPath==5){
+        //   navigate('/whyme');
+        // }
         if(newPath==5){
-          navigate('/whyme');
-        }
-        if(newPath==6){
           navigate('/mystrava');
         }
-        if(newPath>6){
+        if(newPath>5){
           navigate('/mystrava');
-          newPath = 6;
+          newPath = 5;
         }
       }
       //left
       else if (e.keyCode == '37') {
         newPath = pathValue-1;
+        pathValue = newPath;
         if(newPath==1){
           navigate('/home');
         }
@@ -58,15 +59,15 @@ function Navbar(props) {
         if(newPath==4){
           navigate('/achievements');
         }
+        // if(newPath==5){
+        //   navigate('/whyme');
+        // }
         if(newPath==5){
-          navigate('/whyme');
+          navigate('/achievements');
         }
-        if(newPath==6){
-          navigate('/mystrava');
-        }
-        if(newPath==7){
-          navigate('/mystrava');
-          newPath = 6;
+        if(newPath>5){
+          newPath = 4 
+          navigate('/achievements');
         }
       }
 
@@ -90,12 +91,12 @@ function Navbar(props) {
         <div onClick={() => { navigate("/achievements"); clicked(4) }}>Projects & Achievements</div>
       </div>
 
-      <div id="whyme" className={'body_content_5 body_content_all' + (pathValue === 5 ? ' orange' : ' ')}>
+      {/* <div id="whyme" className={'body_content_5 body_content_all' + (pathValue === 5 ? ' orange' : ' ')}>
         <div onClick={() => { navigate("/whyme"); clicked(5) }}>Why me?</div>
-      </div>
+      </div> */}
 
       <div id="mystrava" className={'body_content_6 body_content_all' + (pathValue === 6 ? ' orange' : ' ')}>
-        <div onClick={() => { navigate("/mystrava"); clicked(6) }}>my Strava</div>
+        <div onClick={() => { navigate("/mystrava"); clicked(5) }}>my Strava</div>
       </div>
     </div>
 
