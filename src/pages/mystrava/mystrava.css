@@ -11,6 +11,10 @@
 
 }
 
+.activity_icon {
+    padding-left: 5px;
+    font-size: 20px;
+}
 .grid-item {
     margin: 5px;
     border-radius: 10px;
@@ -70,10 +74,32 @@
     font-size: 20px;
     padding-left: 10px;
 }
-.grid-item-3-key { 
+.grid-item-3-value { 
     color: #000000;
     font-size: 20px;
     padding-left: 10px;
+}
+.grid-item-3-value-name { 
+    color: #000000;
+    font-size: 20px;
+
+    padding-top: 20px;
+}
+.grid-item-3-value-desc { 
+    color: #000000;
+    font-size: 20px;
+
+}
+.grid-item-3-value-type { 
+    color: #000000;
+    font-size: 20px;
+    padding-top: 25%;
+
+}
+.grid-item-3-value-count { 
+    color: #000000;
+    font-size: 20px;
+
 }
 
 .grid-item-4 { 
@@ -100,6 +126,7 @@
     font-size: 60px;
     background-color: #fc5200;
     color: #ffffff;
+    background-size:auto;
 
 }
 
@@ -113,8 +140,13 @@
 .grid-item-5-value { 
     color: #ffffff;
     font-size: 120px;
+    height: 300px;
 }
 
+.photo-album-image {
+    height: 290px;
+    margin-left: 25%;
+}
 
 .grid-item-6 { 
     font-size: 90px;
