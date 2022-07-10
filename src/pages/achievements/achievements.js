@@ -28,7 +28,7 @@ function Acheivements() {
 
                 <Header />
 
-                <div className='bodycontent' style={{
+                <div className='body_content_achievements' style={{
                     backgroundImage: `url(${achievements})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: '100vw'

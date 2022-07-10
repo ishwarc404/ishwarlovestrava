@@ -6,7 +6,7 @@
     background-color: rgb(247, 247, 250);
 }
 
-.bodycontent {
+.bodycontent_mystrava {
     padding:100px;
 
 }
@@ -19,59 +19,143 @@
 }
 
 .grid-item-1 { 
-    font-size: 150px;
     background-color: rgb(86, 93, 51);
     color: #ffffff;
+    height: 100%;
+}
+
+.grid-item-1-key { 
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 10px;
 
 }
+
+.grid-item-1-value { 
+    color: #ffffff;
+    font-size: 120px;
+}
+
+
+
 .grid-item-2 { 
     font-size: 100px;
     background-color: rgb(245, 192, 238);    
     color: #000000;
+    height: 100%;
+}
 
+.grid-item-2-key { 
+    color: #000000;
+    font-size: 20px;
+    padding-left: 10px;
 
 }
+
+.grid-item-2-value { 
+    color: #000000;
+    font-size: 120px;
+}
+
+
+
 .grid-item-3 { 
     font-size: 90px;
     background-color: rgb(244, 244, 90);
-
+    height: 100%;
 }
+
+.grid-item-3-key { 
+    color: #000000;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.grid-item-3-key { 
+    color: #000000;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
 .grid-item-4 { 
     font-size:90px;
     background-color: rgb(17, 52, 88);
     color: #ffffff;
+    height: 100%;
+}
 
+.grid-item-4-key { 
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 10px;
 
 }
+
+.grid-item-4-value { 
+    color: #ffffff;
+    font-size: 120px;
+}
+
+
 .grid-item-5 { 
     font-size: 60px;
     background-color: #fc5200;
     color: #ffffff;
 
 }
+
+.grid-item-5-key { 
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+.grid-item-5-value { 
+    color: #ffffff;
+    font-size: 120px;
+}
+
+
 .grid-item-6 { 
     font-size: 90px;
     background-color: rgb(86, 93, 51);
     color: #ffffff;
+    height: 100%;
 
 }
 .grid-item-7 { 
     font-size: 90px;
     background-color: rgb(245, 192, 238);    
     color: #000000;
+    height: 100%;
 
 
 }
 .grid-item-8 { 
     font-size: 90px;
     background-color: rgb(244, 244, 90);
+    height: 100%;
 
 }
 .grid-item-9 { 
     font-size: 90px;
     background-color: rgb(17, 52, 88);
     color: #ffffff;
+    height: 100%;
 }
+
+.grid-item-9-key { 
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 10px;
+
+}
+
+.grid-item-9-value { 
+    color: #ffffff;
+    font-size: 120px;
+}
+
 
 
 
