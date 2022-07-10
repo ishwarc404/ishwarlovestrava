@@ -7,7 +7,7 @@
 }
 
 .bodycontent_mystrava {
-    padding:100px;
+    /* padding:100px; */
 
 }
 
@@ -46,7 +46,7 @@
     font-size: 100px;
     background-color: rgb(245, 192, 238);    
     color: #000000;
-    height: 100%;
+    height: 250px;
 }
 
 .grid-item-2-key { 
@@ -58,7 +58,7 @@
 
 .grid-item-2-value { 
     color: #000000;
-    font-size: 120px;
+    font-size: 100px;
 }
 
 
@@ -66,7 +66,7 @@
 .grid-item-3 { 
     font-size: 90px;
     background-color: rgb(244, 244, 90);
-    height: 100%;
+    height: 400px;
 }
 
 .grid-item-3-key { 
@@ -126,8 +126,7 @@
     font-size: 60px;
     background-color: #fc5200;
     color: #ffffff;
-    background-size:auto;
-
+    height: 300px;
 }
 
 .grid-item-5-key { 
@@ -144,8 +143,11 @@
 }
 
 .photo-album-image {
-    height: 290px;
-    margin-left: 25%;
+    height: 320px;
+    margin-left: 10px;
+    border-radius: 10px;
+    
+
 }
 
 .grid-item-6 { 
@@ -157,15 +159,15 @@
 }
 .grid-item-7 { 
     font-size: 90px;
-    background-color: rgb(245, 192, 238);    
+    /* background-color: rgb(245, 192, 238);     */
     color: #000000;
     height: 100%;
 
-
 }
+
 .grid-item-8 { 
     font-size: 90px;
-    background-color: rgb(244, 244, 90);
+    /* background-color: rgb(244, 244, 90); */
     height: 100%;
 
 }
@@ -189,5 +191,94 @@
 }
 
 
+/* test code */
+.total-activites-header {
+ font-size: 30px;
+}
+
+.total-activites-content {
+    font-size: 300px;
+}
+
+.d1{
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(142, 115, 249);    
+}
+.d2{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(244, 244, 90);;
+}
+.d3{
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(17, 52, 88);;
+}
+.d4{
+    width: 25vw;
+    height: 100vh;
+    background-color: rgb(245, 192, 238);
+}
 
 
+.i1{
+    width: 250px;
+    /* height: 100vh;
+    background-color: rgb(142, 115, 249);     */
+}
+.i2{
+    width: 340px;
+    /* height: 100vh;
+    background-color: rgb(244, 244, 90);; */
+}
+.i3{
+    width: 250px;
+    /* height: 100vh;
+    background-color: rgb(17, 52, 88);; */
+}
+.i4{
+    width: 250px;
+    /* height: 100vh;
+    background-color: rgb(245, 192, 238); */
+}
+
+.information-div{
+    width: 400px;
+    height: 250px;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.information-div-child{
+    /* width: 600px;
+    height: 300px; */
+    color: rgb(0, 0, 0); 
+    border-radius: 10px;
+    /* margin: 20px;
+    padding: 20px; */
+    font-size: 130px;
+}
+
+.information-div-child-lots{
+    /* width: 600px; */
+    height: 300px; 
+    color: rgb(0, 0, 0); 
+    border-radius: 10px;
+    /* margin: 20px;
+    padding: 20px; */
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.information-div-child-kudos{
+    /* width: 600px;
+    height: 300px; */
+    color: rgb(0, 0, 0); 
+    border-radius: 10px;
+    /* margin: 20px;
+    padding: 20px; */
+    font-size: 120px;
+}
