@@ -39,7 +39,7 @@ var latestActivity = {
 }
 var latestActivityId = 0;
 
-const maxActivityPages = 3; //change this to 5
+const maxActivityPages = 3; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
 const refreshToken = 'bd8b400a40d972c7e45c69720e41a47f8e661597';
@@ -49,9 +49,10 @@ var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
 
+var userSelectedActivityType = 'Ride'
 var mileageData = {
   maxMileage: 100,
-  miles: [20, 30, 30, 25, 15, 20, 28, 35],
+  miles: [], //this will be the final reduced mileages 
   run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
   run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
   run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
@@ -306,7 +307,7 @@ function Mystrava() {
               <div className='activity-summary-button-suite'>
                 <button className='activity-summary-button'><img className="activity_icon run" src={runimage} />Run</button>
                 <button className='activity-summary-button'><img className=" activity_icon bike" src={bikeimage} />Ride</button>
-                <button className='activity-summary-button'><img className=" activity_icon swim" src={swimimage} />Swim</button>
+                {/* <button className='activity-summary-button' onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
                 <button className='activity-summary-button'>
                   <img className=" activity_icon weighttraining" src={weightimage} />Weight Training</button>
               </div>
@@ -326,7 +327,7 @@ function Mystrava() {
                   <div className='stat-info'>110 m</div>
                 </div> */}
               </div>
-              <SummaryPlot mileageData={mileageData} />
+              <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
             </div>
           </div>
 

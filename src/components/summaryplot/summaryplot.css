@@ -28,13 +28,14 @@
     box-shadow: 3px 3px 10px #fc5200;
     position: absolute;
     z-index: 50;
-    max-width: 250px
+    /* max-width: 250px */
 } 
 
 .quiz-graph {
-    padding-top: 30px; 
-    /* height: 370px; */
-    width: 330px;
+    padding-top: 10px; 
+    height: 340px;
+    /* width: 330px; */
+    z-index: 0;
 }
 
 .quiz-graph .x-labels {
@@ -61,5 +62,6 @@
 .quiz-graph-dot, .quiz-graph-start-dot{
     fill: white;
     stroke-width: 2;
-    stroke: #fc5200;   
+    stroke: #fc5200; 
+    z-index: 100; 
 }
