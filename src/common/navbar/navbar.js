@@ -96,7 +96,7 @@ function Navbar(props) {
       </div> */}
 
       <div id="mystrava" className={'body_content_6 body_content_all' + (pathValue === 6 ? ' orange' : ' ')}>
-        <div onClick={() => { navigate("/mystrava"); clicked(5) }}>my Strava</div>
+        <div onClick={() => { navigate("/mystrava"); clicked(5) }}>My Strava</div>
       </div>
     </div>
 

@@ -13,6 +13,7 @@ import runimage from '../../assets/run.svg';
 import bikeimage from '../../assets/bike.svg';
 import swimimage from '../../assets/swim.svg';
 import weightimage from '../../assets/weight_training.svg';
+import premiumBadge from '../../assets/badges.svg';
 import imgs from './images';
 import { sizeWidth } from '@mui/system';
 
@@ -23,6 +24,7 @@ import kudos_received_hand from '../../assets/kudos_received_hand.png';
 import weekly_summary_hand from '../../assets/weekly_summary_hand.png'
 
 
+var athleteProfileData = {}
 var athleteStatsData = {};
 var totalActivitiesTillDate = 0;
 var totalHoursTillDate = 0;
@@ -39,8 +41,9 @@ var latestActivity = {
 }
 var latestActivityId = 0;
 
-const maxActivityPages = 1; //change this to 3 or 0
+const maxActivityPages = 3; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
+const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
 const refreshToken = 'bd8b400a40d972c7e45c69720e41a47f8e661597';
 const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=bd8b400a40d972c7e45c69720e41a47f8e661597&grant_type=refresh_token'
@@ -134,7 +137,19 @@ function Mystrava() {
     axios.post(refreshURL, {
     }).then((response) => {
       // console.log(response.data);
-      accessToken = response.data['access_token']
+      accessToken = response.data['access_token'];
+
+
+      //GETTING ATHLETE PROFILE DATA
+      axios.get(athleteDataURL, {
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+        }
+      }).then((response) => {
+        athleteProfileData = response.data;
+        setState({});
+      });
+
 
       var currentEpoch = new Date().getTime();
       var currentEpochInDate = new Date(currentEpoch);
@@ -158,9 +173,6 @@ function Mystrava() {
       for (var i = 0; i < maxActivityPages; i++) {
         //MILEAGE CALCULATION
         //CURRENT EPOCH -  in milliseconds
-
-
-
 
         //ALL ACTIVITY DATA
         axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${i + 1}&per_page=200`, {
@@ -252,14 +264,6 @@ function Mystrava() {
     });
 
 
-    // axios.get(baseURL, {
-    //   headers: headers
-    // }).then((response) => {
-    //   athleteStatsData = response.data;
-    //   totalHoursTillDate = athleteStatsData.all_ride_totals['elapsed_time'] + athleteStatsData.all_run_totals['elapsed_time'] + athleteStatsData.all_swim_totals['elapsed_time'];
-    //   totalHoursTillDate = Math.round(totalHoursTillDate / 3600)
-    //   setState({});
-    // });
 
     // setInterval(function () {
     //   if (imageCount > 24) {
@@ -338,15 +342,25 @@ function Mystrava() {
             <div className='information-div-weekly-summary'>
               <img className="i1" src={weekly_summary_hand} />
               <div className='activity-summary-button-suite'>
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'Run'; setState({});}}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'Ride'; setState({});}}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
-                {/* <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange' : ' ')} onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'Run'; setState({});}}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'Ride'; setState({});}}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
+                {/* <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
                   <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
               </div>
               <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
             </div>
-            <div className='information-div-profile'></div>
+            <div className='information-div-profile d-flex'>
+              <div>
+                <img className='information-div-profile-athlete-image' src={athleteProfileData['profile']}></img>
+                {/* <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img> */}
+              </div>
+              <div className='information-div-profile-text-container'>
+                <span><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></span>
+                <br></br>
+                <span>{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</span>
+              </div>
+            </div>
             </div>
 
           </div>
