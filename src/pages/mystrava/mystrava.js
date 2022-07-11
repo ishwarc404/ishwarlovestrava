@@ -49,7 +49,7 @@ var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
 
-var userSelectedActivityType = 'Ride'
+var userSelectedActivityType = 'Run'
 var mileageData = {
   maxMileage: 100,
   miles: [], //this will be the final reduced mileages 
@@ -84,6 +84,7 @@ function getMonday(d) {
   finalDate.setHours(0, 0, 0, 0);
   return finalDate;
 }
+
 
 
 
@@ -305,11 +306,11 @@ function Mystrava() {
             <div className='information-div-weekly-summary'>
               <img className="i1" src={weekly_summary_hand} />
               <div className='activity-summary-button-suite'>
-                <button className='activity-summary-button'><img className="activity_icon run" src={runimage} />Run</button>
-                <button className='activity-summary-button'><img className=" activity_icon bike" src={bikeimage} />Ride</button>
-                {/* <button className='activity-summary-button' onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
-                <button className='activity-summary-button'>
-                  <img className=" activity_icon weighttraining" src={weightimage} />Weight Training</button>
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'Run'; setState({});}}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'Ride'; setState({});}}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
+                {/* <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange' : ' ')} onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
+                <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
+                  <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
               </div>
               <div className='d-flex justify-content-start summary-stats'>
                 <div className='stat-1'>

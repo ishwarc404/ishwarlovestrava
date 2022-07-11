@@ -50,13 +50,14 @@ function SummaryPlot(props) {
     maxHeight = 150 + 'px';
     // mileageData.miles = [0,20000,30000,20000,20000,20000,0,20000,20000]
     //need to reverse this - done
+    var multiplierVis = 3.5;
     //3.5 below is the height multiplier which aids in visualisation
     for (var i = mileageData.miles.length - 1; i >= 0; i--) {
       //diving by 1000 because it is in meters
       mileageDataComponent.push(
-        <circle className="quiz-graph-start-dot" cx={x_value} cy={(150)-(mileageData.miles[i]/1000)} key={x_value} data-value="7.2" r="6"></circle>
+        <circle className="quiz-graph-start-dot" cx={x_value} cy={(150)-((mileageData.miles[i]*multiplierVis/1000))} key={x_value} data-value="7.2" r="6"></circle>
       )
-      strokeComponentPoints = strokeComponentPoints + `${x_value},${(150)-(mileageData.miles[i]/1000)} `;
+      strokeComponentPoints = strokeComponentPoints + `${x_value},${(150)-(mileageData.miles[i]*multiplierVis/1000)} `;
       // console.log(strokeComponentPoints);
       x_value += 30;
       
