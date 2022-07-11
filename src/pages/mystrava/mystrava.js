@@ -220,15 +220,31 @@ function Mystrava() {
               </div>
             </div>
             <div className='information-div-weekly-summary'>
-                <img className="i1" src={weekly_summary_hand} />
-                <div className='activity-summary-button-suite'>
-                  <button className='activity-summary-button'><img className="activity_icon run" src={runimage}/>Run</button>
-                  <button className='activity-summary-button'><img className=" activity_icon bike" src={bikeimage}/>Ride</button>
-                  <button className='activity-summary-button'><img className=" activity_icon swim" src={swimimage}/>Swim</button>
-                  <button className='activity-summary-button'>
+              <img className="i1" src={weekly_summary_hand} />
+              <div className='activity-summary-button-suite'>
+                <button className='activity-summary-button'><img className="activity_icon run" src={runimage} />Run</button>
+                <button className='activity-summary-button'><img className=" activity_icon bike" src={bikeimage} />Ride</button>
+                <button className='activity-summary-button'><img className=" activity_icon swim" src={swimimage} />Swim</button>
+                <button className='activity-summary-button'>
                   <img className=" activity_icon weighttraining" src={weightimage} />Weight Training</button>
+              </div>
+              <div className='d-flex justify-content-start summary-stats'>
+                <div className='stat-1'>
+                  <div className='stat-title'>Distance</div>
+                  <div className='stat-info'>20.9 km</div>
                 </div>
-                <SummaryPlot mileageData={mileageData} />
+                <div className='stat-line'></div>
+                <div className='stat-2'>                      
+                  <div className='stat-title'>Time</div>
+                  <div className='stat-info'>2h 38 m</div>
+                </div>
+                <div className='stat-line'></div>
+                <div className='stat-3'>                      
+                  <div className='stat-title'>Elevation Gain</div>
+                  <div className='stat-info'>110 m</div>
+                </div>
+              </div>
+              <SummaryPlot mileageData={mileageData} />
             </div>
           </div>
 
