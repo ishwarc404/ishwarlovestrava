@@ -7,7 +7,7 @@
 }
 
 .bodycontent_mystrava {
-    /* padding:100px; */
+    padding-top:5%;
 
 }
 
@@ -312,6 +312,7 @@
     background-color: #ffffff;
     border: solid 1px rgb(202, 202, 202);
     border-radius: 5px;
+    margin-top:8px;
     padding-left:8px;
     padding-right:8px;
     margin-right: 5px;

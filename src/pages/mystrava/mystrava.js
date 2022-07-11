@@ -39,7 +39,7 @@ var latestActivity = {
 }
 var latestActivityId = 0;
 
-const maxActivityPages = 0; //change this to 5
+const maxActivityPages = 3; //change this to 5
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
 const refreshToken = 'bd8b400a40d972c7e45c69720e41a47f8e661597';
@@ -51,8 +51,16 @@ var latestActivityFlag = true;
 
 var mileageData = {
   maxMileage: 100,
-  miles: [20, 30, 30, 25, 15, 20, 28, 35]
+  miles: [20, 30, 30, 25, 15, 20, 28, 35],
+  run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+  weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
 }
+var previousMondays = []
 
 function convertSeconds(value) {
   const sec = parseInt(value, 10); // convert value to number if it's string
@@ -66,6 +74,16 @@ function convertSeconds(value) {
 
   return hours + minutes + seconds; // Return is HH : MM : SS
 }
+
+function getMonday(d) {
+  d = new Date(d);
+  var day = d.getDay();
+  var diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
+  var finalDate = new Date(d.setDate(diff));
+  finalDate.setHours(0, 0, 0, 0);
+  return finalDate;
+}
+
 
 
 function Mystrava() {
@@ -82,14 +100,40 @@ function Mystrava() {
       // console.log(response.data);
       accessToken = response.data['access_token']
 
-      for (var i = 0; i < 1; i++) {
-        // console.log('i is ',i);
+      var currentEpoch = new Date().getTime();
+      var currentEpochInDate = new Date(currentEpoch);
+
+      var tenWeeksPriorEpoch = currentEpoch - 6048000000;
+      var tenWeeksPriorEpochInDate = new Date(tenWeeksPriorEpoch)
+
+      //need to get epochs of all prev 10 mondays
+      var currentWeekMonday = getMonday(currentEpoch);
+      previousMondays.push(currentWeekMonday)
+      console.log(new Date(currentWeekMonday));
+      for (var i = 1; i < 10; i++) {
+        //run 9 times
+        var prevMonday = currentWeekMonday - (604800000 * i);
+        previousMondays.push(prevMonday);
+        console.log(new Date(prevMonday));
+      }
+
+
+      //MAIN LOOPS BEGINS
+      for (var i = 0; i < maxActivityPages; i++) {
+        //MILEAGE CALCULATION
+        //CURRENT EPOCH -  in milliseconds
+
+
+
+
         //ALL ACTIVITY DATA
-        axios.get(`https://www.strava.com/api/v3/athlete/activities?before=1657381150&page=${i + 1}&per_page=200`, {
+        axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${i + 1}&per_page=200`, {
           headers: {
             'Authorization': `Bearer ${accessToken}`,
           }
         }).then((response) => {
+
+          // console.log(response.data);
 
           if (latestActivityFlag) {
             latestActivityFlag = false;
@@ -110,10 +154,14 @@ function Mystrava() {
           }
 
 
+
+
+
           totalActivitiesTillDate += response.data.length
-          console.log(totalActivitiesTillDate);
+          // console.log(totalActivitiesTillDate);
           athleteStatsData = response.data;
-          console.log(response.data);
+          // console.log(response.data);
+
           for (var k = 0; k < athleteStatsData.length; k++) {
 
             totalHoursTillDate += athleteStatsData[k]['elapsed_time'];
@@ -124,10 +172,44 @@ function Mystrava() {
             } else {
               userActivityCount[athleteStatsData[k]['type']] += 1;
             }
+
+            //MILEAGE CALCULATION
+            var activityDate = new Date(athleteStatsData[k]['start_date']);
+            // console.log(activityDate);
+            // console.log(tenWeeksPriorEpochInDate);
+            // console.log("------");
+            if (activityDate >= tenWeeksPriorEpochInDate) {
+              // console.log('yes!');
+              //IT IS IN THE 10 WEEK RANGE
+              //ADD IT'S STATS TO THE MILEAGE OBJECT
+              var weekValue = null;
+              var tempSetVal = true;
+              for (var z = 0; z < 10; z++) {
+                if (activityDate > previousMondays[z] && tempSetVal) {
+                  //activity belongs to that week
+                  weekValue = z + 1;
+                  tempSetVal = false;
+                  if (athleteStatsData[k]['type'] === 'Run') {
+                    mileageData.run_miles[weekValue].push(athleteStatsData[k]['distance']);
+                    // console.log(mileageData.run_miles);
+                    mileageData.run_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                  if (athleteStatsData[k]['type'] === 'Ride') {
+                    mileageData.ride_miles[weekValue].push(athleteStatsData[k]['distance']);
+                    mileageData.ride_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                  if (athleteStatsData[k]['type'] === 'WeightTraining') {
+                    mileageData.weight_training_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                }
+                //or else it is checked with the next week.
+              }
+
+            }
+
+
+
           }
-
-
-
           setState({});
         });
       }
@@ -178,7 +260,7 @@ function Mystrava() {
           {/* </div> */}
 
 
-          <div className='d-flex justify-content-center'>
+          <div className='d-flex justify-content-center '>
             <div className=''>
               <div className='information-div'>
                 <img className="i1" src={total_activities_hand} />
@@ -234,15 +316,15 @@ function Mystrava() {
                   <div className='stat-info'>20.9 km</div>
                 </div>
                 <div className='stat-line'></div>
-                <div className='stat-2'>                      
+                <div className='stat-2'>
                   <div className='stat-title'>Time</div>
                   <div className='stat-info'>2h 38 m</div>
                 </div>
-                <div className='stat-line'></div>
-                <div className='stat-3'>                      
+                {/* <div className='stat-line'></div> */}
+                {/* <div className='stat-3'>                      
                   <div className='stat-title'>Elevation Gain</div>
                   <div className='stat-info'>110 m</div>
-                </div>
+                </div> */}
               </div>
               <SummaryPlot mileageData={mileageData} />
             </div>

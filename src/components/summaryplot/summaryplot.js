@@ -24,7 +24,7 @@ function SummaryPlot(props) {
         <circle className="quiz-graph-start-dot" cx={x_value} cy={100-mileageData.miles[i]} key={x_value} data-value="7.2" r="6"></circle>
       )
       strokeComponentPoints = strokeComponentPoints + `${x_value},${100-mileageData.miles[i]} `;
-      console.log(strokeComponentPoints);
+      // console.log(strokeComponentPoints);
       x_value += 40;
       
     }
