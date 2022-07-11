@@ -39,7 +39,7 @@ var latestActivity = {
 }
 var latestActivityId = 0;
 
-const maxActivityPages = 3; //change this to 3 or 0
+const maxActivityPages = 1; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
 const refreshToken = 'bd8b400a40d972c7e45c69720e41a47f8e661597';
@@ -53,6 +53,8 @@ var userSelectedActivityType = 'Run'
 var mileageData = {
   maxMileage: 100,
   miles: [], //this will be the final reduced mileages 
+  times: [], //this will be the final reduced mileages 
+
   run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
   run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
   run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
@@ -111,12 +113,12 @@ function Mystrava() {
       //need to get epochs of all prev 10 mondays
       var currentWeekMonday = getMonday(currentEpoch);
       previousMondays.push(currentWeekMonday)
-      console.log(new Date(currentWeekMonday));
+      // console.log(new Date(currentWeekMonday));
       for (var i = 1; i < 10; i++) {
         //run 9 times
         var prevMonday = currentWeekMonday - (604800000 * i);
         previousMondays.push(prevMonday);
-        console.log(new Date(prevMonday));
+        // console.log(new Date(prevMonday));
       }
 
 
@@ -312,22 +314,7 @@ function Mystrava() {
                 <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
                   <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
               </div>
-              <div className='d-flex justify-content-start summary-stats'>
-                <div className='stat-1'>
-                  <div className='stat-title'>Distance</div>
-                  <div className='stat-info'>20.9 km</div>
-                </div>
-                <div className='stat-line'></div>
-                <div className='stat-2'>
-                  <div className='stat-title'>Time</div>
-                  <div className='stat-info'>2h 38 m</div>
-                </div>
-                {/* <div className='stat-line'></div> */}
-                {/* <div className='stat-3'>                      
-                  <div className='stat-title'>Elevation Gain</div>
-                  <div className='stat-info'>110 m</div>
-                </div> */}
-              </div>
+
               <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
             </div>
           </div>

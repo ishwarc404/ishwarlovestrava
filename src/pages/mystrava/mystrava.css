@@ -341,38 +341,3 @@
 }
 
 
-.summary-stats{
-    padding-top: 20px;
-}
-.stat-title {
-    font-size: 10px;
-}
-
-.stat-info {
-    font-size: 20px;
-
-}
-
-.stat-1 {
-   padding-right: 15px;
-
-}
-
-.stat-2 {
-    padding-left: 15px;
-    padding-right: 15px;
-
-}
-.stat-3 {
-    padding-left: 15px;
-    /* padding-right: 10px; */
-
-}
-
-.stat-line {
-    width: 1px;
-    margin-top:5px;
-    height: 30px;
-    background-color: rgb(202, 202, 202);
-}
-
