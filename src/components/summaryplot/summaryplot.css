@@ -1,0 +1,65 @@
+.Discussion{
+    font-family: 'Maison Neue', sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;	
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    /* overflow: hidden */
+}
+
+.discussion_1 
+{
+    /* border-bottom: 4px solid #FFF; */
+    /* overflow: hidden; */
+    /* background-color: #000; */
+    /* position: fixed;  */
+    /* Set the navbar to fixed position */
+    /* top: 0; 
+    Position the navbar at the top of the page */
+    /* width: 100%;  */
+    /* Full width */
+    /* height: 100vh; */
+}
+
+.quiz-chartTip {
+    padding: 5px 10px;
+    border: 1px solid #fc5200;
+    border-radius: 4px;
+    background-color: #fc5200;
+    box-shadow: 3px 3px 10px #fc5200;
+    position: absolute;
+    z-index: 50;
+    max-width: 250px
+} 
+
+.quiz-graph {
+    padding-top: 30px; 
+    /* height: 370px; */
+    width: 330px;
+}
+
+.quiz-graph .x-labels {
+    text-anchor: middle;
+}
+
+.quiz-graph .y-labels {
+    text-anchor: end;
+}
+
+.quiz-graph .quiz-graph-grid {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.label-title {
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: gray;
+}
+
+.quiz-graph-dot, .quiz-graph-start-dot{
+    fill: white;
+    stroke-width: 2;
+    stroke: #fc5200;   
+}

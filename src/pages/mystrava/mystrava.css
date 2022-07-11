@@ -11,10 +11,6 @@
 
 }
 
-.activity_icon {
-    padding-left: 5px;
-    font-size: 20px;
-}
 .grid-item {
     margin: 5px;
     border-radius: 10px;
@@ -252,6 +248,20 @@
     padding: 20px;
 }
 
+.summary-plot-div {
+    height: 100%;
+}
+.information-div-weekly-summary{
+    width: 400px;
+    height: 520px;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 20px;
+}
+
+
 .information-div-child{
     /* width: 600px;
     height: 300px; */
@@ -281,4 +291,29 @@
     /* margin: 20px;
     padding: 20px; */
     font-size: 120px;
+}
+
+.activity_icon {
+    /* padding-left: 5px;
+    font-size: 20px; */
+    padding: 7px;
+    width: 25px;
+    color: solid 1px rgb(202, 202, 202);
+
+}
+
+
+.activity-summary-button-suite {
+    padding-top:20px;
+
+}
+
+.activity-summary-button {
+    background-color: #ffffff;
+    border: solid 1px rgb(202, 202, 202);
+    border-radius: 5px;
+    padding-left:8px;
+    padding-right:8px;
+    margin-right: 5px;
+    font-size: 10px;
 }
