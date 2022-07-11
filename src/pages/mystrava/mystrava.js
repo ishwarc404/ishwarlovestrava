@@ -308,9 +308,6 @@ function Mystrava() {
               </div>
 
             </div>
-            {/* <div className='d2'>
-            <div></div>
-            </div> */}
             <div>
               <div className='information-div'><img className="i3" src={latest_activity_hand} />
                 <div>
@@ -337,6 +334,7 @@ function Mystrava() {
                 <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
               </div>
             </div>
+            <div>
             <div className='information-div-weekly-summary'>
               <img className="i1" src={weekly_summary_hand} />
               <div className='activity-summary-button-suite'>
@@ -346,9 +344,11 @@ function Mystrava() {
                 <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
                   <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
               </div>
-
               <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
             </div>
+            <div className='information-div-profile'></div>
+            </div>
+
           </div>
 
 
