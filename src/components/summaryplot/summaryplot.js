@@ -94,6 +94,8 @@ function SummaryPlot(props) {
       x_value += 30;
 
     }
+    onHoverDistance = parseFloat(mileageData.miles[9]/1000).toFixed(1) + "km"; 
+    onHoverTime = convertSeconds(mileageData.times[9]); 
   })
 
   return (

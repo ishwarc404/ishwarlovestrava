@@ -99,6 +99,38 @@ function Mystrava() {
 
   useEffect(() => {
 
+    //RESET ALL!
+    athleteStatsData = {};
+    totalActivitiesTillDate = 0;
+    totalHoursTillDate = 0;
+    userActivityCount = {};
+    userKudosRecievedCount = 0;
+    latestActivity = {
+    'name': null,
+    'elapsed_time': null,
+    'sport_type': null,
+    'kudos_count': null,
+    'description': null,
+    'total_photo_count': null,
+    'photos': null
+    }
+    latestActivityId = 0;
+    mileageData = {
+      maxMileage: 100,
+      miles: [], //this will be the final reduced mileages 
+      times: [], //this will be the final reduced mileages 
+    
+      run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+    }
+    previousMondays = []
+
+
     axios.post(refreshURL, {
     }).then((response) => {
       // console.log(response.data);
