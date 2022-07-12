@@ -1,15 +1,26 @@
 .header_1 
 {
-    border-bottom: 4px solid #FFF;
+    /* border-bottom: 4px solid #FFF; */
     overflow: hidden;
     background-color: #ffffff;
     /* position: fixed;  */
     /* Set the navbar to fixed position */
     /* top: 0; 
     Position the navbar at the top of the page */
-    /* width: 100%;  */
+    width: 100%; 
     /* Full width */
+    z-index: 1000;
     height: 6vh;
+    position: fixed;
+
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.8);
+    /* border-radius: 16px; */
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+
 }
 
 .header_content_1

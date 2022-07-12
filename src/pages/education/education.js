@@ -62,7 +62,7 @@ function Education(props) {
           backgroundSize: '100vw'
         }}>
 
-          <div className='d-flex justify-content-start'>
+          <div className='d-flex justify-content-start education_div_main'>
             <div className='header_2_education'>
               <span onMouseOver={() => changeInfo('btech')} className={'highlight_block_education' + (pathValue === 1 ? ' educationhighlight_container_1' : '')}>Bachelor's in Computer Science
                 <br></br>

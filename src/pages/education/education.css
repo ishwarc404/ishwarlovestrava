@@ -11,6 +11,10 @@
     overflow-y: hidden;
     z-index: -10;
 }
+
+.education_div_main{
+    margin-top: 100px;
+}
 .header_2_education
 {
     padding-left: 10%;

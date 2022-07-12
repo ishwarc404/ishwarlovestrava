@@ -7,9 +7,10 @@
 }
 
 .bodycontent_mystrava {
-    padding-top:5%;
+    padding-top:10%;
 
 }
+
 
 .grid-item {
     margin: 5px;
@@ -434,7 +435,7 @@
     left: 0;
     font-size: 30px;
 
-    margin-left: 30px;
+    margin-left: 0px;
     padding-bottom: 40px;
 
     /* padding-right: 200px; */
@@ -497,7 +498,7 @@
 .iphone-3-video {
     position: absolute;
     top: 200px;
-    left: 32px;
+    left: 22px;
     width: 255px;
     height: auto;
 }

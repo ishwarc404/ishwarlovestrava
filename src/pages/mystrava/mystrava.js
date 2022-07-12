@@ -309,7 +309,7 @@ function Mystrava() {
 
 
           <div className='d-flex justify-content-center '>
-            <div className=''>
+            <div className='title-test'>
               <div className='information-div'>
                 <img className="i1" src={total_activities_hand} />
                 <div className='information-div-child'>{totalActivitiesTillDate}</div>
@@ -391,7 +391,7 @@ function Mystrava() {
               <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true}></video>
             </div>
             <div className='iphone-info-div-3'>
-              <div className='segments-title' ><b>Boulder</b>, incoming.</div>ß
+              <div className='segments-title' ><b>Boulder</b>, incoming.</div>
               <img className='iphone-3' src={iphone} width="300"></img>
               <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true}></video>
             </div>
