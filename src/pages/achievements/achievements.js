@@ -36,7 +36,6 @@ function Acheivements() {
                     <div className='d-flex justify-content-center'>
                         <div className='hackathon_container'>
 
-
                             <div className={'d-flex justify-content-start competition_container' + (pathValue === 1 ? ' competition_container_1' : '')}
                                 onMouseOver={() => { clicked(1) }}>
                                 <svg className='trophy_icon' fill="#FEC835" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50"><g fill=""><path d="M11.33 10.7l.67 1.25.67-1.25L12 9.44zm10.91 7.97H1.76v4h20.48z"></path><path d="M22.68 4.56l-3.03 1.61L12 2.11 4.35 6.17 1.32 4.56l-.99.67 1.38 12.1h20.58l1.38-12.1zM12 14.83L9.8 10.7 12 6.56l2.2 4.14z"></path></g></svg>

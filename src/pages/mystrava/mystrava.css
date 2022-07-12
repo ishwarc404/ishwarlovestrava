@@ -352,13 +352,25 @@
     font-size: 10px; */
 }
 
+.information-div-image-parent{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+}
 .information-div-profile {
 
 }
 .information-div-profile-athlete-image-badge {
+    position: absolute;
+    top: 0px;
+    left: 95px;
 
 }
 .information-div-profile-athlete-image {
+    position: relative;
+    top: 0;
+    left: 0;
     border-radius: 50%;
     width: 100px;
 }
@@ -366,4 +378,11 @@
 .information-div-profile-text-container {
     padding-left: 20px;
     padding-top: 20px;
+}
+
+.information-div-profile-text-location {
+    font-size: 13px;
+}
+.information-div-profile-text-bio {
+    font-size: 12px;
 }

@@ -32,7 +32,7 @@ var userActivityCount = {};
 var userKudosRecievedCount = 0;
 var latestActivity = {
   'name': null,
-  'elapsed_time': null,
+  'elapsed_time': "",
   'sport_type': null,
   'kudos_count': null,
   'description': null,
@@ -41,7 +41,7 @@ var latestActivity = {
 }
 var latestActivityId = 0;
 
-const maxActivityPages = 3; //change this to 3 or 0
+const maxActivityPages = 1; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
@@ -69,6 +69,10 @@ var mileageData = {
 var previousMondays = []
 
 function convertSeconds(value) {
+
+  if(!value){
+    return "";
+  }
   const sec = parseInt(value, 10); // convert value to number if it's string
   let hours = Math.floor(sec / 3600); // get hours
   let minutes = Math.floor((sec - (hours * 3600)) / 60); // get minutes
@@ -334,7 +338,8 @@ function Mystrava() {
                   </div>
                 </div>
               </div>
-              <div className='information-div'><img className="i4" src={kudos_received_hand} />
+              <div className='information-div'>
+                <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} />
                 <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
               </div>
             </div>
@@ -351,14 +356,15 @@ function Mystrava() {
               <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
             </div>
             <div className='information-div-profile d-flex'>
-              <div>
+              <div class='information-div-image-parent'>
                 <img className='information-div-profile-athlete-image' src={athleteProfileData['profile']}></img>
-                {/* <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img> */}
+                <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img>
               </div>
               <div className='information-div-profile-text-container'>
-                <span><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></span>
-                <br></br>
-                <span>{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</span>
+                <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
+                <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
+                <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
+
               </div>
             </div>
             </div>

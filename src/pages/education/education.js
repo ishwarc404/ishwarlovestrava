@@ -35,10 +35,15 @@ function Education(props) {
       isInformationVisible = true;
       pathValue  = 3;
     }
+    else if (data === 'internship2') {
+      information = 'Worked as a Full Stack Developer, incorporating technologies such as Python, .NET, mySQL & VueJs. Developed and deployed two customer facing projects. The more successful of the two handles live traffic of more than 300 systems. ';
+      isInformationVisible = true;
+      pathValue  = 4;
+    }
     else if (data === 'fulltime') {
       information = 'Worked as a front end developer for more than a year with Angular micro-front end. Implemented customer facing features for their BloxOne DDI product, developed UI components, bug-fixing and also participated in UX designing.';
       isInformationVisible = true;
-      pathValue  = 4;
+      pathValue  = 5;
     }
     // else {
     //   isInformationVisible = false;
@@ -69,12 +74,17 @@ function Education(props) {
                 University of Colorado, Boulder  ['24]</span>
               <br></br>
               <br></br>
-              <span onMouseOver={() => changeInfo('internship')}  className={'highlight_block_education'+ (pathValue === 3 ? ' educationhighlight_container_3' : '')}>Bot Mantra & DeltaX
+              <span onMouseOver={() => changeInfo('internship')}  className={'highlight_block_education'+ (pathValue === 3 ? ' educationhighlight_container_3' : '')}>Bot Mantra
                 <br></br>
                 Software Developer Intern ['19-'21]</span>
               <br></br>
               <br></br>
-              <span onMouseOver={() => changeInfo('fulltime')}  className={'highlight_block_education'+ (pathValue === 4 ? ' educationhighlight_container_4' : '')}>Infoblox Inc.
+              <span onMouseOver={() => changeInfo('internship2')}  className={'highlight_block_education'+ (pathValue === 4 ? ' educationhighlight_container_4' : '')}>DeltaX
+                <br></br>
+                Software Developer Intern ['19-'21]</span>
+              <br></br>
+              <br></br>
+              <span onMouseOver={() => changeInfo('fulltime')}  className={'highlight_block_education'+ (pathValue === 5 ? ' educationhighlight_container_5' : '')}>Infoblox Inc.
                 <br></br>
                 Software Developer ['21-'22]</span>
             </div>
