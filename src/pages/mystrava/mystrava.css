@@ -2,7 +2,7 @@
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
     overflow: hidden;
-    height: 100vh;
+    height: 200vh;
     background-color: rgb(247, 247, 250);
 }
 
@@ -95,7 +95,7 @@
 .grid-item-3-value-count { 
     color: #000000;
     font-size: 20px;
-
+    width: 100%;
 }
 
 .grid-item-4 { 
@@ -248,11 +248,21 @@
     padding: 20px;
 }
 
+.information-div-center-row{
+    width: 330px;
+    height: 250px;
+    background-color: #ffff;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
 .summary-plot-div {
     height: 100%;
 }
 .information-div-weekly-summary{
-    width: 400px;
+    width: 340px;
     height: 350px;
     background-color: #ffff;
     border-radius: 10px;
@@ -285,7 +295,7 @@
 }
 
 .information-div-child-lots{
-    /* width: 600px; */
+    /* width: 00px; */
     height: 300px; 
     color: rgb(0, 0, 0); 
     border-radius: 10px;
@@ -360,6 +370,7 @@
 }
 .information-div-profile {
 
+    width: 340px;
 }
 .information-div-profile-athlete-image-badge {
     position: absolute;
@@ -385,4 +396,56 @@
 }
 .information-div-profile-text-bio {
     font-size: 12px;
+}
+
+.iphone-title-div{
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+
+.iphone-info-div{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+}
+
+.iphone-1-video {
+    position: absolute;
+    top: 110px;
+    left: 22px;
+    width: 255px;
+    height: auto;
+}
+
+
+.iphone-1{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-right: 150px;
+}
+
+.iphone-info-div-2{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+}
+
+.iphone-2-video {
+    position: absolute;
+    top: 110px;
+    left: 22px;
+    width: 255px;
+    height: auto;
+}
+
+
+.iphone-2{
+    position: relative;
+    top: 0;
+    left: 0;
+    /* margin-right: 150px; */
 }

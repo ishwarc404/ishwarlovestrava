@@ -15,6 +15,9 @@ import swimimage from '../../assets/swim.svg';
 import weightimage from '../../assets/weight_training.svg';
 import premiumBadge from '../../assets/badges.svg';
 import imgs from './images';
+import iphone from '../../assets/iphone.png';
+import trophy_video from '../../assets/trophy.mp4';
+import dnf_video from '../../assets/dnf.mp4';
 import { sizeWidth } from '@mui/system';
 
 import total_activities_hand from '../../assets/total_activities_hand.png';
@@ -24,7 +27,13 @@ import kudos_received_hand from '../../assets/kudos_received_hand.png';
 import weekly_summary_hand from '../../assets/weekly_summary_hand.png'
 
 
-var athleteProfileData = {}
+var athleteProfileData = {
+  lastname: '',
+  firstname: '',
+  city: '',
+  state: '',
+  bio: ''
+}
 var athleteStatsData = {};
 var totalActivitiesTillDate = 0;
 var totalHoursTillDate = 0;
@@ -70,7 +79,7 @@ var previousMondays = []
 
 function convertSeconds(value) {
 
-  if(!value){
+  if (!value) {
     return "";
   }
   const sec = parseInt(value, 10); // convert value to number if it's string
@@ -113,20 +122,20 @@ function Mystrava() {
     userActivityCount = {};
     userKudosRecievedCount = 0;
     latestActivity = {
-    'name': null,
-    'elapsed_time': null,
-    'sport_type': null,
-    'kudos_count': null,
-    'description': null,
-    'total_photo_count': null,
-    'photos': null
+      'name': null,
+      'elapsed_time': null,
+      'sport_type': null,
+      'kudos_count': null,
+      'description': null,
+      'total_photo_count': null,
+      'photos': null
     }
     latestActivityId = 0;
     mileageData = {
       maxMileage: 100,
       miles: [], //this will be the final reduced mileages 
       times: [], //this will be the final reduced mileages 
-    
+
       run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
       run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
       run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
@@ -296,13 +305,6 @@ function Mystrava() {
           backgroundSize: '100vw'
         }}>
 
-          {/* <div className='d-flex'> */}
-          {/* <div className='d1'></div> */}
-          {/* <div className='d2'></div> */}
-          {/* <div className='d3'></div>
-          <div className='d4'></div> */}
-          {/* </div> */}
-
 
           <div className='d-flex justify-content-center '>
             <div className=''>
@@ -317,7 +319,7 @@ function Mystrava() {
 
             </div>
             <div>
-              <div className='information-div'><img className="i3" src={latest_activity_hand} />
+              <div className='information-div-center-row'><img className="i3" src={latest_activity_hand} />
                 <div>
                   <div className='information-div-child-lots'>
                     <div><b>{latestActivity.name}</b></div>
@@ -338,39 +340,52 @@ function Mystrava() {
                   </div>
                 </div>
               </div>
-              <div className='information-div'>
+              <div className='information-div-center-row'>
                 <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} />
                 <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
               </div>
             </div>
             <div>
-            <div className='information-div-weekly-summary'>
-              <img className="i1" src={weekly_summary_hand} />
-              <div className='activity-summary-button-suite'>
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'Run'; setState({});}}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'Ride'; setState({});}}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
-                {/* <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
-                <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange_activity' : ' ')} onClick={()=>{userSelectedActivityType = 'WeightTraining'; setState({});}}>
-                  <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
+              <div className='information-div-weekly-summary'>
+                <img className="i1" src={weekly_summary_hand} />
+                <div className='activity-summary-button-suite'>
+                  <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'Run'; setState({}); }}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
+                  <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'Ride'; setState({}); }}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
+                  {/* <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={userSelectedActivityType = 'Swim'}><img className=" activity_icon swim" src={swimimage} />Swim</button> */}
+                  <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'WeightTraining'; setState({}); }}>
+                    <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
+                </div>
+                <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
               </div>
-              <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
-            </div>
-            <div className='information-div-profile d-flex'>
-              <div class='information-div-image-parent'>
-                <img className='information-div-profile-athlete-image' src={athleteProfileData['profile']}></img>
-                <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img>
-              </div>
-              <div className='information-div-profile-text-container'>
-                <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
-                <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
-                <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
+              <div className='information-div-profile d-flex'>
+                <div class='information-div-image-parent'>
+                  <img className='information-div-profile-athlete-image' src={athleteProfileData['profile']}></img>
+                  <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img>
+                </div>
+                <div className='information-div-profile-text-container'>
+                  <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
+                  <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
+                  <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
 
+                </div>
               </div>
-            </div>
             </div>
 
           </div>
 
+          <div className='d-flex justify-content-center iphone-title-div'>
+            <span>Proud of my badges, more of my DNFs.</span>
+          </div>
+          <div className='d-flex justify-content-center'>
+            <div className='iphone-info-div'>
+              <img className='iphone-1' src={iphone} width="300"></img>
+              <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true}></video>
+            </div>
+            <div className='iphone-info-div-2'>
+              <img className='iphone-2' src={iphone} width="300"></img>
+              <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true}></video>
+            </div>
+          </div>
 
 
           <Navbar path={6} />
