@@ -18,6 +18,8 @@ import imgs from './images';
 import iphone from '../../assets/iphone.png';
 import trophy_video from '../../assets/trophy.mp4';
 import dnf_video from '../../assets/dnf.mp4';
+import segments_video from '../../assets/segments.mp4';
+
 import { sizeWidth } from '@mui/system';
 
 import total_activities_hand from '../../assets/total_activities_hand.png';
@@ -374,16 +376,24 @@ function Mystrava() {
           </div>
 
           <div className='d-flex justify-content-center iphone-title-div'>
-            <span>Proud of my badges, more of my DNFs.</span>
+
+
           </div>
-          <div className='d-flex justify-content-center'>
+          <div className='d-flex justify-content-center iphone-divs'>
             <div className='iphone-info-div'>
+              <div className='proud-title'>Proud of my trophies.</div>
               <img className='iphone-1' src={iphone} width="300"></img>
               <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true}></video>
             </div>
             <div className='iphone-info-div-2'>
+              <div className='dnf-title'>More, of my DNFs.</div>
               <img className='iphone-2' src={iphone} width="300"></img>
               <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true}></video>
+            </div>
+            <div className='iphone-info-div-3'>
+              <div className='segments-title' ><b>Boulder</b>, incoming.</div>ß
+              <img className='iphone-3' src={iphone} width="300"></img>
+              <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true}></video>
             </div>
           </div>
 
