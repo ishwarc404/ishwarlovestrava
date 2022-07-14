@@ -4,7 +4,7 @@ import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 
 
-import background from '../../assets/skills5.png';
+import background from '../../assets/ghepan2.png';
 import Discussion from '../../common/discussion/discussion';
 
 

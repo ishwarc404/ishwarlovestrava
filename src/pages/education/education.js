@@ -64,29 +64,30 @@ function Education(props) {
 
           <div className='d-flex justify-content-start education_div_main'>
             <div className='header_2_education'>
+            <span onMouseOver={() => changeInfo('ms')}  className={'highlight_block_education'+ (pathValue === 2 ? ' educationhighlight_container_2' : '')}>Master's in Computer Science
+                <br></br>
+                University of Colorado, Boulder, 2024</span>
+              <br></br>
+              <br></br>
               <span onMouseOver={() => changeInfo('btech')} className={'highlight_block_education' + (pathValue === 1 ? ' educationhighlight_container_1' : '')}>Bachelor's in Computer Science
                 <br></br>
-                PES University, Bangalore ['21]</span>
-              <br></br>
-              <br></br>
-              <span onMouseOver={() => changeInfo('ms')}  className={'highlight_block_education'+ (pathValue === 2 ? ' educationhighlight_container_2' : '')}>Master's in Computer Science
-                <br></br>
-                University of Colorado, Boulder  ['24]</span>
-              <br></br>
-              <br></br>
-              <span onMouseOver={() => changeInfo('internship')}  className={'highlight_block_education'+ (pathValue === 3 ? ' educationhighlight_container_3' : '')}>Bot Mantra
-                <br></br>
-                Software Developer Intern ['19-'20]</span>
-              <br></br>
-              <br></br>
-              <span onMouseOver={() => changeInfo('internship2')}  className={'highlight_block_education'+ (pathValue === 4 ? ' educationhighlight_container_4' : '')}>DeltaX
-                <br></br>
-                Software Developer Intern ['20]</span>
+                PES University, Bangalore, 2021</span>
               <br></br>
               <br></br>
               <span onMouseOver={() => changeInfo('fulltime')}  className={'highlight_block_education'+ (pathValue === 5 ? ' educationhighlight_container_5' : '')}>Infoblox Inc.
                 <br></br>
-                Software Developer ['21-'22]</span>
+                Software Developer, '21-'22</span>
+              <br></br>
+              <br></br>
+              <span onMouseOver={() => changeInfo('internship2')}  className={'highlight_block_education'+ (pathValue === 4 ? ' educationhighlight_container_4' : '')}>DeltaX
+                <br></br>
+                Software Developer Intern, 2020</span>
+              <br></br>
+              <br></br>
+              <span onMouseOver={() => changeInfo('internship')}  className={'highlight_block_education'+ (pathValue === 3 ? ' educationhighlight_container_3' : '')}>Bot Mantra
+                <br></br>
+                Software Developer Intern, '19-'20</span>
+
             </div>
             <div className={'information_box' + (isInformationVisible ? '' : ' information_box_invisible')}>
               <span className='highlight_block_information'>{information}</span>

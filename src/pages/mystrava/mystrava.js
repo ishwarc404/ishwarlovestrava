@@ -1,4 +1,5 @@
 import './mystrava.css';
+import './loader.css'
 
 var polyline = require('@mapbox/polyline');
 import React, { useState, useEffect } from 'react';
@@ -30,6 +31,8 @@ import kudos_received_hand from '../../assets/kudos_received_hand.png';
 import weekly_summary_hand from '../../assets/weekly_summary_hand.png'
 
 
+var isLoaderActive = true;
+
 var athleteProfileData = {
   lastname: '',
   firstname: '',
@@ -54,7 +57,7 @@ var latestActivity = {
 var latestActivityPolyline = '';
 var latestActivityId = 0;
 
-const maxActivityPages = 3; //change this to 3 or 0
+const maxActivityPages = 1; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
@@ -119,6 +122,8 @@ function Mystrava() {
 
   useEffect(() => {
 
+    isLoaderActive = true;
+
     //RESET ALL!
     athleteStatsData = {};
     totalActivitiesTillDate = 0;
@@ -134,7 +139,7 @@ function Mystrava() {
       'total_photo_count': null,
       'photos': null,
       'map': {
-        'summary_polyline':'testing'
+        'summary_polyline': 'testing'
       }
     }
     latestActivityId = 0;
@@ -216,13 +221,30 @@ function Mystrava() {
               // console.log('here');
               // console.log(response.data);
               latestActivity = response.data;
-              if(latestActivity['map']){
-                if(latestActivity['map']['summary_polyline']){
-                  latestActivityPolyline = polyline.decode(latestActivity['map']['summary_polyline']);
-                  latestActivityPolyline = polyline.encode(latestActivityPolyline);
 
+              if (latestActivity['map']) {
+                if (latestActivity['map']['summary_polyline']) {
+                  latestActivityPolyline = polyline.decode(latestActivity['map']['summary_polyline']);
                 }
               }
+              for (let i = 0; i < latestActivityPolyline.length; i++) {
+                latestActivityPolyline[i] = [
+                  latestActivityPolyline[i][1],
+                  latestActivityPolyline[i][0]
+                ];
+              }
+
+              console.log('here: ', polyline.encode(latestActivityPolyline));
+
+              //TEST CODE
+              let geoJSON = {
+                "type": "Feature",
+                "geometry": {
+                  "type": "LineString",
+                  "coordinates": latestActivityPolyline
+                }
+              };
+
               setState({});
             });
 
@@ -281,6 +303,7 @@ function Mystrava() {
 
 
           }
+          isLoaderActive = false;
           setState({});
         });
       }
@@ -317,32 +340,38 @@ function Mystrava() {
 
 
           <div className='d-flex justify-content-center '>
-            <div className=''>
+            <div className='first-col'>
               <div className='information-div'>
                 <span className='title-total-activities'>TOTAL ACTIVITIES</span>
                 {/* <img className="i1" src={total_activities_hand} /> */}
-                <div className='information-div-child'>{totalActivitiesTillDate}</div>
+                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
+
+                <div className='information-div-child' >{isLoaderActive ? '' : totalActivitiesTillDate}</div>
               </div>
               <div className='information-div'>
                 <span className='title-total-activities'>HOURS OF MOVEMENT</span>
+                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
+
                 {/* <img className="i2" src={total_hours_hand} /> */}
-                <div className='information-div-child'>{Math.round(totalHoursTillDate / 3600)}</div>
+                <div className='information-div-child'>{isLoaderActive ? '' :  Math.round(totalHoursTillDate / 3600)}</div>
               </div>
 
             </div>
-            <div>
+            <div className='center-col'>
               <div className='information-div-center-row'>
                 <span className='title-total-activities'>LATEST ACTIVITY</span>
+                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
+
                 {/* <img className="i3" src={latest_activity_hand} /> */}
                 <div>
                   <div className='information-div-child-lots'>
-                    <div><b>{latestActivity.name}</b></div>
-                    <div>{latestActivity.description}</div>
-                    <div>{convertSeconds(latestActivity.elapsed_time)} </div>
-                    <div>{parseFloat(latestActivity.distance/1000).toFixed(1) + " km"} </div>
+                    <div><b>{isLoaderActive ? '' :  latestActivity.name}</b></div>
+                    <div>{isLoaderActive ? '' : latestActivity.description}</div>
+                    <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
+                    <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
                     <div>{console.log(latestActivityPolyline)}</div>
-                    <div><i>{latestActivity.sport_type}</i>
-                      {latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
+                    <div><i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
+                      {isLoaderActive ? '' : latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
                         latestActivity.sport_type == 'Ride' ? (<img className=" activity_icon bike" src={bikeimage} />) :
                           latestActivity.sport_type == 'Swim' ? (<img className=" activity_icon swim" src={swimimage} />) :
                             latestActivity.sport_type == 'WeightTraining' ? (<img className=" activity_icon weighttraining" src={weightimage} />) :
@@ -356,15 +385,19 @@ function Mystrava() {
                   </div>
                 </div>
               </div>
-              <div className='information-div-center-row'>
+              <div className='information-div-center-row-kudos'>
                 <span className='title-total-activities'>KUDOS RECEIVED</span>
+                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
+
                 {/* <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} /> */}
                 <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
               </div>
             </div>
             <div>
               <div className='information-div-weekly-summary'>
-              <span className='title-total-activities'>WEEKLY SUMMARY</span>
+                <span className='title-total-activities'>WEEKLY SUMMARY</span>
+                {/* <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div> */}
+
                 {/* <img className="i1" src={weekly_summary_hand} /> */}
                 <div className='activity-summary-button-suite'>
                   <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'Run'; setState({}); }}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
@@ -373,17 +406,18 @@ function Mystrava() {
                   <button className={'activity-summary-button' + (userSelectedActivityType == 'WeightTraining' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'WeightTraining'; setState({}); }}>
                     <img className=" activity_icon_inbutton weighttraining" src={weightimage} />Weight Training</button>
                 </div>
-                <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
+                <SummaryPlot  mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
               </div>
               <div className='information-div-profile d-flex'>
                 <div class='information-div-image-parent'>
-                  <img className='information-div-profile-athlete-image' src={athleteProfileData['profile']}></img>
-                  <img className='information-div-profile-athlete-image-badge' src={premiumBadge}></img>
+                  <img className={'information-div-profile-athlete-image'  + (isLoaderActive ? ' data-invisble' : ' ')}  src={athleteProfileData['profile']}></img>
+                  <img className={'information-div-profile-athlete-image-badge' + (isLoaderActive ? ' data-invisble' : ' ')}  src={premiumBadge}></img>
                 </div>
+                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
                 <div className='information-div-profile-text-container'>
-                  <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
-                  <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
-                  <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
+                  <div><b>{isLoaderActive ? '' : athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
+                  <div className='information-div-profile-text-location' >{isLoaderActive ? '' : athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
+                  <div className='information-div-profile-text-bio' >{isLoaderActive ? '' : athleteProfileData['bio']}</div>
 
                 </div>
               </div>

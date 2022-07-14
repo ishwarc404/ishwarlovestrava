@@ -11,7 +11,13 @@
 
 }
 
-
+.loader-invisible {
+    display: none; 
+}
+.data-invisible {
+    display: none;
+    visibility: hidden;
+}
 
 .title-total-activities {
     font-size: 20px;
@@ -21,19 +27,39 @@
     width: 400px;
     height: 250px;
     background-color: #ffff;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 20px;
     padding: 20px;
 }
 
+/* .first-col{
+    height: 600px;
+}
+
+
+.center-col{
+    height: 600px;
+} */
+
 .information-div-center-row{
-    width: 330px;
-    height: 250px;
+    /* width: 330px; */
+    height: 300px;
     background-color: #ffff;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 20px;
     padding: 20px;
 }
+
+.information-div-center-row-kudos{
+    /* width: 330px; */
+    height: 200px;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    padding-top: 10px;
+}
+
 
 
 .summary-plot-div {
@@ -43,7 +69,7 @@
     width: 340px;
     height: 360px;
     background-color: #ffff;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 20px;
     padding: 20px;
     padding-top: 20px;
@@ -53,7 +79,7 @@
     width: 400px;
     height: 140px;
     background-color: #ffff;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 20px;
     padding: 20px;
     padding-top: 20px;
@@ -73,8 +99,8 @@
 }
 
 .information-div-child-lots{
-    /* width: 00px; */
-    height: 300px; 
+    max-width: 400px;
+    /* max-height: 500px;  */
     color: rgb(0, 0, 0); 
     border-radius: 10px;
     /* margin: 20px;
