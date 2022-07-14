@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ishwarlovestrava/static/css/main.8bfbb25d.css",
-    "main.js": "/ishwarlovestrava/static/js/main.49808855.js",
+    "main.js": "/ishwarlovestrava/static/js/main.01c991b1.js",
     "static/js/787.772d3d10.chunk.js": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
     "static/media/darkmountain3.png": "/ishwarlovestrava/static/media/darkmountain3.f351114d48556015fedc.png",
@@ -50,11 +50,11 @@
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
     "main.8bfbb25d.css.map": "/ishwarlovestrava/static/css/main.8bfbb25d.css.map",
-    "main.49808855.js.map": "/ishwarlovestrava/static/js/main.49808855.js.map",
+    "main.01c991b1.js.map": "/ishwarlovestrava/static/js/main.01c991b1.js.map",
     "787.772d3d10.chunk.js.map": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8bfbb25d.css",
-    "static/js/main.49808855.js"
+    "static/js/main.01c991b1.js"
   ]
 }
