@@ -28,7 +28,7 @@ function convertSeconds(value) {
 
   if (hours == 0) { hours = ""; } else { hours = hours + "hrs "; }
   if (minutes == 0) { minutes = ""; } else { minutes = minutes + " mins "; }
-  if (seconds == 0) { seconds = ""; } else { seconds = seconds + " seconds"; }
+  if (seconds == 0) { seconds = ""; } else { seconds = seconds + " secs"; }
 
   return hours + minutes; // Return is HH : MM : SS
 }
@@ -41,7 +41,7 @@ function SummaryPlot(props) {
 
   useEffect(() => {
     mileageData = props.mileageData;
-    var userSelectedActivityType = props.userSelectedActivityType;
+    userSelectedActivityType = props.userSelectedActivityType;
     // console.log(userSelectedActivityType);
     if (userSelectedActivityType === 'Run') {
       mileageData.miles = [];
@@ -136,16 +136,16 @@ function SummaryPlot(props) {
             <polyline fill="none" stroke="#fc5200" strokeWidth="2" points={strokeComponentPoints}></polyline>
 
             <g>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[9]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[9]); setState({});}} cx={0} cy={(150) - ((mileageData.miles[9] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[8]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[8]); setState({});}} cx={30} cy={(150) - ((mileageData.miles[8] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[7]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[7]); setState({});}} cx={60} cy={(150) - ((mileageData.miles[7] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[6]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[6]); setState({});}} cx={90} cy={(150) - ((mileageData.miles[6] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[5]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[5]); setState({});}} cx={120} cy={(150) - ((mileageData.miles[5] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[4]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[4]); setState({});}} cx={150} cy={(150) - ((mileageData.miles[4] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[3]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[3]); setState({});}} cx={180} cy={(150) - ((mileageData.miles[3] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[2]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[2]); setState({});}} cx={210} cy={(150) - ((mileageData.miles[2] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[1]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[1]); setState({});}} cx={240} cy={(150) - ((mileageData.miles[1] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = parseFloat(mileageData.miles[0]/1000).toFixed(1) + "km"; onHoverTime = convertSeconds(mileageData.times[0]); setState({});}} cx={270} cy={(150) - ((mileageData.miles[0] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[9]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[9]); setState({});}} cx={0} cy={(150) - ((mileageData.miles[9] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[8]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[8]); setState({});}} cx={30} cy={(150) - ((mileageData.miles[8] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[7]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[7]); setState({});}} cx={60} cy={(150) - ((mileageData.miles[7] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[6]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[6]); setState({});}} cx={90} cy={(150) - ((mileageData.miles[6] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[5]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[5]); setState({});}} cx={120} cy={(150) - ((mileageData.miles[5] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[4]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[4]); setState({});}} cx={150} cy={(150) - ((mileageData.miles[4] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[3]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[3]); setState({});}} cx={180} cy={(150) - ((mileageData.miles[3] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[2]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[2]); setState({});}} cx={210} cy={(150) - ((mileageData.miles[2] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[1]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[1]); setState({});}} cx={240} cy={(150) - ((mileageData.miles[1] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
+            <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[0]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[0]); setState({});}} cx={270} cy={(150) - ((mileageData.miles[0] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
 
             </g>
           </svg>

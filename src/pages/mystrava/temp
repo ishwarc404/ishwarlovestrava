@@ -63,3 +63,234 @@
 
   </Masonry>
 </ResponsiveMasonry> 
+
+
+
+
+.grid-item {
+  margin: 5px;
+  border-radius: 10px;
+  padding: 15px;
+  width: auto;
+}
+
+.grid-item-1 { 
+  background-color: rgb(86, 93, 51);
+  color: #ffffff;
+  height: 100%;
+}
+
+.grid-item-1-key { 
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 10px;
+
+}
+
+.grid-item-1-value { 
+  color: #ffffff;
+  font-size: 120px;
+}
+
+
+
+.grid-item-2 { 
+  font-size: 100px;
+  background-color: rgb(245, 192, 238);    
+  color: #000000;
+  height: 250px;
+}
+
+.grid-item-2-key { 
+  color: #000000;
+  font-size: 20px;
+  padding-left: 10px;
+
+}
+
+.grid-item-2-value { 
+  color: #000000;
+  font-size: 100px;
+}
+
+
+
+.grid-item-3 { 
+  font-size: 90px;
+  background-color: rgb(244, 244, 90);
+  height: 400px;
+}
+
+.grid-item-3-key { 
+  color: #000000;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.grid-item-3-value { 
+  color: #000000;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.grid-item-3-value-name { 
+  color: #000000;
+  font-size: 20px;
+
+  padding-top: 20px;
+}
+.grid-item-3-value-desc { 
+  color: #000000;
+  font-size: 20px;
+
+}
+.grid-item-3-value-type { 
+  color: #000000;
+  font-size: 20px;
+  padding-top: 25%;
+
+}
+.grid-item-3-value-count { 
+  color: #000000;
+  font-size: 20px;
+  width: 100%;
+}
+
+.grid-item-4 { 
+  font-size:90px;
+  background-color: rgb(17, 52, 88);
+  color: #ffffff;
+  height: 100%;
+}
+
+.grid-item-4-key { 
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 10px;
+
+}
+
+.grid-item-4-value { 
+  color: #ffffff;
+  font-size: 120px;
+}
+
+
+.grid-item-5 { 
+  font-size: 60px;
+  background-color: #fc5200;
+  color: #ffffff;
+  height: 300px;
+}
+
+.grid-item-5-key { 
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 10px;
+
+}
+
+.grid-item-5-value { 
+  color: #ffffff;
+  font-size: 120px;
+  height: 300px;
+}
+
+.photo-album-image {
+  height: 320px;
+  margin-left: 10px;
+  border-radius: 10px;
+  
+
+}
+
+.grid-item-6 { 
+  font-size: 90px;
+  background-color: rgb(86, 93, 51);
+  color: #ffffff;
+  height: 100%;
+
+}
+.grid-item-7 { 
+  font-size: 90px;
+  /* background-color: rgb(245, 192, 238);     */
+  color: #000000;
+  height: 100%;
+
+}
+
+.grid-item-8 { 
+  font-size: 90px;
+  /* background-color: rgb(244, 244, 90); */
+  height: 100%;
+
+}
+.grid-item-9 { 
+  font-size: 90px;
+  background-color: rgb(17, 52, 88);
+  color: #ffffff;
+  height: 100%;
+}
+
+.grid-item-9-key { 
+  color: #ffffff;
+  font-size: 20px;
+  padding-left: 10px;
+
+}
+
+.grid-item-9-value { 
+  color: #ffffff;
+  font-size: 120px;
+}
+
+
+/* test code */
+.total-activites-header {
+font-size: 30px;
+}
+
+.total-activites-content {
+  font-size: 300px;
+}
+
+.d1{
+  width: 25vw;
+  height: 100vh;
+  background-color: rgb(142, 115, 249);    
+}
+.d2{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(244, 244, 90);;
+}
+.d3{
+  width: 25vw;
+  height: 100vh;
+  background-color: rgb(17, 52, 88);;
+}
+.d4{
+  width: 25vw;
+  height: 100vh;
+  background-color: rgb(245, 192, 238);
+}
+
+
+.i1{
+  width: 250px;
+  /* height: 100vh;
+  background-color: rgb(142, 115, 249);     */
+}
+.i2{
+  width: 340px;
+  /* height: 100vh;
+  background-color: rgb(244, 244, 90);; */
+}
+.i3{
+  width: 250px;
+  /* height: 100vh;
+  background-color: rgb(17, 52, 88);; */
+}
+.i4{
+  width: 250px;
+  /* height: 100vh;
+  background-color: rgb(245, 192, 238); */
+}

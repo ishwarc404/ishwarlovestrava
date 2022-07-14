@@ -1,5 +1,6 @@
 import './mystrava.css';
 
+var polyline = require('@mapbox/polyline');
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Header from '../../common/header/header';
@@ -50,6 +51,7 @@ var latestActivity = {
   'total_photo_count': null,
   'photos': null
 }
+var latestActivityPolyline = '';
 var latestActivityId = 0;
 
 const maxActivityPages = 1; //change this to 3 or 0
@@ -91,7 +93,7 @@ function convertSeconds(value) {
 
   if (hours == 0) { hours = ""; } else { hours = hours + "hrs "; }
   if (minutes == 0) { minutes = ""; } else { minutes = minutes + " mins "; }
-  if (seconds == 0) { seconds = ""; } else { seconds = seconds + " seconds"; }
+  if (seconds == 0) { seconds = ""; } else { seconds = seconds + " secs"; }
 
   return hours + minutes + seconds; // Return is HH : MM : SS
 }
@@ -130,7 +132,10 @@ function Mystrava() {
       'kudos_count': null,
       'description': null,
       'total_photo_count': null,
-      'photos': null
+      'photos': null,
+      'map': {
+        'summary_polyline':'testing'
+      }
     }
     latestActivityId = 0;
     mileageData = {
@@ -211,14 +216,17 @@ function Mystrava() {
               // console.log('here');
               // console.log(response.data);
               latestActivity = response.data;
+              if(latestActivity['map']){
+                if(latestActivity['map']['summary_polyline']){
+                  latestActivityPolyline = polyline.decode(latestActivity['map']['summary_polyline']);
+                  latestActivityPolyline = polyline.encode(latestActivityPolyline);
+
+                }
+              }
               setState({});
             });
 
           }
-
-
-
-
 
           totalActivitiesTillDate += response.data.length
           // console.log(totalActivitiesTillDate);
@@ -309,24 +317,30 @@ function Mystrava() {
 
 
           <div className='d-flex justify-content-center '>
-            <div className='title-test'>
+            <div className=''>
               <div className='information-div'>
-                <img className="i1" src={total_activities_hand} />
+                <span className='title-total-activities'>TOTAL ACTIVITIES</span>
+                {/* <img className="i1" src={total_activities_hand} /> */}
                 <div className='information-div-child'>{totalActivitiesTillDate}</div>
               </div>
               <div className='information-div'>
-                <img className="i2" src={total_hours_hand} />
+                <span className='title-total-activities'>HOURS OF MOVEMENT</span>
+                {/* <img className="i2" src={total_hours_hand} /> */}
                 <div className='information-div-child'>{Math.round(totalHoursTillDate / 3600)}</div>
               </div>
 
             </div>
             <div>
-              <div className='information-div-center-row'><img className="i3" src={latest_activity_hand} />
+              <div className='information-div-center-row'>
+                <span className='title-total-activities'>LATEST ACTIVITY</span>
+                {/* <img className="i3" src={latest_activity_hand} /> */}
                 <div>
                   <div className='information-div-child-lots'>
                     <div><b>{latestActivity.name}</b></div>
                     <div>{latestActivity.description}</div>
                     <div>{convertSeconds(latestActivity.elapsed_time)} </div>
+                    <div>{parseFloat(latestActivity.distance/1000).toFixed(1) + " km"} </div>
+                    <div>{console.log(latestActivityPolyline)}</div>
                     <div><i>{latestActivity.sport_type}</i>
                       {latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
                         latestActivity.sport_type == 'Ride' ? (<img className=" activity_icon bike" src={bikeimage} />) :
@@ -343,13 +357,15 @@ function Mystrava() {
                 </div>
               </div>
               <div className='information-div-center-row'>
-                <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} />
+                <span className='title-total-activities'>KUDOS RECEIVED</span>
+                {/* <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} /> */}
                 <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
               </div>
             </div>
             <div>
               <div className='information-div-weekly-summary'>
-                <img className="i1" src={weekly_summary_hand} />
+              <span className='title-total-activities'>WEEKLY SUMMARY</span>
+                {/* <img className="i1" src={weekly_summary_hand} /> */}
                 <div className='activity-summary-button-suite'>
                   <button className={'activity-summary-button' + (userSelectedActivityType == 'Run' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'Run'; setState({}); }}><img className="activity_icon_inbutton run" src={runimage} />Run</button>
                   <button className={'activity-summary-button' + (userSelectedActivityType == 'Ride' ? ' orange_activity' : ' ')} onClick={() => { userSelectedActivityType = 'Ride'; setState({}); }}><img className=" activity_icon_inbutton bike" src={bikeimage} />Ride</button>
@@ -396,7 +412,6 @@ function Mystrava() {
               <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true}></video>
             </div>
           </div>
-
 
           <Navbar path={6} />
         </div>

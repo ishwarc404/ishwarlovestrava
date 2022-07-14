@@ -76,12 +76,12 @@ function Education(props) {
               <br></br>
               <span onMouseOver={() => changeInfo('internship')}  className={'highlight_block_education'+ (pathValue === 3 ? ' educationhighlight_container_3' : '')}>Bot Mantra
                 <br></br>
-                Software Developer Intern ['19-'21]</span>
+                Software Developer Intern ['19-'20]</span>
               <br></br>
               <br></br>
               <span onMouseOver={() => changeInfo('internship2')}  className={'highlight_block_education'+ (pathValue === 4 ? ' educationhighlight_container_4' : '')}>DeltaX
                 <br></br>
-                Software Developer Intern ['19-'21]</span>
+                Software Developer Intern ['20]</span>
               <br></br>
               <br></br>
               <span onMouseOver={() => changeInfo('fulltime')}  className={'highlight_block_education'+ (pathValue === 5 ? ' educationhighlight_container_5' : '')}>Infoblox Inc.

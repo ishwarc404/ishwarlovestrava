@@ -3,7 +3,7 @@ import './achievements.css';
 import React, { useState } from 'react';
 
 
-import achievements from '../../assets/darkmountain2.png';
+import achievements from '../../assets/darkmountain3.png';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
