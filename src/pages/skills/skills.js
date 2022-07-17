@@ -11,14 +11,10 @@ import Discussion from '../../common/discussion/discussion';
 function Skills() {
   return (
     <div>
-      <div className="Home">
+      <div className="Skills">
         <Header />
-        <div className='bodycontent' style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100vw'
-        }}>
-          <div className='d-flex justify-content-end'>
+        <div className='bodycontent_skills '>
+          <div className='d-flex justify-content-end nonresponsive-div'>
             <div className='technical'>
               <span className='highlight_block_technical'>
                 Technical

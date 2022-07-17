@@ -3,9 +3,13 @@
     cursor: url('../../../public/assets/badge.svg'), auto;
     overflow: hidden;
     height: 100vh;
+    overflow:visible;
+    background-image: url('../../../public/assets/ghepan2.png');
+    background-repeat: repeat;	
+    background-size: 1800px 1061.2px;
 }
    
-.bodycontent
+.bodycontent_skills
 {
     overflow-y: hidden;
     z-index: -10;
@@ -17,7 +21,7 @@
     opacity: 100%;
     /* background-color: #fff; */
     background-color: rgb(255,255,255);
-    padding-top: 6%;
+    padding-top: 15vh;
     padding-left: 5%;
     /* border-top: solid 2px #fc5200; */
 
@@ -71,6 +75,9 @@
 
 }
 
+.nonresponsive-div {
+    display: block;
+}
 
 
 /* .highlight_block_skills:hover{
@@ -84,4 +91,33 @@
 
 .breakdiv {
     height: 2vh;
+}
+
+@media screen and (max-width: 700px) {
+
+
+    .technical {
+        width: 100vw;
+        /* height: 100vh; */
+        opacity: 100%;
+        /* background-color: #fff; */
+        background-color: rgb(255,255,255);
+        padding-top: 15vh;
+        padding-left: 25vw;
+        
+    
+    } 
+    .highlight_block_technical {
+        border: solid 3px #fc5200;
+
+        font-size: 4vw;
+        /* margin-left: 35vw; */
+        padding: 3px;
+        padding-right: 20vw;
+
+    }
+    .highlight_block_technical_content {
+        font-size: 3.5vw;   
+        /* margin-left: 22.5vw;  */
+    }
 }

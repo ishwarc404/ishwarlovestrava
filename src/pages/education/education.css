@@ -9,8 +9,9 @@
 }
     
 
-.bodycontent
+.bodycontent_education
 {
+    margin-top: 30px;
     overflow-y: hidden;
     z-index: -10;
 }
@@ -122,13 +123,13 @@
 }
 
 @media screen and (min-width: 600px) {
-    .bodycontent {
+    .bodycontent_education {
         height: 100vh;
     }
 }
 
 @media screen and (max-width: 900px) {
-    .bodycontent {
+    .bodycontent_education {
         height: 100vh;
     }
     .header_2_education
