@@ -221,29 +221,30 @@ function Mystrava() {
               // console.log('here');
               // console.log(response.data);
               latestActivity = response.data;
-
+              console.log(latestActivity)
               if (latestActivity['map']) {
                 if (latestActivity['map']['summary_polyline']) {
-                  latestActivityPolyline = polyline.decode(latestActivity['map']['summary_polyline']);
+                  latestActivityPolyline = latestActivity['map']['summary_polyline'];
+                  console.log(latestActivity['map']['summary_polyline']);
                 }
               }
-              for (let i = 0; i < latestActivityPolyline.length; i++) {
-                latestActivityPolyline[i] = [
-                  latestActivityPolyline[i][1],
-                  latestActivityPolyline[i][0]
-                ];
-              }
+              // for (let i = 0; i < latestActivityPolyline.length; i++) {
+              //   latestActivityPolyline[i] = [
+              //     latestActivityPolyline[i][1],
+              //     latestActivityPolyline[i][0]
+              //   ];
+              // }
 
-              console.log('here: ', polyline.encode(latestActivityPolyline));
+              // console.log('here: ', polyline.encode(latestActivityPolyline));
 
               //TEST CODE
-              let geoJSON = {
-                "type": "Feature",
-                "geometry": {
-                  "type": "LineString",
-                  "coordinates": latestActivityPolyline
-                }
-              };
+              // let geoJSON = {
+              //   "type": "Feature",
+              //   "geometry": {
+              //     "type": "LineString",
+              //     "coordinates": latestActivityPolyline
+              //   }
+              // };
 
               setState({});
             });
@@ -388,9 +389,8 @@ function Mystrava() {
               <div className='information-div-center-row-kudos'>
                 <span className='title-total-activities'>KUDOS RECEIVED</span>
                 <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
-
                 {/* <img className="i4" src={userKudosRecievedCount ? kudos_received_hand : ""} /> */}
-                <div className='information-div-child-kudos'>{userKudosRecievedCount}</div>
+                <div className='information-div-child-kudos'>{isLoaderActive ? '' :  userKudosRecievedCount}</div>
               </div>
             </div>
             <div>
@@ -413,11 +413,10 @@ function Mystrava() {
                   <img className={'information-div-profile-athlete-image'  + (isLoaderActive ? ' data-invisble' : ' ')}  src={athleteProfileData['profile']}></img>
                   <img className={'information-div-profile-athlete-image-badge' + (isLoaderActive ? ' data-invisble' : ' ')}  src={premiumBadge}></img>
                 </div>
-                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
                 <div className='information-div-profile-text-container'>
-                  <div><b>{isLoaderActive ? '' : athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
-                  <div className='information-div-profile-text-location' >{isLoaderActive ? '' : athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
-                  <div className='information-div-profile-text-bio' >{isLoaderActive ? '' : athleteProfileData['bio']}</div>
+                  <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
+                  <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
+                  <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
 
                 </div>
               </div>

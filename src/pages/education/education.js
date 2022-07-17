@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 
-import background from '../../assets/squiggly6_greeen.png';
+import background from '../../assets/squiggly6_green3.png';
 import Discussion from '../../common/discussion/discussion';
 
 

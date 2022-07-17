@@ -22,11 +22,7 @@ function Home() {
 
         <Header />
 
-        <div className='bodycontent' style={{
-          backgroundImage: `url(${heatmap})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: '100vw'
-        }}>
+        <div className='bodycontent'>
 
           <div className='header_2'>
             <span className='header_content_all'> Hi there! I'm <span className='highlight_block'><b>ISHWAR</b></span>, and this is my résumé for the summer intern position
