@@ -39,8 +39,10 @@ function Home() {
 
           <Navbar path={1}/>
         </div>
+
+       <Discussion />
+
       </div>
-      <Discussion />
     </div>
 
   );

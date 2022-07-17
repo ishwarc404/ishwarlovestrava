@@ -291,6 +291,8 @@
     top: 50px;
     left: -1vw;
     font-size: 2.5vw;
+    font-weight: bold;
+
 }
 
 .edu_icon_parent {
@@ -298,6 +300,7 @@
     top: 0;
     left: 0;
     height: 8vh;
+    
 }
 .edu_icon {
     position: relative;
@@ -310,6 +313,8 @@
     top: 50px;
     left: -3vw;
     font-size: 2.5vw;
+    font-weight: bold;
+
 }
 
 
@@ -330,6 +335,8 @@
     top: 50px;
     left: -0.5vw;
     font-size: 2.5vw;
+    font-weight: bold;
+
 }
 
 .acheivements_icon_parent {
@@ -349,6 +356,8 @@
     top: 50px;
     left: -5vw;
     font-size: 2.5vw;
+    font-weight: bold;
+
 }
 
 .mystrava_icon_parent {
@@ -368,6 +377,7 @@
     top: 50px;
     left: 1vw;
     font-size: 2.5vw;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {

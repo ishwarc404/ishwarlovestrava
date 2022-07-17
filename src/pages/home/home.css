@@ -3,17 +3,17 @@
     cursor: url('../../../public/assets/badge.svg'), auto;	
     background-color: rgb(247, 247, 250);
     height: 100vh;
-    overflow: hidden
+    overflow:visible;
+    background-image: url('../../../public/assets/heatmaporiginal.png');
+    background-repeat: repeat;	
+    background-size: 2000px 1261.2px;
+
 }
 
 .bodycontent{
-height: 100vh;
 margin-top: 50px;
-background-image: url('../../../public/assets/heatmaporiginal.png') ;	
-background-size: 2000px 1261.2px;
-
-
 }
+
 
 
 .header_2
@@ -21,7 +21,7 @@ background-size: 2000px 1261.2px;
     /* height: 80vh; */
     padding: 10%;
     padding-top: 5%;
-    font-size: 40px;
+    font-size: 2.8vw;
 }
 
 .header_content_all{
@@ -90,3 +90,19 @@ color: #fc5200;
 
 
 
+@media screen and (min-width: 600px) {
+    .bodycontent {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bodycontent {
+        height: 100vh;
+    }
+    .header_2
+    {
+        margin-top: 50px;
+        font-size: 7vw;
+    }
+}
