@@ -57,14 +57,12 @@ function Education(props) {
       <div className="Education">
         <Header />
         <div className='bodycontent' style={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '100vw'
         }}>
 
-          <div className='d-flex justify-content-start education_div_main'>
+          <div className='d-flex justify-content-center education_div_main'>
             <div className='header_2_education'>
-            <span onMouseOver={() => changeInfo('ms')}  className={'highlight_block_education'+ (pathValue === 2 ? ' educationhighlight_container_2' : '')}>Master's in Computer Science
+            <span onMouseOver={() => changeInfo('ms')}  className={'highlight_block_education'+ (pathValue === 2 ? ' educationhighlight_container_2' : '')}>
+              Master's in Computer Science
                 <br></br>
                 University of Colorado, Boulder, 2024</span>
               <br></br>
@@ -93,6 +91,14 @@ function Education(props) {
               <span className='highlight_block_information'>{information}</span>
               <br></br>
             </div>
+          </div>
+          <div className='d-flex justify-content-center'>
+            
+          <div className={'information_box_mobile' + (isInformationVisible ? '' : ' information_box_invisible_mobile')}>
+              <span className='highlight_block_information_mobile'>{information}</span>
+              <br></br>
+          </div>
+
           </div>
         </div>
         <Navbar path={2}/>

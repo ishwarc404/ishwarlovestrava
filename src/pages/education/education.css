@@ -1,8 +1,11 @@
 .Education{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
-    overflow: hidden;
     height: 100vh;
+    overflow:visible;
+    background-image: url('../../../public/assets/squiggly6_green3.png');
+    background-repeat: repeat;	
+    background-size: 1800px 1061.2px;
 }
     
 
@@ -30,8 +33,6 @@
     color: #000;
     padding: 5px;
     transition: all 0.2s ease-in-out;
-    
-
 }
 
 
@@ -71,7 +72,7 @@
     height: 600px;
     /* border: solid white; */
     border-radius: 20px; 
-     z-index: 4;
+     z-index: 0;
 }
 
 
@@ -116,3 +117,96 @@
 
 }
 
+.information_box_mobile {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .bodycontent {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .bodycontent {
+        height: 100vh;
+    }
+    .header_2_education
+    {
+        margin-top: 15px;
+        font-size: 3vw;
+    }
+
+    .Education{
+        font-family: 'Maison Neue', sans-serif;
+        height: 100vh;
+        overflow:visible;
+        background-image: url('../../../public/assets/squiggly6_mobile.png');
+        background-repeat: repeat;	
+        background-size: 1000px 461.2px;
+    }
+    
+    .information_box {
+        display: none;
+    }
+
+    .header_2_education {
+        margin-left: 2vw;
+        /* padding-top: 3vs; */
+        padding-left: 2vw;
+        padding: 2vw;
+
+        background-color: #ffffff;
+    }
+    .highlight_block_education {
+        background-color: none;
+        color: #000;
+        padding: 0px;
+        transition: all 0.2s ease-in-out;
+        border: 0px;
+    }
+    
+    .highlight_block_education:hover{
+        border-left: solid 5px #fc5200;
+        color: #000;
+        transition: all 0.1s ease-in-out;
+        padding: 0px;
+
+    }
+
+    .information_box_mobile {
+        margin-top: 5vh;
+        width: 60vw;
+        /* height: 100%; */
+        background-color:  #2ad309;
+        padding: 10px;
+        display: block;
+    }
+    
+    .highlight_block_information_mobile {
+        /* border: 4px solid #fc5200; */
+        /* background-color: rgb(255,234,0,1); */
+        background-color:  #2ad309;
+        color: #000;
+        /* padding: 5px; */
+        
+        transition: all 0.3s ease-in-out;
+    
+        /* border-radius: 16px; */
+        /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+        /* background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(7.9px);
+        -webkit-backdrop-filter: blur(7.9px); */
+    }
+    
+    
+    .highlight_block_informatio_mobile{
+    
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .information_box_invisible {
+        visibility: hidden;
+    }
+
+}
