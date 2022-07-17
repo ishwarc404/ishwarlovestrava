@@ -1,7 +1,8 @@
 .Mystrava{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: scroll;
     height: 200vh;
     background-color: rgb(247, 247, 250);
 }
@@ -20,11 +21,11 @@
 }
 
 .title-total-activities {
-    font-size: 20px;
+    font-size: 1.2vw;
     color: #2ad309;
 }
 .information-div{
-    width: 400px;
+    width: 20vw;
     height: 250px;
     background-color: #ffff;
     border-radius: 5px;
@@ -95,7 +96,7 @@
     border-radius: 10px;
     /* margin: 20px;
     padding: 20px; */
-    font-size: 130px;
+    font-size: 8vw;
 }
 
 .information-div-child-lots{
@@ -106,7 +107,7 @@
     /* margin: 20px;
     padding: 20px; */
     padding-top: 20px;
-    font-size: 18px;
+    font-size: 1.2vw;
 }
 
 .information-div-child-kudos{
@@ -116,12 +117,11 @@
     border-radius: 10px;
     /* margin: 20px;
     padding: 20px; */
-    font-size: 120px;
+    font-size: 6.8vw;
 }
 
 .activity_icon {
     /* padding-left: 5px;*/
-    font-size: 40px; 
     padding: 7px;
     width: 35px;
     color: solid 1px rgb(202, 202, 202);
@@ -312,4 +312,47 @@
     top: 0;
     left: 0;
     /* margin-right: 150px; */
+}
+
+.bodycontent_mystrava {
+    display: block;
+    visibility: visible;
+}
+
+.bodycontent_mystrava-responsive {
+    display: none;
+    visibility: hidden;
+}
+@media screen and (max-width: 900px) { 
+    .bodycontent_mystrava {
+    }
+
+    .bodycontent_mystrava {
+        display: none;
+        visibility: hidden;
+    }
+
+    .bodycontent_mystrava-responsive {
+        display: block;
+        visibility: visible;
+        padding-top: 5vh;
+    }
+
+    .information-div-profile {
+        width: 100vw;
+    }
+
+    .information-div-weekly-summary {
+        padding-left: 4vw;
+        width: 100vw;
+    }
+
+    .title-total-activities {
+        font-size: 5vw;
+        color: black;
+    }
+
+    .information-div-child-lots {
+        font-size: 5vw;
+    }
 }
