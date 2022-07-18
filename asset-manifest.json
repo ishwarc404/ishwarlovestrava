@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/ishwarlovestrava/static/css/main.8bfbb25d.css",
-    "main.js": "/ishwarlovestrava/static/js/main.01c991b1.js",
+    "main.css": "/ishwarlovestrava/static/css/main.00d26b1f.css",
+    "main.js": "/ishwarlovestrava/static/js/main.fbcf1f4f.js",
     "static/js/787.772d3d10.chunk.js": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
-    "static/media/darkmountain3.png": "/ishwarlovestrava/static/media/darkmountain3.f351114d48556015fedc.png",
-    "static/media/skills5.png": "/ishwarlovestrava/static/media/skills5.d554cafff3d4805347a2.png",
+    "static/media/darkmountain9.png": "/ishwarlovestrava/static/media/darkmountain9.a6eac84580f6da6b104c.png",
+    "static/media/ghepan2.png": "/ishwarlovestrava/static/media/ghepan2.2a1e5bc2d4eef3c84227.png",
     "static/media/heatmaporiginal.png": "/ishwarlovestrava/static/media/heatmaporiginal.4a515c10378628c155d2.png",
     "static/media/segments.mp4": "/ishwarlovestrava/static/media/segments.c82506c8112838925efb.mp4",
-    "static/media/squiggly6_greeen.png": "/ishwarlovestrava/static/media/squiggly6_greeen.4680903faa9ec9567c53.png",
+    "static/media/squiggly6_green3.png": "/ishwarlovestrava/static/media/squiggly6_green3.a3ec634f116c95e1b2bf.png",
     "static/media/dnf.mp4": "/ishwarlovestrava/static/media/dnf.f7d9379ae557d476f911.mp4",
     "static/media/img12.png": "/ishwarlovestrava/static/media/img12.14c65da937fb5bb94189.png",
     "static/media/img18.png": "/ishwarlovestrava/static/media/img18.d41e5544bb350a17f6da.png",
@@ -30,6 +30,7 @@
     "static/media/img1.png": "/ishwarlovestrava/static/media/img1.25154180fc7fd3c52834.png",
     "static/media/img20.png": "/ishwarlovestrava/static/media/img20.9c64bedbb8215a2a6e29.png",
     "static/media/img9.png": "/ishwarlovestrava/static/media/img9.51ae8f2b3f7847004062.png",
+    "static/media/squiggly6_mobile.png": "/ishwarlovestrava/static/media/squiggly6_mobile.3a590673b81e0bb9a9ea.png",
     "static/media/img24.png": "/ishwarlovestrava/static/media/img24.bb73a4784973a376ee06.png",
     "static/media/img7.png": "/ishwarlovestrava/static/media/img7.be3ad747541db72f249e.png",
     "static/media/img8.png": "/ishwarlovestrava/static/media/img8.9f3c0ae13163d206268c.png",
@@ -49,12 +50,12 @@
     "static/media/bike.svg": "/ishwarlovestrava/static/media/bike.8c8193b19bf797bff42acd2bf39315c8.svg",
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
-    "main.8bfbb25d.css.map": "/ishwarlovestrava/static/css/main.8bfbb25d.css.map",
-    "main.01c991b1.js.map": "/ishwarlovestrava/static/js/main.01c991b1.js.map",
+    "main.00d26b1f.css.map": "/ishwarlovestrava/static/css/main.00d26b1f.css.map",
+    "main.fbcf1f4f.js.map": "/ishwarlovestrava/static/js/main.fbcf1f4f.js.map",
     "787.772d3d10.chunk.js.map": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8bfbb25d.css",
-    "static/js/main.01c991b1.js"
+    "static/css/main.00d26b1f.css",
+    "static/js/main.fbcf1f4f.js"
   ]
 }
