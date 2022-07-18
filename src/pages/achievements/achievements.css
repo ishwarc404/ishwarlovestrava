@@ -4,24 +4,28 @@
     overflow: hidden;
     height: 100vh;
     background-color: rgb(247, 247, 250);
+    height: 100vh;
+    overflow:visible;
+    background-image: url('../../../public/assets/darkmountain9.png');
+    background-repeat: repeat;	
+    background-size: 1800px 1061.2px;
 
 }
 
 .body_content_achievements {
     padding-top:100px;
-
 }
 
 .hackathon_container {
     /* padding: 5%; */
     width: 40vw;
     margin: 5%;
-    /* margin-bottom: 0%; */
+    margin-bottom: 0%;
     margin-top: 5vh;
     flex-wrap: wrap;
     background-color: rgb(255, 255, 255,0.85);
     border-radius: 3px;
-    margin-bottom: 70%;
+    /* margin-bottom: 70%; */
 
 }
 
@@ -29,7 +33,7 @@
 .hackathon_container{
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
+    border-radius: 3px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
@@ -50,7 +54,7 @@
 .competition_name {
     margin:15px;
     /* margin-top:5%; */
-    font-size: 20px;
+    font-size: 1.2vw;
     font-weight: bold;
 }
 
@@ -58,6 +62,8 @@
     margin-top: 10px;
     margin-left: 10px;
     /* display: inline-block; */
+    width: 3vw;
+    height: 3vw;
 }
 
 .info_container{
@@ -77,7 +83,7 @@
 .info_container{
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
+border-radius: 3px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(7.9px);
 -webkit-backdrop-filter: blur(7.9px);
@@ -95,7 +101,7 @@ backdrop-filter: blur(7.9px);
     /* color: #fc5200; */
         color: #f7b500;
 
-    font-size: 45px;
+    font-size: 2.5vw;
     font-weight: bold;
     transition: all 0.3s;
 }
@@ -204,3 +210,174 @@ backdrop-filter: blur(7.9px);
     /* margin-top: 1px; */
 }
 
+
+.info_container_responsive {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+@media screen and (max-width: 600px) { 
+
+    .body_content_achievements {
+        padding-top:40px;
+    }
+    
+
+    .info_container{
+        display: none;
+        visibility: hidden;
+    }
+
+    .info_container_responsive {
+        display: block;
+        visibility: visible;
+    }
+
+    .competition_name {
+        margin:15px;
+        /* margin-top:5%; */
+        font-size: 2.3vw;
+        font-weight: bold;
+    }
+
+    .competition_container {
+        height: 5vh;
+        margin: 5px;
+    }
+
+    .hackathon_container {
+        /* padding: 5%; */
+        width: 60vw;
+        margin: 5%;
+        /* height: 20vh; */
+        /* margin-bottom: 0%; */
+        margin-top: 5vh;
+        flex-wrap: wrap;
+        background-color: rgb(255, 255, 255,0.85);
+        border-radius: 3px;
+        /* margin-bottom: 70%; */
+    
+    }
+    
+    .trophy_icon {
+        /* margin-top: 10px;
+        margin-left: 10px; */
+        /* display: inline-block; */
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .info_container_responsive{
+        /* margin: 5%; */
+        /* margin-top: 5vh; */
+        /* margin-left: 0%; */
+        /* height: 100%; */
+        width: 80vw;
+        /* border: solid 1px #fff; */
+        background-color: rgb(255, 255, 255,0.55);
+        border-radius: 1px;
+        padding: 5%;
+        /* transition: all 0.2s ease-in-out; */
+        /* transition:all 0.5s; */
+    }
+    
+    .info_container_responsive{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    
+    }
+
+    .github_button {
+        background-color: #fc5200;
+        border-color: #fc5200;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 2.5vw;
+        padding: 5px;
+        padding-left:10px;
+        padding-right:10px;
+        margin-right: 10px;
+    }
+    
+
+    .achievements_highlight_block_information {
+        /* border: 4px solid #fc5200; */
+        /* background-color: rgb(255,234,0,1); */
+        /* background-color:  #fc5200; */
+        /* color: #fc5200; */
+        color: #f7b500;
+    
+        font-size: 3vw;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .highlight_block_information_sub {
+        /* border: 4px solid #fc5200; */
+        /* background-color: rgb(255,234,0,1); */
+        /* background-color:  #fff; */
+        color: #000;
+        font-size: 2vw;
+        transition: all 0.3s;
+        padding: 1px;
+    }
+    
+    
+
+    .competition_container:hover {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+    }
+    
+    .competition_container_1 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_2 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_3 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_4 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_5 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_6 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+    .competition_container_7 {
+        background-color: rgb(255, 255, 255,1);
+        border-left: solid 2px #fc5200;;
+
+    }
+    
+
+}
