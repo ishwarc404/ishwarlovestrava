@@ -116,9 +116,14 @@ function SummaryPlot(props) {
                   <div className='stat-info'>110 m</div>
                 </div> */}
       </div>
-      <div className="">
+      <div className="d-flex justify-content-start graph-container">
         <div>
           <svg className="quiz-graph">
+            <defs>
+              <pattern id="grid" width="30" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 0 0 L 0 0 0 50" fill="none" stroke="#cfcfcf" strokeWidth="1"></path>
+              </pattern>
+            </defs>
             <defs>
               <pattern id="grid" width="30" height="10" patternUnits="userSpaceOnUse">
                 <path d="M 0 0 L 0 0 0 50" fill="none" stroke="#cfcfcf" strokeWidth="1"></path>
@@ -146,7 +151,6 @@ function SummaryPlot(props) {
             <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[2]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[2]); setState({});}} cx={210} cy={(150) - ((mileageData.miles[2] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
             <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[1]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[1]); setState({});}} cx={240} cy={(150) - ((mileageData.miles[1] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
             <circle className="quiz-graph-start-dot"  onMouseEnter={()=>{onHoverDistance = userSelectedActivityType==='WeightTraining' ? "0.0 km" : parseFloat(mileageData.miles[0]/1000).toFixed(1) + "km";  onHoverTime = convertSeconds(mileageData.times[0]); setState({});}} cx={270} cy={(150) - ((mileageData.miles[0] * multiplierVis / 1000))}  data-value="7.2" r="6"></circle>
-
             </g>
           </svg>
         </div>

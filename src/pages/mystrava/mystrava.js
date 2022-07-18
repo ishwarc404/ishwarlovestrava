@@ -501,7 +501,22 @@ function Mystrava() {
                   </div>
                 </div>
               </div>
+              <div className='information-div-center-row latest-activities-responsive'>
+                <span className='title-total-activities'>STATS</span>
+                {/* <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div> */}
+                <div className="d-flex justify-content-around">
+                <div className="circle-1">{isLoaderActive ? '' : totalActivitiesTillDate}</div>
+                <div className="circle-2">{isLoaderActive ? '' : Math.round(totalHoursTillDate / 3600)}</div>
+                <div className="circle-3">{isLoaderActive ? '' : userKudosRecievedCount}</div>
+                </div>
 
+                <div className="d-flex justify-content-around circle-titles">
+                <div className="circle-1-title">Activites</div>
+                <div className="circle-2-title">Hours</div>
+                <div className="circle-3-title">Kudos</div>
+                </div>
+              </div>
+              
   
             
 

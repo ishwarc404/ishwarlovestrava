@@ -323,7 +323,61 @@
     display: none;
     visibility: hidden;
 }
-@media screen and (max-width: 900px) { 
+
+.circle-1 {
+    margin-left: 5vw;
+    margin-top: 5vw;
+    width: 27vw;
+    height: 27vw;
+    line-height: 27vw;
+    border-radius: 50%;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    background: rgb(245, 200, 94);
+}
+
+.circle-2 {
+    margin-top: 5vw;
+    width: 27vw;
+    height: 27vw;
+    line-height: 27vw;
+    border-radius: 50%;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    background: rgb(143, 216, 227)
+}
+
+.circle-3 {
+    margin-top: 5vw;
+    width: 27vw;
+    height: 27vw;
+    line-height: 27vw;
+    border-radius: 50%;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    background: rgb(170, 160, 248)
+}
+
+.circle-titles {
+    padding-top: 5px;
+    padding-left: -10px;
+}
+
+.circle-1-title {
+    /* padding-right: 10vw; */
+}
+.circle-2-title {
+    /* padding-left: 10vw; */
+    /* padding-right: 5vw; */
+}
+.circle-3-title {
+    /* padding-left: 10vw; */
+}
+
+@media screen and (max-width: 600px) { 
     .bodycontent_mystrava {
     }
 
