@@ -31,7 +31,8 @@ function Header() {
         </div>
         <div className="header_content_3">
         {/* <button> */}
-        <img onClick={()=>{menuIsOpen = !menuIsOpen; setState({});}} className="hamburger" src="https://img.icons8.com/ios/50/000000/menu--v4.png"/>
+        <img onClick={()=>{menuIsOpen = true; setState({});}} className={"hamburger" + (menuIsOpen ? ' hidden' :'')} src="https://img.icons8.com/ios/50/000000/menu--v4.png"/>
+        <img onClick={()=>{menuIsOpen = false; setState({});}} className={"hamburger_close" + (menuIsOpen ? '' :' hidden')} src="https://img.icons8.com/ios/100/000000/multiply.png"/>
         {/* </button> */}
         </div>
         </div>

@@ -88,6 +88,18 @@
         /* padding: 30px; */
     }
 
+    .hamburger_close{
+        width: 30px;
+        margin-top: 15px;
+        margin-right: 20px;
+        /* padding: 30px; */
+    }
+
+    .hidden {
+display: none;
+visibility: hidden;
+    }
+
     .expandable_menu_hidden {
         display: none;
     }
