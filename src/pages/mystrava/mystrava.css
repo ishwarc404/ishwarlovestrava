@@ -324,6 +324,25 @@
     visibility: hidden;
 }
 
+.circle-1-parent {
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+.circle-2-parent {
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+.circle-3-parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
 .circle-1 {
     margin-left: 5vw;
     margin-top: 5vw;
@@ -335,6 +354,9 @@
     color: #fff;
     text-align: center;
     background: rgb(245, 200, 94);
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .circle-2 {
@@ -346,7 +368,10 @@
     font-size: 4vw;
     color: #fff;
     text-align: center;
-    background: rgb(143, 216, 227)
+    background: rgb(143, 216, 227);
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .circle-3 {
@@ -358,23 +383,39 @@
     font-size: 4vw;
     color: #fff;
     text-align: center;
-    background: rgb(170, 160, 248)
+    background: rgb(170, 160, 248);
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 .circle-titles {
-    padding-top: 5px;
-    padding-left: -10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    /* padding-top: 5px;
+    padding-left: -10px; */
 }
 
 .circle-1-title {
-    /* padding-right: 10vw; */
+    padding-top: 3vw;
+    position: absolute;
+    left: 70px;
+    top: 1120;
 }
 .circle-2-title {
-    /* padding-left: 10vw; */
-    /* padding-right: 5vw; */
+    padding-top: 3vw;
+    position: absolute;
+    left: 205px;
+    top: 1120;
+
 }
 .circle-3-title {
     /* padding-left: 10vw; */
+    padding-top: 3vw;
+    position: absolute;
+    left: 325px;
+    top: 1120;
+
 }
 
 @media screen and (max-width: 600px) { 

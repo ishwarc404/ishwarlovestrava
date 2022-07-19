@@ -10,11 +10,31 @@
 
 }
 
+.HomeLoader{
+    font-family: 'Maison Neue', sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;	
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    overflow:visible;
+    /* background-image: url('../../../public/assets/heatmaporiginal.png'); */
+    /* background-repeat: repeat;	 */
+    /* background-size: 2000px 1261.2px; */
+
+}
+
+
 .bodycontent{
 margin-top: 50px;
 }
 
 
+.loadingGifDiv{
+    padding-top: 45vh;
+    padding-left: 50vw;
+}
+.loadingGif {
+    width: 40px;
+}
 
 .header_2
 {
@@ -103,6 +123,12 @@ color: #fc5200;
     .header_2
     {
         margin-top: 50px;
+        padding-top: 50px;
         font-size: 7vw;
+    }
+
+    .loadingGifDiv{
+        padding-top: 45vh;
+        padding-left:45vw;
     }
 }

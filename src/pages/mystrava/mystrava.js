@@ -476,12 +476,12 @@ function Mystrava() {
               </div>
               <div className='information-div-center-row latest-activities-responsive'>
                 <span className='title-total-activities'>LATEST ACTIVITY</span>
-                <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div>
+                <div className={'loader' + (isLoaderActive ? '' : 'loader-invisible')} ></div>
 
                 {/* <img className="i3" src={latest_activity_hand} /> */}
                 <div>
                   <div className='information-div-child-lots'>
-                    <div><b>{isLoaderActive ? '' :  latestActivity.name}</b></div>
+                    <div><b>{isLoaderActive ? '' : latestActivity.name}</b></div>
                     <div>{isLoaderActive ? '' : latestActivity.description}</div>
                     <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
                     <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
@@ -505,20 +505,34 @@ function Mystrava() {
                 <span className='title-total-activities'>STATS</span>
                 {/* <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div> */}
                 <div className="d-flex justify-content-around">
-                <div className="circle-1">{isLoaderActive ? '' : totalActivitiesTillDate}</div>
-                <div className="circle-2">{isLoaderActive ? '' : Math.round(totalHoursTillDate / 3600)}</div>
-                <div className="circle-3">{isLoaderActive ? '' : userKudosRecievedCount}</div>
+                  <div className='c1-parent'>
+                    <div className="circle-1">{isLoaderActive ? '' : totalActivitiesTillDate}</div>
+                    {/* <div className="circle-1-title">Activites</div> */}
+                  </div>
+                  <div className='c2-parent'>
+                    <div className="circle-2">{isLoaderActive ? '' : Math.round(totalHoursTillDate / 3600)}</div>
+                    {/* <div className="circle-2-title">Hours</div> */}
+                  </div>
+                  <div className='c3-parent'>
+                    <div className="circle-3">{isLoaderActive ? '' : userKudosRecievedCount}</div>
+                    {/* <div className="circle-3-title">Kudos</div>  */}
+                  </div>
                 </div>
-
                 <div className="d-flex justify-content-around circle-titles">
-                <div className="circle-1-title">Activites</div>
-                <div className="circle-2-title">Hours</div>
-                <div className="circle-3-title">Kudos</div>
+                  <div className=''>
+                    <div className="">Activites</div>
+                  </div>
+                  <div className=''>
+                    <div className="">Hours</div>
+                  </div>
+                  <div className=''>
+                    <div className="">Kudos</div> 
+                  </div>
                 </div>
               </div>
-              
-  
-            
+
+
+
 
             </div>
 
