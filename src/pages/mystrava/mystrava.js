@@ -9,7 +9,6 @@ import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
 import SummaryPlot from '../../components/summaryplot/summaryplot';
 
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 
 import runimage from '../../assets/run.svg';
 import bikeimage from '../../assets/bike.svg';
@@ -22,13 +21,13 @@ import trophy_video from '../../assets/trophy.mp4';
 import dnf_video from '../../assets/dnf.mp4';
 import segments_video from '../../assets/segments.mp4';
 
-import { sizeWidth } from '@mui/system';
+// import { sizeWidth } from '@mui/system';
 
-import total_activities_hand from '../../assets/total_activities_hand.png';
-import total_hours_hand from '../../assets/total_hours_hand.png';
-import latest_activity_hand from '../../assets/latest_activity_hand.png';
-import kudos_received_hand from '../../assets/kudos_received_hand.png';
-import weekly_summary_hand from '../../assets/weekly_summary_hand.png'
+// import total_activities_hand from '../../assets/total_activities_hand.png';
+// import total_hours_hand from '../../assets/total_hours_hand.png';
+// import latest_activity_hand from '../../assets/latest_activity_hand.png';
+// import kudos_received_hand from '../../assets/kudos_received_hand.png';
+// import weekly_summary_hand from '../../assets/weekly_summary_hand.png'
 
 
 var isLoaderActive = true;

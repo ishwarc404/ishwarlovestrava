@@ -1,21 +1,51 @@
 .Discussion{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;	
-    background-color: rgb(0, 0, 0);
     height: 100vh;
-    /* overflow: hidden */
+    overflow:visible;
+    background-image: url('../../../public/assets/kudos_background.png');
 }
 
 .discussion_1 
 {
-    /* border-bottom: 4px solid #FFF; */
     overflow: hidden;
     background-color: #000;
-    /* position: fixed;  */
-    /* Set the navbar to fixed position */
-    /* top: 0; 
-    Position the navbar at the top of the page */
-    /* width: 100%;  */
-    /* Full width */
     height: 100vh;
 }
+
+.give-kudos {
+    width: 30vw;
+    height: 30vh;
+    background-color:rgb(255, 255, 255,1);
+    margin-top: 25vh;
+    border-radius: 3px;
+}
+
+.kudos-logo {
+    margin-top: 10vh;
+    width: 100px;
+    height: 100px;
+}
+
+
+.kudos-counter {
+    margin-top: 10vh;
+    margin-left: 3vw;
+    font-size: 5vw;
+}
+
+.comments {
+    width: 30vw;
+    height: 10vh;
+    background-color:rgb(255, 255, 255,1);
+    margin-top: 5vh;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 600px) {
+    .Discussion {
+        height: 100vh;
+        overflow:visible;
+        background-image: url('../../../public/assets/kudos_background_mobile.png');
+    }
+ }
