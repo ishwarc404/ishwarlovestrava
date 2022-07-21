@@ -41,9 +41,9 @@ function Header() {
         </div>
         <div>
           <div className="header_content_2">
-            <a className="email_href" href='' target='_blank'>email</a>
+            <a className="email_href" href="mailto:ishwarc404@gmail.com?subject=Hi Ishwar!" target='_blank'>email</a>
             <span className='seperator_line'> | </span>
-            <a className="email_href" href='' target='_blank'>resume</a>
+            <a className="email_href" href='https://drive.google.com/file/d/1-zUxpJ4-k8ZJpPXoaKaQdTnvXLMX5PZo/view?usp=sharing' target='_blank'>resume</a>
             <span className='seperator_line'> | </span>
             <a onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
               <span className='more_div' >more</span>
@@ -63,26 +63,25 @@ function Header() {
           <img onClick={() => { moreIsOpen = false; setState({}); }} className="up_arrow_image" src={uparrow} />
         </div>
         <div className='d-flex justify-content-center flex-div-more'>
-          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_linkedIn">
+          <div className="more_content"><a href='https://www.linkedin.com/in/ishwarchoudhary/' target='_blank'><span className="more_content_name_linkedIn">
             <img className="medium_image" src={linkedinlogo} />
           </span></a></div>
-          <div className="more_content"><a href='' target='_blank'><span className="more_content_name">
+          <div className="more_content"><a href='https://github.com/ishwarc404/ishwarlovestrava' target='_blank'><span className="more_content_name">
             <img className="github_image" src={githublogo} />
           </span></a></div>
-          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_strava">
+          <div className="more_content"><a href='https://www.strava.com/athletes/43290018' target='_blank'><span className="more_content_name_strava">
             <img className="medium_image" src={stravalogo} />
           </span></a></div>
-          <div className="more_content"><a href='' target='_blank'><span className="more_content_name">
+          <div className="more_content"><a href='https://medium.com/@ishwarc404' target='_blank'><span className="more_content_name">
             <img className="medium_image" src={mediumlogo} />
           </span></a></div>
-          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_instagram">
+          <div className="more_content"><a href='https://instagram.com/ishwartakespictures' target='_blank'><span className="more_content_name_instagram">
             <img className="medium_image" src={instagramlogo} />
           </span></a></div>
 
         </div>
         <div>
           <div className=' d-flex justify-content-center flex-div-more-small'>
-          <div  className="more_content_bug"><a  href='' target='_blank'><span className="">Share</span></a></div>
           <div  className="more_content_bug"><a  href='' target='_blank'><span className="">Credits</span></a></div>
             <div className="more_content_bug">
               <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
@@ -94,16 +93,16 @@ function Header() {
           <a className="email_href" href='https://www.google.com' target='_blank'>Email</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='' target='_blank'>Resume</a>
+          <a className="email_href" href='https://drive.google.com/file/d/1-zUxpJ4-k8ZJpPXoaKaQdTnvXLMX5PZo/view?usp=sharing' target='_blank'>Resume</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='' target='_blank'>LinkedIn</a>
+          <a className="email_href" href='https://www.linkedin.com/in/ishwarchoudhary/' target='_blank'>LinkedIn</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='' target='_blank'>Github</a>
+          <a className="email_href" href='https://github.com/ishwarc404/ishwarlovestrava' target='_blank'>Github</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='' target='_blank'>Strava</a>
+          <a className="email_href" href='https://www.strava.com/athletes/43290018' target='_blank'>Strava</a>
         </div>
         <div className=' d-flex justify-content-center'>
           <a className="email_href" href='' target='_blank'>Credits</a>
