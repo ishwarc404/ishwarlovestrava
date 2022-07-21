@@ -14,10 +14,10 @@
 }
 
 .body_content_1{
-    /* padding-top: 1%; */
-    padding: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 5px;
     font-size: 0.8vw;
      border: none;
     border-bottom-left-radius: 5px;
@@ -31,12 +31,14 @@
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .3s ease-in-out;
     /* width: max-content; */
+    
 
 }
 
 .body_content_2{
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 0.8vw;
@@ -48,11 +50,14 @@
 
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .3s ease-in-out;
+    padding-top: 5px;
+
 }
 
 .body_content_3{
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 0.8vw;
@@ -64,11 +69,14 @@
 
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .3s ease-in-out;
+    padding-top: 5px;
+
 }
 
 .body_content_4{
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 0.8vw;
@@ -80,11 +88,14 @@
 
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .3s ease-in-out;
+    padding-top: 5px;
+
 }
 
 .body_content_5{
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 0.8vw;
@@ -100,11 +111,14 @@
 
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .5s ease-in-out;
+    padding-top: 5px;
+
 }
 
 .body_content_6{
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 0.8vw;
@@ -118,6 +132,8 @@
 
     box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
     transition: all .5s ease-in-out;
+    padding-top: 5px;
+
 }
 
 .body_content_all:hover {
@@ -159,7 +175,7 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;
@@ -182,7 +198,8 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;
@@ -200,7 +217,8 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;
@@ -218,7 +236,8 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;
@@ -236,7 +255,8 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;
@@ -258,7 +278,8 @@
     display:none;
     visibility: hidden;
     /* padding-top: 1%; */
-    padding: 5px;
+    padding: 0px;
+    padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8vw;

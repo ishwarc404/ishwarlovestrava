@@ -101,7 +101,7 @@
         /* height: 100vh; */
         opacity: 100%;
         /* background-color: #fff; */
-        background-color: rgb(255,255,255);
+        background-color: rgb(202, 202, 202);
         padding-top: 15vh;
         padding-left: 25vw;
         
@@ -114,10 +114,13 @@
         /* margin-left: 35vw; */
         padding: 3px;
         padding-right: 20vw;
+        
 
     }
     .highlight_block_technical_content {
         font-size: 3.5vw;   
         /* margin-left: 22.5vw;  */
+        background-color: rgb(202, 202, 202);
+
     }
 }

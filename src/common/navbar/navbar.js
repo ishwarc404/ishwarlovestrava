@@ -74,7 +74,7 @@ function Navbar(props) {
   } 
 
   return (
-    <div>
+    <div className=''>
     <div className='navigation-bar d-flex justify-content-center'>
       <div id="home" className={'body_content_1 body_content_all' + (pathValue === 1 ? ' orange' : ' ')}>
         <div onClick={() => { navigate('/home'); clicked(1) }}>Home</div>
