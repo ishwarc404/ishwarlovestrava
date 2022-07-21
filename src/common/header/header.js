@@ -6,6 +6,12 @@ import React, { useState, useEffect } from 'react';
 import ishwarname from '../../assets/ishwar.png';
 import xletter from '../../assets/x.png';
 import strava from '../../assets/b&w.png';
+import uparrow from '../../assets/up_arrow.png';
+import mediumlogo from '../../assets/1200px-Medium_logo_Wordmark_Black.png'
+import stravalogo from '../../assets/1280px-Strava_Logo.svg.png'
+import githublogo from '../../assets/GitHub-Logo.png'
+import linkedinlogo from '../../assets/LinkedIn_Logo.svg.png'
+import instagramlogo from '../../assets/Instagram_logo.svg.png'
 
 var menuIsOpen = false;
 var moreIsOpen = true;
@@ -17,8 +23,8 @@ function Header() {
   document.onkeydown = checkKey;
 
   function checkKey(e) {
-      e = e || window.event;
-      //right
+    e = e || window.event;
+    //right
     if (e.keyCode == '27') {
       moreIsOpen = false;
       setState({});
@@ -41,7 +47,6 @@ function Header() {
             <span className='seperator_line'> | </span>
             <a onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
               <span className='more_div' >more</span>
-
             </a>
           </div>
           <div className="header_content_3">
@@ -54,19 +59,34 @@ function Header() {
 
       </div>
       <div className={'header_content_more' + (moreIsOpen ? ' more_data_visible' : '')}>
-        <div className=' d-flex justify-content-center flex-div-more'>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name_linkedIn">LinkedIn</span></a></div>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name">Github</span></a></div>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name_strava">Strava</span></a></div>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name">Medium</span></a></div>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name_instagram">Instagram</span></a></div>
-          <div  className="more_content"><a  href='' target='_blank'><span className="more_content_name">Credits</span></a></div>
+        <div className='d-flex justify-content-center flex-div-more-parent'>
+          <img onClick={() => { moreIsOpen = false; setState({}); }} className="up_arrow_image" src={uparrow} />
+        </div>
+        <div className='d-flex justify-content-center flex-div-more'>
+          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_linkedIn">
+            <img className="medium_image" src={linkedinlogo} />
+          </span></a></div>
+          <div className="more_content"><a href='' target='_blank'><span className="more_content_name">
+            <img className="github_image" src={githublogo} />
+          </span></a></div>
+          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_strava">
+            <img className="medium_image" src={stravalogo} />
+          </span></a></div>
+          <div className="more_content"><a href='' target='_blank'><span className="more_content_name">
+            <img className="medium_image" src={mediumlogo} />
+          </span></a></div>
+          <div className="more_content"><a href='' target='_blank'><span className="more_content_name_instagram">
+            <img className="medium_image" src={instagramlogo} />
+          </span></a></div>
+
         </div>
         <div>
-        <div className=' d-flex justify-content-center flex-div-more'>
-        <div className="more_content_bug"> 
-        <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
-        </div>
+          <div className=' d-flex justify-content-center flex-div-more-small'>
+          <div  className="more_content_bug"><a  href='' target='_blank'><span className="">Share</span></a></div>
+          <div  className="more_content_bug"><a  href='' target='_blank'><span className="">Credits</span></a></div>
+            <div className="more_content_bug">
+              <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
+          </div>
         </div>
       </div>
       <div className={"header_content_4 expandable_menu" + (menuIsOpen ? '' : '_hidden')}>

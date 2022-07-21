@@ -77,11 +77,19 @@
 .flex-div-more {
     flex-wrap: wrap;
     margin-top: 10vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
 }
+
 .more_data_visible {
     display: block;
 }
 
+.up_arrow_image {
+    width: 3vw;
+    opacity: 0.5;
+}
 .more_content {
     font-size: 4vw;
     padding: 2.3vw;
@@ -109,6 +117,9 @@
     border-bottom: 8px solid #ffea00;
 }
 
+.more_content_bug {
+    padding: 50px;
+}
 .more_content_bug > a {
     color: red;
 }
@@ -117,6 +128,13 @@
     color: red;
 }
 
+.medium_image {
+    width: 15vw;
+}
+
+.github_image {
+    width: 13vw;
+}
 
 
 @media screen and (max-width: 600px) {
