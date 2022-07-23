@@ -6,6 +6,9 @@
     background-image: url('../../../public/assets/kudos_background.png');
 }
 
+.Discussion_control {
+    background-image: none;
+}
 .discussion_1 
 {
     overflow: hidden;

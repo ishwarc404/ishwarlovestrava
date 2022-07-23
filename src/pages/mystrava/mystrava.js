@@ -430,6 +430,7 @@ function Mystrava() {
           </div>
           <div className='strava_wall_div'
           >
+      <Discussion noBackground={true}/>
 
           </div>
 
@@ -533,7 +534,6 @@ function Mystrava() {
           <Navbar path={6} />
         </div>
       </div>
-      {/* <Discussion /> */}
     </div>
 
   );

@@ -4,11 +4,11 @@ import './discussion.css';
 import kudosLogo from '../../assets/kudos_logo.png'
 
 
-function Discussion() {
+function Discussion(props) {
 
 
   return (
-    <div className='Discussion'>
+    <div className={'Discussion' + (props.noBackground ? ' Discussion_control' : '' )}>
       <div className='d-flex justify-content-center'>
         <div className='d-flex justify-content-center give-kudos'>
           <img className='kudos-logo' src={kudosLogo}></img>

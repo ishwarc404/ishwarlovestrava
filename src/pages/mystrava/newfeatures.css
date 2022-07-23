@@ -1,7 +1,8 @@
 .NewFeatures {
 margin-top: 15vh;
 height: 100vh;
-background-image: linear-gradient(rgb(247, 247, 250) 2%, #ffea00);
+background-image: linear-gradient(rgb(247, 247, 250) 1px,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00, #ffea00);
+/* background-color: #ffea00; */
 font-family: 'Playfair Display';
 }
 
