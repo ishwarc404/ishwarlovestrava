@@ -1,9 +1,9 @@
 .Mystrava{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
-    /* overflow: scroll; */
+    overflow: scroll;
     /* overflow-x: scroll; */
-    height: 200vh;
+    /* height: 100vh; */
     background-color: rgb(247, 247, 250);
 }
 
@@ -444,6 +444,7 @@
     left: 0; */
     background-image: url('../../../public/assets/strava_wall_transparent.png');
     background-size: 100vw auto;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     background-color: rgb(247, 247, 250);
@@ -472,15 +473,14 @@
 
 @media screen and (max-width: 600px) { 
     .bodycontent_mystrava {
-    }
-
-    .bodycontent_mystrava {
         display: none;
         visibility: hidden;
     }
     .bodycontent_mystrava-responsive-parent {
         display: block;
         visibility: visible;
+        
+
     }
 
 

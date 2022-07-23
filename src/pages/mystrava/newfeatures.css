@@ -1,0 +1,32 @@
+.NewFeatures {
+margin-top: 15vh;
+height: 100vh;
+background-image: linear-gradient(rgb(247, 247, 250) 2%, #ffea00);
+font-family: 'Playfair Display';
+}
+
+.title-new-features {
+    margin: 5vw;
+    font-size: 8vw;
+    width:50vw;
+}
+
+.divider-div {
+    margin: 1vw;
+    margin-top: 10vw;
+    height: 10vw;
+    width: 0.2vw;
+    background-color: black;
+}
+
+.love-span {
+    color: rgb(249, 139, 229);
+}
+
+.title-new-features-feat {
+    width:40vw;
+    margin: 5vw;
+    margin-left: 7vw;
+    margin-top: 8vw;
+    font-size: 4.5vw;
+}
