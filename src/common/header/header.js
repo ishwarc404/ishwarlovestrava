@@ -14,7 +14,7 @@ import linkedinlogo from '../../assets/LinkedIn_Logo.svg.png'
 import instagramlogo from '../../assets/Instagram_logo.svg.png'
 
 var menuIsOpen = false;
-var moreIsOpen = true;
+var moreIsOpen = false;
 
 function Header() {
   const [, setState] = useState();

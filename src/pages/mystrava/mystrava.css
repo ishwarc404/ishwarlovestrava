@@ -1,8 +1,8 @@
 .Mystrava{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
-    overflow: scroll;
-    overflow-x: scroll;
+    /* overflow: scroll; */
+    /* overflow-x: scroll; */
     height: 200vh;
     background-color: rgb(247, 247, 250);
 }
@@ -22,7 +22,8 @@
 
 .title-total-activities {
     font-size: 1.2vw;
-    color: #2ad309;
+    color: #909090;
+    /* font-weight: bold; */
 }
 .information-div{
     width: 20vw;
@@ -45,6 +46,15 @@
 .information-div-center-row{
     /* width: 330px; */
     height: 300px;
+    background-color: #ffff;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.information-div-center-row-responsive{
+    /* width: 330px; */
+    /* height: 300px; */
     background-color: #ffff;
     border-radius: 5px;
     margin: 20px;
@@ -202,6 +212,10 @@
     font-size: 12px;
 }
 
+.information-div-kudos-count {
+    padding-left: 20px;
+}
+
 .iphone-divs{
     margin-top: 100px;
     /* font-size: 30px; */
@@ -319,6 +333,11 @@
     visibility: visible;
 }
 
+.bodycontent_mystrava-responsive-parent {
+    display: none;
+    visibility: hidden;
+}
+
 .bodycontent_mystrava-responsive {
     display: none;
     visibility: hidden;
@@ -418,6 +437,39 @@
 
 }
 
+.strava_wall_div {
+    margin-top: 30vh;
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    background-image: url('../../../public/assets/strava_wall_transparent.png');
+    background-size: 100vw auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(247, 247, 250);
+
+}
+
+.strava_wall_image{
+    width: 100vw;
+    /* position: relative;
+    top: 0;
+    left: 0; */
+    margin-right: 110px;
+}
+
+
+.strava_wall_image_exit  {
+    position: fixed;
+    height: auto;
+    font-size: 1.7vw;
+    font-weight: bold;
+    color:red;
+    transform: perspective(1000px) rotateY(-35deg);  
+    /* transition: transform 1s ease 0s; */
+}
+
+
 @media screen and (max-width: 600px) { 
     .bodycontent_mystrava {
     }
@@ -426,6 +478,11 @@
         display: none;
         visibility: hidden;
     }
+    .bodycontent_mystrava-responsive-parent {
+        display: block;
+        visibility: visible;
+    }
+
 
     .bodycontent_mystrava-responsive {
         display: block;
@@ -449,5 +506,6 @@
 
     .information-div-child-lots {
         font-size: 5vw;
+        height: fit-content;
     }
 }

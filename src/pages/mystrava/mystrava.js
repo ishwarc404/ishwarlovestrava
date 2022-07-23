@@ -20,7 +20,7 @@ import iphone from '../../assets/iphone.png';
 import trophy_video from '../../assets/trophy.mp4';
 import dnf_video from '../../assets/dnf.mp4';
 import segments_video from '../../assets/segments.mp4';
-
+import stravawall from '../../assets/strava_wall_transparent.png';
 // import { sizeWidth } from '@mui/system';
 
 // import total_activities_hand from '../../assets/total_activities_hand.png';
@@ -366,18 +366,20 @@ function Mystrava() {
                     <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
                     <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
                     <div>{console.log(latestActivityPolyline)}</div>
-                    <div><i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
+                    <div className='d-flex'>
+                      <i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
                       {isLoaderActive ? '' : latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
                         latestActivity.sport_type == 'Ride' ? (<img className=" activity_icon bike" src={bikeimage} />) :
                           latestActivity.sport_type == 'Swim' ? (<img className=" activity_icon swim" src={swimimage} />) :
                             latestActivity.sport_type == 'WeightTraining' ? (<img className=" activity_icon weighttraining" src={weightimage} />) :
                               <span></span>
                       }
+                      <div className='information-div-kudos-count'>
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" data-testid="unfilled_kudos"><path d="M15.243 7.182a1.907 1.907 0 00-.532-1.423 2.069 2.069 0 00-1.493-.641H9.863l.454-1.812A2.426 2.426 0 008.064.514h-.513l-.718 2.807L4.97 6.915.412 9.34l2.472 6.424 4.278-2.28h4.785a2.142 2.142 0 002.127-1.976l.084-1.177a1.962 1.962 0 00.712-2.097 1.93 1.93 0 00.373-1.052zM1.664 9.807l2.06-1.1 1.748 4.542-2.061 1.1-1.747-4.542zm12.289-2.038l-.268.254.165.331a.942.942 0 01-.044.903.965.965 0 01-.369.352l-.237.131-.122 1.7a1.123 1.123 0 01-1.129 1.049H6.914l-.552.295-1.748-4.547 1.1-.586 2.033-3.92.567-2.166a1.427 1.427 0 011.032 1.371c0 .071 0 .139-.007.167l-.758 3.016h4.64a1.059 1.059 0 01.764.328.917.917 0 01.26.683.942.942 0 01-.292.639z" fill=""></path></svg>
+                        {latestActivity.kudos_count}
+                      </div>
                     </div>
-                    <div className='grid-item-3-value-count'>
-                      <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" data-testid="unfilled_kudos"><path d="M15.243 7.182a1.907 1.907 0 00-.532-1.423 2.069 2.069 0 00-1.493-.641H9.863l.454-1.812A2.426 2.426 0 008.064.514h-.513l-.718 2.807L4.97 6.915.412 9.34l2.472 6.424 4.278-2.28h4.785a2.142 2.142 0 002.127-1.976l.084-1.177a1.962 1.962 0 00.712-2.097 1.93 1.93 0 00.373-1.052zM1.664 9.807l2.06-1.1 1.748 4.542-2.061 1.1-1.747-4.542zm12.289-2.038l-.268.254.165.331a.942.942 0 01-.044.903.965.965 0 01-.369.352l-.237.131-.122 1.7a1.123 1.123 0 01-1.129 1.049H6.914l-.552.295-1.748-4.547 1.1-.586 2.033-3.92.567-2.166a1.427 1.427 0 011.032 1.371c0 .071 0 .139-.007.167l-.758 3.016h4.64a1.059 1.059 0 01.764.328.917.917 0 01.26.683.942.942 0 01-.292.639z" fill=""></path></svg>
-                      {latestActivity.kudos_count}
-                    </div>
+
                   </div>
                 </div>
               </div>
@@ -419,10 +421,6 @@ function Mystrava() {
 
           </div>
 
-          <div className='d-flex justify-content-center iphone-title-div'>
-
-
-          </div>
           <div className='d-flex justify-content-center iphone-divs'>
             <div className='iphone-info-div'>
               <div className='proud-title'>Proud of my trophies.</div>
@@ -440,10 +438,14 @@ function Mystrava() {
               <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true}></video>
             </div>
           </div>
+          <div className='strava_wall_div'
+          >
+          
+          </div>
 
           <Navbar path={6} />
         </div>
-        <div>
+        <div className='bodycontent_mystrava-responsive-parent'>
           <div className='d-flex justify-content-center bodycontent_mystrava-responsive'>
 
             <div>
@@ -473,7 +475,7 @@ function Mystrava() {
                 </div>
                 <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
               </div>
-              <div className='information-div-center-row latest-activities-responsive'>
+              <div className='information-div-center-row-responsive latest-activities-responsive'>
                 <span className='title-total-activities'>LATEST ACTIVITY</span>
                 <div className={'loader' + (isLoaderActive ? '' : 'loader-invisible')} ></div>
 
@@ -485,6 +487,7 @@ function Mystrava() {
                     <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
                     <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
                     <div>{console.log(latestActivityPolyline)}</div>
+                    <div className='d-flex'>
                     <div><i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
                       {isLoaderActive ? '' : latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
                         latestActivity.sport_type == 'Ride' ? (<img className=" activity_icon bike" src={bikeimage} />) :
@@ -493,14 +496,15 @@ function Mystrava() {
                               <span></span>
                       }
                     </div>
-                    <div className='grid-item-3-value-count'>
+                    <div className='information-div-kudos-count'>
                       <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" data-testid="unfilled_kudos"><path d="M15.243 7.182a1.907 1.907 0 00-.532-1.423 2.069 2.069 0 00-1.493-.641H9.863l.454-1.812A2.426 2.426 0 008.064.514h-.513l-.718 2.807L4.97 6.915.412 9.34l2.472 6.424 4.278-2.28h4.785a2.142 2.142 0 002.127-1.976l.084-1.177a1.962 1.962 0 00.712-2.097 1.93 1.93 0 00.373-1.052zM1.664 9.807l2.06-1.1 1.748 4.542-2.061 1.1-1.747-4.542zm12.289-2.038l-.268.254.165.331a.942.942 0 01-.044.903.965.965 0 01-.369.352l-.237.131-.122 1.7a1.123 1.123 0 01-1.129 1.049H6.914l-.552.295-1.748-4.547 1.1-.586 2.033-3.92.567-2.166a1.427 1.427 0 011.032 1.371c0 .071 0 .139-.007.167l-.758 3.016h4.64a1.059 1.059 0 01.764.328.917.917 0 01.26.683.942.942 0 01-.292.639z" fill=""></path></svg>
                       {latestActivity.kudos_count}
                     </div>
+</div>
                   </div>
                 </div>
               </div>
-              <div className='information-div-center-row latest-activities-responsive'>
+              <div className='information-div-center-row-responsive latest-activities-responsive'>
                 <span className='title-total-activities'>STATS</span>
                 {/* <div className={'loader'  + (isLoaderActive ? '' : 'loader-invisible')} ></div> */}
                 <div className="d-flex justify-content-around">
@@ -525,7 +529,7 @@ function Mystrava() {
                     <div className="">Hours</div>
                   </div>
                   <div className=''>
-                    <div className="">Kudos</div> 
+                    <div className="">Kudos</div>
                   </div>
                 </div>
               </div>
@@ -539,7 +543,7 @@ function Mystrava() {
           <Navbar path={6} />
         </div>
       </div>
-      <Discussion />
+      {/* <Discussion /> */}
     </div>
 
   );

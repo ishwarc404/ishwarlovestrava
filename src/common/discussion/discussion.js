@@ -16,11 +16,12 @@ function Discussion() {
         </div>
       </div>
       <div className='d-flex justify-content-center'>
-        <div className='d-flex justify-content-center comments'>
-          
+        <div className='d-flex justify-content-around write-comment'>
+          <input className='write-comment-input-box' placeholder="Add a comment"></input>
         </div>
-      </div>
-      <div className='write-comment'>
+        <div className='d-flex justify-content-around post-comment'>
+          <div className='write-comment-post-button'><b>Post</b></div>
+        </div>
       </div>
     </div>
 

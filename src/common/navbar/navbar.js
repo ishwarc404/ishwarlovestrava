@@ -7,14 +7,13 @@ var newPath = '';
 function Navbar(props) {
   const [, setState] = useState();
   let navigate = useNavigate();
+  
+  pathValue = props.path;
 
-  // useEffect(() => {
-    pathValue = props.path;
-  // })
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  })
 
-  function clicked(path) {
-    // pathValue = path;
-  }
   document.onkeydown = checkKey;
 
   function checkKey(e) {
