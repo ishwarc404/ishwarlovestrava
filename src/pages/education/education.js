@@ -103,7 +103,7 @@ function Education(props) {
         </div>
         <Navbar path={2} />
       </div>
-      <Discussion />
+      {/* <Discussion /> */}
     </div>
   );
 }

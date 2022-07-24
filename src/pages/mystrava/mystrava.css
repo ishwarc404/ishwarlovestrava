@@ -461,8 +461,8 @@
 
 
 .strava_wall_image_exit  {
-    position: fixed;
-    height: auto;
+    /* position: fixed; */
+    /* height: auto; */
     font-size: 1.7vw;
     font-weight: bold;
     color:red;

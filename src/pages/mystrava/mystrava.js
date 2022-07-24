@@ -429,9 +429,11 @@ function Mystrava() {
             </div>
           </div>
           <div className='strava_wall_div'
+          
           >
+            {/* <div className='strava_wall_image_exit'>EXIT</div> */}
       <Discussion noBackground={true}/>
-
+                    
           </div>
 
           <Navbar path={6} />

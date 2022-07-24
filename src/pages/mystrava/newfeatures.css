@@ -1,20 +1,20 @@
 .NewFeatures {
-margin-top: 15vh;
-height: 100vh;
-background-image: linear-gradient(rgb(247, 247, 250) 1px,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00, #ffea00);
-/* background-color: #ffea00; */
+margin-top: 27vh;
+/* height: 100vw; */
+/* background-image: linear-gradient(rgb(247, 247, 250) 1px,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00, #ffea00); */
+background-color: #ffea00;
 font-family: 'Playfair Display';
 }
 
 .title-new-features {
     margin: 5vw;
     font-size: 8vw;
-    width:50vw;
+    width:40vw;
 }
 
 .divider-div {
     margin: 1vw;
-    margin-top: 10vw;
+    margin-top: 20vw;
     height: 10vw;
     width: 0.2vw;
     background-color: black;
@@ -27,7 +27,75 @@ font-family: 'Playfair Display';
 .title-new-features-feat {
     width:40vw;
     margin: 5vw;
+
     margin-left: 7vw;
-    margin-top: 8vw;
+    margin-top: 2vw;
     font-size: 4.5vw;
+}
+
+.prototypes{
+    margin: 5vw;
+    margin-top: 10vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* padding-top: 50px; */
+}
+
+.iphone-1-image-original {
+    position: absolute;
+    top: 68px;
+    left: 22px;
+    width: 255px;
+    height: auto;
+}
+
+.iphone-1-image-translate {
+    position: absolute;
+    top: 68px;
+    left: 22px;
+    width: 254.6px;
+    height: auto;
+}
+
+.iphone-1-image-translate-button {
+    font-family: 'Maison Neue', sans-serif;
+    position: absolute;
+    top: 147px;
+    left: 210px;
+    font-size: 10px;
+    color: #757575;
+    /* width: 255px; */
+    height: auto;
+    border: none;
+    background-color: white;
+    
+}
+
+
+.iphone-1-image-original-button {
+    font-family: 'Maison Neue', sans-serif;
+    position: absolute;
+    top: 147px;
+    left: 215px;
+    font-size: 10px;
+    color: #757575;
+    /* width: 255px; */
+    height: auto;
+    border: none;
+    background-color: white;
+    
+}
+
+
+.iphone-1-prototype{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+.invisible {
+    display: none;
+    visibility: hidden;
 }

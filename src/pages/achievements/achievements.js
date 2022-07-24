@@ -304,7 +304,7 @@ function Acheivements() {
                 </div>
                 <Navbar path={4}/>
             </div>
-            <Discussion />
+            {/* <Discussion /> */}
         </div>
 
     );

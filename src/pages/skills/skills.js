@@ -41,7 +41,7 @@ function Skills() {
           <Navbar path={3}/>
         </div>
       </div>
-      <Discussion />
+      {/* <Discussion /> */}
     </div>
   );
 }
