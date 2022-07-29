@@ -27,7 +27,7 @@ function Discussion(props) {
       user_ip_ = data.IPv4;
       setState({});
 
-      axios.get('https://sheet.best/api/sheets/f03e4f53-e301-449b-b2ea-743bef0a5e23')
+      axios.get('https://sheet.best/api/sheets/3c44458e-3947-4552-8dbb-ed197b7f6b08')
         .then(response => {
           kudos_counter = response.data.length;
           setState({});
@@ -65,7 +65,7 @@ function Discussion(props) {
 
     if (!kudos_given_before) {
       console.log('there');
-      axios.post('https://sheet.best/api/sheets/f03e4f53-e301-449b-b2ea-743bef0a5e23', {
+      axios.post('https://sheet.best/api/sheets/3c44458e-3947-4552-8dbb-ed197b7f6b08', {
         ip: user_ip_,
         date: Date.now(),
         kudos: 1

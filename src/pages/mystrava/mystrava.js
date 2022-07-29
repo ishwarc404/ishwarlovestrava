@@ -415,17 +415,17 @@ function Mystrava() {
             <div className='iphone-info-div'>
               <div className='proud-title'>Proud of my trophies.</div>
               <img className='iphone-1' src={iphone} width="300"></img>
-              <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true} playsinline></video>
+              <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true} playsInLine></video>
             </div>
             <div className='iphone-info-div-2'>
               <div className='dnf-title'>More, of my DNFs.</div>
               <img className='iphone-2' src={iphone} width="300"></img>
-              <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true} playsinline></video>
+              <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true} playsInLine></video>
             </div>
             <div className='iphone-info-div-3'>
               <div className='segments-title' ><b>Boulder</b>, incoming.</div>
               <img className='iphone-3' src={iphone} width="300"></img>
-              <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true} playsinline></video>
+              <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true} playsInLine></video>
             </div>
           </div>
           <div className='strava_wall_div'
