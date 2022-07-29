@@ -9,6 +9,7 @@
     background-image: url('../../../public/assets/darkmountain9.png');
     background-repeat: repeat;	
     background-size: 1800px 1061.2px;
+    background-size: 100vw auto;
 
 }
 
@@ -219,6 +220,10 @@ backdrop-filter: blur(7.9px);
 
 
 @media screen and (max-width: 600px) { 
+
+    .Achievements {
+        background-size: 1800px 1061.2px;
+    }
 
     .body_content_achievements {
         padding-top:40px;

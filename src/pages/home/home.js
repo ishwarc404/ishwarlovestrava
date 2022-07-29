@@ -21,7 +21,7 @@ function Home(props) {
           <div className='bodycontent'>
 
             <div className='header_2'>
-              <span className='header_content_all'> Hi there! I'm Ishwar, and this is my application for the 2023 <span className='highlight_block'><b>Summer Intern</b></span> position
+              <span className='header_content_all'> Hi there! I'm Ishwar, and this is my application for the 2023 <span className='highlight_block'><b>SUMMER INTERN</b></span> position
                 at Strava.</span>
               <br></br>
               <span className='header_content_all'>

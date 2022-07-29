@@ -5,7 +5,9 @@
     overflow:visible;
     background-image: url('../../../public/assets/squiggly6_green3.png');
     background-repeat: repeat;	
-    background-size: 1800px 1061.2px;
+    /* background-size: 1800px 1061.2px; */
+    background-size: 100vw auto;
+
 }
     
 
@@ -22,8 +24,8 @@
 .header_2_education
 {
     padding-left: 10%;
-    padding-top: 3%;
-    font-size: 30px;
+    padding-top: 5%;
+    font-size: 1.5vw;
 }
 
 

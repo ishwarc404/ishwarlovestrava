@@ -7,6 +7,7 @@
     background-image: url('../../../public/assets/ghepan2.png');
     background-repeat: repeat;	
     background-size: 1800px 1061.2px;
+    background-size: 100vw auto;
 }
    
 .bodycontent_skills
@@ -32,7 +33,7 @@
     /* background-color: rgb(38,107,246);ß */
     background-color: #000;
     color: #fff;
-    font-size: 30px;
+    font-size: 1.4vw;
     /* padding: 1%; */
     border: solid 5px #000; 
     transition: all 0.2s ease-in-out;
@@ -42,7 +43,7 @@
     /* background-color: rgb(38,107,246);ß */
     background-color: rgb(255,255,255);
     color: #000;
-    font-size: 30px;    
+    font-size: 1.8vw;    
     padding: 1%;
     transition: all 0.2s ease-in-out;
     width: 50vw;

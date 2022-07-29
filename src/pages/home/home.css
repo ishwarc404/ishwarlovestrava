@@ -6,7 +6,9 @@
     overflow:visible;
     background-image: url('../../../public/assets/heatmaporiginal.png');
     background-repeat: repeat;	
-    background-size: 2000px 1261.2px;
+    /* background-size: 2000px 1261.2px; */
+    background-size: 100vw auto;
+
 
 }
 

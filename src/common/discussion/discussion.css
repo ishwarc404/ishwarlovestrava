@@ -4,6 +4,7 @@
     height: 100vh;
     overflow:visible;
     background-image: url('../../../public/assets/kudos_background.png');
+
 }
 
 .Discussion_control {
@@ -70,13 +71,21 @@
 .write-comment-post-button {
     padding-left:20px;
     padding-right:20px;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     font-size: 1.2vw;
     color: #fc520f;
 }
 
 .post-comment :hover {
     
+}
+
+.postButton {
+    border: none;
+    background-color: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 @media screen and (max-width: 600px) {
