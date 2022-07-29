@@ -63,22 +63,6 @@ function Discussion(props) {
 
   function handleKudosSubmit(event) {
 
-    // axios.get('https://sheet.best/api/sheets/f03e4f53-e301-449b-b2ea-743bef0a5e23')
-    //   .then(response => {
-    //     console.log('kudo handler!');
-    //     // console.log(response.data);
-    //     kudos_counter = response.data.length;
-    //     for (var i = 0; i < response.data.length; i++) {
-    //       // console.log(response.data[i]['ip']);
-    //       if (response.data[i]['ip'] === user_ip_) {
-    //         console.log('here', user_ip_);
-    //         console.log('here', response.data[i]);
-    //         kudos_given_before = true;
-    //       }
-    //       else {
-
-    //       }
-    //     }
     if (!kudos_given_before) {
       console.log('there');
       axios.post('https://sheet.best/api/sheets/f03e4f53-e301-449b-b2ea-743bef0a5e23', {
@@ -87,7 +71,7 @@ function Discussion(props) {
         kudos: 1
       })
         .then(response => {
-          kudos_counter +=1 ;
+          kudos_counter += 1;
           kudos_given_before = true;
           setState({});
         })
@@ -95,15 +79,9 @@ function Discussion(props) {
     }
 
     setState({});
-      // })
 
-    // console.log(user_ip_);
     event.preventDefault();
-    // if(!kudos_given_before){
 
-
-
-    // }
   }
 
 

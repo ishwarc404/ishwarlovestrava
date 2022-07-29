@@ -133,11 +133,11 @@ function SummaryPlot(props) {
             <g className="label-title">
             </g>
 
-            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
+            {/* <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" style={{ stopColor: '#fc5200', stopOpacity: 1 }}></stop>
               <stop offset="100%" style={{ stopColor: 'white', stopOpacity: '0' }}></stop>
-            </linearGradient>
-            <polyline fill="url(#grad)"  stroke="#fc5200" strokeWidth="0" points={strokeComponentPoints}></polyline>
+            </linearGradient> */}
+            {/* <polyline fill="url(#grad)"  stroke="#fc5200" strokeWidth="0" points={strokeComponentPoints}></polyline> */}
             <polyline fill="none" stroke="#fc5200" strokeWidth="2" points={strokeComponentPoints}></polyline>
 
             <g>
