@@ -1,7 +1,7 @@
 
 .side-bar {
     
-    overflow: hidden; 
+    /* overflow: hidden;  */
     /* background-color: #333; */
     position: fixed; 
     /* Set the navbar to fixed position */
@@ -45,4 +45,11 @@
     margin-left: 5px;
     padding-top: 5px;
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .sidebar-parent {
+        display: none;
+        visibility: hidden;
+    }
 }

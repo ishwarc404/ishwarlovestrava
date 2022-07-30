@@ -111,7 +111,6 @@ color: #fc5200;
 }
 
 
-
 @media screen and (min-width: 600px) {
     .bodycontent {
         height: 100vh;
@@ -119,6 +118,7 @@ color: #fc5200;
 }
 
 @media screen and (max-width: 600px) {
+
     .bodycontent {
         height: 100vh;
     }

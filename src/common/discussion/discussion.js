@@ -52,7 +52,7 @@ function Discussion(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('comment:', comment);
+    if(comment.length !=0 || comment != '' || comment != null || comment.length > 200){
     axios.post('https://sheet.best/api/sheets/20663903-9d53-43a3-beea-43cb136f12f3', {
       date: Date.now(),
       comment: comment
@@ -62,6 +62,8 @@ function Discussion(props) {
         didComment = true;
         setState({});
       })
+
+    }
 
   }
 

@@ -13,74 +13,16 @@ function Sidebar(props) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  })
-
-  document.onkeydown = checkKey;
-
-  // onMouseLeave={() => { isInformationBoxVisible = false; setState({}); }}
-
-  function checkKey(e) {
-    e = e || window.event;
-    //right
-    if (e.keyCode == '39') {
-      newPath = pathValue + 1;
-      pathValue = newPath;
-      if (newPath == 2) {
-        navigate('/education');
-      }
-      if (newPath == 3) {
-        navigate('/skills');
-      }
-      if (newPath == 4) {
-        navigate('/achievements');
-      }
-      // if(newPath==5){
-      //   navigate('/whyme');
-      // }
-      if (newPath == 5) {
-        navigate('/mystrava');
-      }
-      if (newPath > 5) {
-        navigate('/mystrava');
-        newPath = 5;
-      }
-    }
-    //left
-    else if (e.keyCode == '37') {
-      newPath = pathValue - 1;
-      pathValue = newPath;
-      if (newPath == 1) {
-        navigate('/home');
-      }
-      if (newPath == 2) {
-        navigate('/education');
-      }
-      if (newPath == 3) {
-        navigate('/skills');
-      }
-      if (newPath == 4) {
-        navigate('/achievements');
-      }
-      // if(newPath==5){
-      //   navigate('/whyme');
-      // }
-      if (newPath == 5) {
-        navigate('/achievements');
-      }
-      if (newPath > 5) {
-        newPath = 4
-        navigate('/achievements');
-      }
-    }
-
-  }
+    isInformationBoxVisible = false;
+    setState({});
+  },[])
 
   return (
-    <div className=''>
+    <div className='sidebar-parent'  onMouseOver={() => { isInformationBoxVisible = true; setState({}); }}>
       <div className='side-bar'>
         <div id="home" className={'body_content_info'}>
           <div className='d-flex justify-content-around' >
-            <div onMouseOver={() => { isInformationBoxVisible = true; setState({}); }} >
+            <div>
               <span class="material-symbols-outlined" >
                 info
               </span>
@@ -89,8 +31,17 @@ function Sidebar(props) {
               The background is a heatmap of all my activities in Bangalore.
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue==2 ? 'information-box' : 'information-box-invisible')}>
+              <div>
               Image from the first ultra marathon, the 
-              <a href='https://www.strava.com/activities/6105334812' target='_blank'>Solang Sky Ultra.</a>
+              <a href='https://www.strava.com/activities/6105334812' target='_blank'> Solang Sky Ultra.</a>
+              </div>
+            </div>
+            <div className={' ' + (isInformationBoxVisible && pathValue==3 ? 'information-box' : 'information-box-invisible')}>
+              <div>
+              
+                Image from the hike to <a href='https://www.strava.com/activities/5870833129' target='_blank'>Gephan Lake, Himachal Pradesh.
+              </a>
+              </div>
             </div>
           </div>
         </div>
