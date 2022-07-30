@@ -1,10 +1,10 @@
 .Discussion{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;	
-    height: 100vh;
+    /* height: 150vh; */
     overflow:visible;
     background-image: url('../../../public/assets/kudos_background.png');
-
+    padding-bottom: 20vh;
 }
 
 .Discussion_control {
@@ -113,6 +113,28 @@
 
 .thanks-highlight {
     /* background-color: #fc520f; */
+}
+
+.div-part-1 {
+    margin-top: 15vh;
+}
+.div-part-3 {
+    margin-top: 15vh;
+}
+.comments-1 {
+    width: 25vw;
+    height: auto;
+    font-size: 1.1vw;
+    background-color:rgb(255, 255, 255,0.8);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(170, 170, 170, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    color: #000;
 }
 @media screen and (max-width: 600px) {
     .Discussion {
