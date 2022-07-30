@@ -142,6 +142,11 @@
         overflow:visible;
         background-image: url('../../../public/assets/kudos_background_mobile.png');
     }
+    .div-part-1 {
+display: none;    }
+    .div-part-3 {
+        display: none; 
+    }
 
 
     .give-kudos {
