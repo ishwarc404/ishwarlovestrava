@@ -21,11 +21,11 @@ function Skills() {
               </span>
               <br></br>
               <p className='highlight_block_technical_content'>
-                <span className='highlight_block_technical_content_sub'>Professional knowledge</span>: Python, Angular, .NETCore, Typescript.
+                <span className='highlight_block_technical_content_sub'>Professional</span>: Python, Angular, .NETCore, Typescript.
                 <div className='breakdiv'></div>
-                <span className='highlight_block_technical_content_sub'>Intermediate knowledge</span>: ReactJs, VueJs, Flask framework , AWS, C++, MongoDB, SQL & OpenCV.
+                <span className='highlight_block_technical_content_sub'>Intermediate</span>: ReactJs, VueJs, Flask framework , AWS, C++, MongoDB, & OpenCV.
                 <div className='breakdiv'></div>
-                <span className='highlight_block_technical_content_sub'>Basic knowledge</span>: Jenkins, ElectronJs, Selenium.
+                <span className='highlight_block_technical_content_sub'>Basic</span>: Jenkins, ElectronJs, Web automation with Selenium.
               </p>
               <br></br>
               <br></br>
@@ -34,7 +34,7 @@ function Skills() {
               </span>
               <br></br>
               <p className='highlight_block_technical_content'>
-                Final Cut Pro X, Adobe Suite, Digital design, Sound design.
+                Final Cut Pro X, Adobe Suite - Photoshop, Illustrator, & XD.
               </p>
             </div>
           </div>

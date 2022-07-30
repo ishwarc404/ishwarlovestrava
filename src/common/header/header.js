@@ -82,7 +82,7 @@ function Header() {
         </div>
         <div>
           <div className=' d-flex justify-content-center flex-div-more-small'>
-          <div  className="more_content_bug"><a  href='' target='_blank'><span className="">Credits</span></a></div>
+          <div  className="more_content_bug"><a  href='https://docs.google.com/document/d/197UcH4W1h5uKv51FwpsT7BJKtzRQUuYddL2VpjaKw5U/edit?usp=sharing' target='_blank'><span className="">Credits</span></a></div>
             <div className="more_content_bug">
               <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
           </div>
@@ -90,7 +90,7 @@ function Header() {
       </div>
       <div className={"header_content_4 expandable_menu" + (menuIsOpen ? '' : '_hidden')}>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='https://www.google.com' target='_blank'>Email</a>
+          <a className="email_href" href="mailto:ishwarc404@gmail.com?subject=Hi Ishwar!" target='_blank'>Email</a>
         </div>
         <div className=' d-flex justify-content-center'>
           <a className="email_href" href='https://drive.google.com/file/d/1-zUxpJ4-k8ZJpPXoaKaQdTnvXLMX5PZo/view?usp=sharing' target='_blank'>Resume</a>
@@ -105,7 +105,7 @@ function Header() {
           <a className="email_href" href='https://www.strava.com/athletes/43290018' target='_blank'>Strava</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='' target='_blank'>Credits</a>
+          <a className="email_href" href='https://docs.google.com/document/d/197UcH4W1h5uKv51FwpsT7BJKtzRQUuYddL2VpjaKw5U/edit?usp=sharing' target='_blank'>Credits</a>
         </div>
       </div>
     </div>

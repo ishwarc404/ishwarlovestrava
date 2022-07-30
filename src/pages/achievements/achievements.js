@@ -107,9 +107,9 @@ function Acheivements() {
                                     </div>
                                 <br></br>
                                 <div className='d-flex'>
-                                <button className='github_button'>Demo Video</button>
+                                <a href='https://www.youtube.com/watch?v=Yn965DAKQ8k' target='_blank'><button className='github_button'>Demo Video</button></a>
                                 <br></br>
-                                <button className='github_button'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/kaamdey_decentralisedhiring' target='_blank'><button className='github_button'>GitHub</button></a>
                                 </div>
                             </div>
                             <div className={'achievements' + (pathValue === 2 ? ' achievement_visible_2' : ' achievement_not_visible')}>
@@ -121,7 +121,7 @@ function Acheivements() {
                                     Hence with the help of a partner, we designed a de-centralized full-stack system that will allow the authorities to update the status of any resources or help communicate any information with the villagers; and would also allow the citizens to track the resources.
                                 </div>
                                 <br></br>
-                                <button className='github_button github_button_without_video'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/VillageResourceManagement' target='_blank'><button className='github_button github_button_without_video'>GitHub</button></a>
                             </div>
                             <div className={'achievements' + (pathValue === 3 ? ' achievement_visible_3' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Intruction doc to JSON convertor</span>
@@ -133,7 +133,7 @@ function Acheivements() {
                                     Also, implemented an algorithm that generated HTML elements to visualise and work on this JSON via a VueJs website.
                                 </div>
                                 <br></br>
-                                <button className='github_button github_button_without_video'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/Hackwell_48hr_Hackathon' target='_blank'><button className='github_button github_button_without_video'>GitHub</button></a>
                             </div>
                             <div className={'achievements' + (pathValue === 4 ? ' achievement_visible_4' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Capture the Flag hackathon</span>
@@ -145,7 +145,6 @@ function Acheivements() {
                                  totally to crack all the puzzles and find all the flags hidden across the sandbox.
                                 </div>
                                 <br></br>
-                                <button className='github_button github_button_without_video'>GitHub</button>
                             </div>
                             <div className={'achievements' + (pathValue === 5 ? ' achievement_visible_5' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Hurricane Prediction using NOAA data</span>
@@ -159,9 +158,9 @@ function Acheivements() {
                                 </div>
                                 <br></br>
                                 <div className='d-flex'>
-                                <button className='github_button'>Demo Video</button>
+                                <a href='https://www.youtube.com/watch?v=Yny1YIfMtXE' target='_blank'><button className='github_button'>Demo Video</button></a>
                                 <br></br>
-                                <button className='github_button'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/codefundo2018' target='_blank'><button className='github_button'>GitHub</button></a>
                                 </div>
 
                             </div>
@@ -175,7 +174,7 @@ function Acheivements() {
                                 Worked with a fellow musician friend of mine. We integrated our NLP model with Magenta, which is an ML model that can be modelled to generate musical notes based off on several parameters.
                                 </div>
                                 <br></br>
-                                <button className='github_button github_button_without_video'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/synthesisofmusic/tree/master/performance_rnn' target='_blank'><button className='github_button github_button_without_video'>GitHub</button></a>
                             </div>
                             <div className={'achievements' + (pathValue === 7 ? ' achievement_visible_7' : ' achievement_not_visible')}>
                                 <span className='achievements_highlight_block_information'>Lip movement to text conversion</span>
@@ -187,7 +186,9 @@ function Acheivements() {
                                 Unfortunately these results were not as useful, as the parameters were highly limited and recordings done in a controlled environment. 
                                 </div>
                                 <br></br>
-                                <button className='github_button github_button_without_video'>GitHub</button>
+                                <a href='https://github.com/ishwarc404/LipReading_CapstoneProject_Phase2'><button className='github_button github_button_without_video' target='_blank'>GitHub - Phase 2</button></a>
+                                <a href='https://github.com/ishwarc404/Lip2Text_CapstoneProject_Phase1'><button className='github_button github_button_without_video' target='_blank'>GitHub - Phase 1</button></a>
+
                             </div>
                         </div>
                     </div>
