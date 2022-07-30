@@ -66,7 +66,7 @@ function Header() {
           <div className="more_content"><a href='https://www.linkedin.com/in/ishwarchoudhary/' target='_blank'><span className="more_content_name_linkedIn">
             <img className="medium_image" src={linkedinlogo} />
           </span></a></div>
-          <div className="more_content"><a href='https://github.com/ishwarc404/ishwarlovestrava' target='_blank'><span className="more_content_name">
+          <div className="more_content"><a href='https://github.com/ishwarc404?tab=repositories' target='_blank'><span className="more_content_name">
             <img className="github_image" src={githublogo} />
           </span></a></div>
           <div className="more_content"><a href='https://www.strava.com/athletes/43290018' target='_blank'><span className="more_content_name_strava">
@@ -82,10 +82,14 @@ function Header() {
         </div>
         <div>
           <div className=' d-flex justify-content-center flex-div-more-small'>
-          <div  className="more_content_bug"><a  href='https://docs.google.com/document/d/197UcH4W1h5uKv51FwpsT7BJKtzRQUuYddL2VpjaKw5U/edit?usp=sharing' target='_blank'><span className="">Credits</span></a></div>
+            <div className="more_content_bug"><a href='https://docs.google.com/document/d/197UcH4W1h5uKv51FwpsT7BJKtzRQUuYddL2VpjaKw5U/edit?usp=sharing' target='_blank'><span className="">Credits</span></a></div>
             <div className="more_content_bug">
               <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
+            <div className="more_content_bug">
+              <a href="https://forms.gle/RB2CDD2vwFDaDvfv9" target='_blank'>Get access to the webpage code.</a></div>
           </div>
+
+
         </div>
       </div>
       <div className={"header_content_4 expandable_menu" + (menuIsOpen ? '' : '_hidden')}>
@@ -99,7 +103,7 @@ function Header() {
           <a className="email_href" href='https://www.linkedin.com/in/ishwarchoudhary/' target='_blank'>LinkedIn</a>
         </div>
         <div className=' d-flex justify-content-center'>
-          <a className="email_href" href='https://github.com/ishwarc404/ishwarlovestrava' target='_blank'>Github</a>
+          <a className="email_href" href='https://github.com/ishwarc404?tab=repositories' target='_blank'>Github</a>
         </div>
         <div className=' d-flex justify-content-center'>
           <a className="email_href" href='https://www.strava.com/athletes/43290018' target='_blank'>Strava</a>
