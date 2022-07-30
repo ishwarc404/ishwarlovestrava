@@ -213,11 +213,11 @@ function Mystrava() {
               // console.log('here');
               // console.log(response.data);
               latestActivity = response.data;
-              console.log(latestActivity)
+              // console.log(latestActivity)
               if (latestActivity['map']) {
                 if (latestActivity['map']['summary_polyline']) {
                   latestActivityPolyline = latestActivity['map']['summary_polyline'];
-                  console.log(latestActivity['map']['summary_polyline']);
+                  // console.log(latestActivity['map']['summary_polyline']);
                 }
               }
               // for (let i = 0; i < latestActivityPolyline.length; i++) {
@@ -353,7 +353,7 @@ function Mystrava() {
                     <div>{isLoaderActive ? '' : latestActivity.description}</div>
                     <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
                     <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
-                    <div>{console.log(latestActivityPolyline)}</div>
+                    {/* <div>{console.log(latestActivityPolyline)}</div> */}
                     <div className='d-flex'>
                       <i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
                       {isLoaderActive ? '' : latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :
@@ -415,17 +415,17 @@ function Mystrava() {
             <div className='iphone-info-div'>
               <div className='proud-title'>Proud of my trophies.</div>
               <img className='iphone-1' src={iphone} width="300"></img>
-              <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true} playsInLine></video>
+              <video className='iphone-1-video' src={trophy_video} loop={true} autoPlay={true} playsInline></video>
             </div>
             <div className='iphone-info-div-2'>
               <div className='dnf-title'>More, of my DNFs.</div>
               <img className='iphone-2' src={iphone} width="300"></img>
-              <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true} playsInLine></video>
+              <video className='iphone-2-video' src={dnf_video} loop={true} autoPlay={true} playsInline></video>
             </div>
             <div className='iphone-info-div-3'>
               <div className='segments-title' ><b>Boulder</b>, incoming.</div>
               <img className='iphone-3' src={iphone} width="300"></img>
-              <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true} playsInLine></video>
+              <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true} playsInline></video>
             </div>
           </div>
           <div className='strava_wall_div'
@@ -479,7 +479,7 @@ function Mystrava() {
                     <div>{isLoaderActive ? '' : latestActivity.description}</div>
                     <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
                     <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
-                    <div>{console.log(latestActivityPolyline)}</div>
+                    {/* <div>{console.log(latestActivityPolyline)}</div> */}
                     <div className='d-flex'>
                       <div><i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
                         {isLoaderActive ? '' : latestActivity.sport_type == 'Run' ? (<img className=" activity_icon run" src={runimage} />) :

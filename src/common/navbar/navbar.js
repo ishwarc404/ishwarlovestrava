@@ -110,7 +110,7 @@ function Navbar(props) {
 
         <div id="education" className={'body_content_2_responsive body_content_all' + (pathValue === 2 ? ' orange' : ' ')}>
           <div className='edu_icon_parent' onClick={() => { navigate('/education'); clicked(2) }}>
-            <span class="material-symbols-outlined test-material-icon">
+            <span className="material-symbols-outlined test-material-icon">
               school
             </span>
             <br></br>
@@ -120,7 +120,7 @@ function Navbar(props) {
 
         <div id="skills" className={'body_content_3_responsive body_content_all' + (pathValue === 3 ? ' orange' : ' ')}>
           <div className='skills_icon_parent' onClick={() => { navigate("/skills"); clicked(3) }}>
-            <span class="material-symbols-outlined skills-icon test-material-icon">
+            <span className="material-symbols-outlined skills-icon test-material-icon">
               code
             </span>            <br></br>
             <span className='skills_icon_title'>Skills</span>

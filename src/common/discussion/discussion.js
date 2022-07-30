@@ -13,6 +13,8 @@ var userData = {
 var kudos_counter = 0;
 var user_ip_ = null;
 var kudos_given_before = false;
+var didComment = false;
+
 function Discussion(props) {
 
   const [comment, setComment] = React.useState('');
@@ -21,7 +23,7 @@ function Discussion(props) {
 
   useEffect(() => {
     const get_ip = async () => {
-      console.log("got here");
+      // console.log("got here");
       const response = await fetch("https://geolocation-db.com/json/");
       const data = await response.json();
       user_ip_ = data.IPv4;
@@ -56,7 +58,9 @@ function Discussion(props) {
       comment: comment
     })
       .then(response => {
-        console.log(response);
+        // console.log(response);
+        didComment = true;
+        setState({});
       })
 
   }
@@ -64,7 +68,7 @@ function Discussion(props) {
   function handleKudosSubmit(event) {
 
     if (!kudos_given_before) {
-      console.log('there');
+      // console.log('there');
       axios.post('https://sheet.best/api/sheets/3c44458e-3947-4552-8dbb-ed197b7f6b08', {
         ip: user_ip_,
         date: Date.now(),
@@ -106,6 +110,9 @@ function Discussion(props) {
           <div className='d-flex justify-content-around post-comment'>
             <button className="postButton" type='submit'><div className='write-comment-post-button'><b>Post</b></div></button>
           </div>
+        </div>
+        <div className={'d-flex justify-content-center' + (didComment ? ' thanks-comment' : ' thanks-comment-invisible')}>
+          <span className='thanks-highlight'>Thanks!</span>
         </div>
       </form>
     </div>

@@ -8,6 +8,7 @@ import loadingGif from '../../assets/12fps.gif';
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
+import Sidebar from '../../common/sidebar/sidebar';
 
 function Home(props) {
 
@@ -33,6 +34,7 @@ function Home(props) {
               Thanks!
             </div>
 
+            <Sidebar path={1} />
             <Navbar path={1} />
           </div>
 

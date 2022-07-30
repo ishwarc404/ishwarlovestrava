@@ -1,0 +1,48 @@
+
+.side-bar {
+    
+    overflow: hidden; 
+    /* background-color: #333; */
+    position: fixed; 
+    /* Set the navbar to fixed position */
+    top: 90%; 
+    /* left:95%; */
+    /* top: 0; 
+    Position the navbar at the top of the page */
+    /* width: 100%;  */
+
+}
+
+.body_content_info{
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 0.8vw;
+     border: none;
+    /* border-bottom-left-radius: 5px; */
+    /* border-top-left-radius: 5px; */
+    border-right: 0px;
+    background-color: #FFF;
+    /* color: #fc5200; */
+    /* color: white; */
+    /* height: 20vh; */
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all .3s ease-in-out;
+    /* width: max-content; */
+    
+
+}
+
+.information-box {
+    margin-left: 5px;
+    margin-top: 5px;
+    display: block;
+}
+
+.information-box-invisible {
+    margin-left: 5px;
+    padding-top: 5px;
+    display: none;
+}

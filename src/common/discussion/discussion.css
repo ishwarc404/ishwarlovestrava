@@ -31,14 +31,14 @@
 
 
 .kudos-logo {
-    margin-top: 10vh;
+    margin-top: 8vh;
     width: 100px;
     height: 100px;
 }
 
 
 .kudos-counter {
-    margin-top: 10vh;
+    margin-top: 8vh;
     margin-left: 3vw;
     font-size: 5vw;
 }
@@ -93,6 +93,27 @@
     margin: 0px;
 }
 
+.thanks-comment {
+    margin-top: 1vh;
+    font-size: 2vw;
+        color: white;
+    /* background-color: #fff; */
+    display: block;
+}
+
+.thanks-comment-invisible {
+    display: none;
+    visibility: hidden;
+    margin-top: 1vh;
+
+    color: white;
+    /* background-color: #fff; */
+
+}
+
+.thanks-highlight {
+    /* background-color: #fc520f; */
+}
 @media screen and (max-width: 600px) {
     .Discussion {
         height: 100vh;

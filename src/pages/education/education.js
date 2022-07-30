@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
-
+import Sidebar from '../../common/sidebar/sidebar';
 import background from '../../assets/squiggly6_green3.png';
 import Discussion from '../../common/discussion/discussion';
 
@@ -101,6 +101,7 @@ function Education(props) {
 
           </div>
         </div>
+        <Sidebar path={2} />
         <Navbar path={2} />
       </div>
       {/* <Discussion /> */}
