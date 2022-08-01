@@ -32,7 +32,7 @@ function Discussion(props) {
       setState({});
 
       //getting kudos
-      axios.get('https://sheet.best/api/sheets/3c44458e-3947-4552-8dbb-ed197b7f6b08')
+      axios.get('https://sheet.best/api/sheets/a41c21aa-1c83-4b4f-a478-549345179b89')
         .then(response => {
           kudos_counter = response.data.length;
           setState({});
@@ -97,8 +97,7 @@ function Discussion(props) {
   function handleKudosSubmit(event) {
 
     if (!kudos_given_before) {
-      // console.log('there');
-      axios.post('https://sheet.best/api/sheets/3c44458e-3947-4552-8dbb-ed197b7f6b08', {
+      axios.post('https://sheet.best/api/sheets/a41c21aa-1c83-4b4f-a478-549345179b89', {
         ip: user_ip_,
         date: Date.now(),
         kudos: 1

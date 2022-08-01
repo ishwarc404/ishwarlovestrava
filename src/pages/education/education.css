@@ -14,7 +14,7 @@
 .bodycontent_education
 {
     margin-top: 30px;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     z-index: -10;
 }
 
