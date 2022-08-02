@@ -10,7 +10,7 @@ import Discussion from '../../common/discussion/discussion';
 
 
 
-var information = 'Beginning my studies this Fall as a full-time student at Boulder. My goal is to specialise in the field of cloud computing and backend systems.';
+var information = 'Beginning my studies this Fall as a full-time student at Boulder. Specialising in Cloud Computing and Backend systems.';
 
 var isInformationVisible = true;
 var pathValue = 2;
@@ -26,17 +26,17 @@ function Education(props) {
       pathValue = 1;
     }
     else if (data === 'ms') {
-      information = 'Beginning my studies this Fall as a full-time student at Boulder. My goal is to specialise in the field of cloud computing and backend systems.';
+      information = 'Beginning my studies this Fall as a full-time student at Boulder. Specialising in Cloud Computing and Backend systems.';
       isInformationVisible = true;
       pathValue = 2;
     }
     else if (data === 'internship') {
-      information = 'Worked as a Full Stack Developer, incorporating technologies such as Python, .NET, mySQL & VueJs. Developed and deployed two customer facing projects. The more successful of the two handles live traffic of more than 300 systems. ';
+      information = 'Worked as a Full Stack Developer, where I developed and deployed two customer facing projects. One of which, is an a activity monitoring software for call-centres and handles live traffic from more than 300 systems.';
       isInformationVisible = true;
       pathValue = 3;
     }
     else if (data === 'internship2') {
-      information = 'Worked as a Full Stack Developer, incorporating technologies such as Python, .NET, mySQL & VueJs. Developed and deployed two customer facing projects. The more successful of the two handles live traffic of more than 300 systems. ';
+      information = 'Worked as a Full Stack Developer. Developed an advertisement mock-up tool for internal use. Used technologies like .NET Core, mySQL & VueJs.';
       isInformationVisible = true;
       pathValue = 4;
     }

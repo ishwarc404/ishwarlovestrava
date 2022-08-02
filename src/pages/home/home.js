@@ -26,8 +26,7 @@ function Home(props) {
                 at Strava.</span>
               <br></br>
               <span className='header_content_all'>
-              I hope you give me a chance to showcase why I would be a great fit as part of Strava’s
-              <br></br><span className='highlight_block'><b>ENGINEERING TEAM.</b></span>
+              I’d love to show you why I’d be a great fit at STRAVA and as part of your <span className='highlight_block'><b>ENGINEERING TEAM.</b></span>
               </span>
               <br></br>
               <br></br>
