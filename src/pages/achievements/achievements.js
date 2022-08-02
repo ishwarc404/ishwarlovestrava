@@ -124,7 +124,7 @@ function Acheivements() {
                                 <a href='https://github.com/ishwarc404/VillageResourceManagement' target='_blank'><button className='github_button github_button_without_video'>GitHub</button></a>
                             </div>
                             <div className={'achievements' + (pathValue === 3 ? ' achievement_visible_3' : ' achievement_not_visible')}>
-                                <span className='achievements_highlight_block_information'>Intruction doc to JSON convertor</span>
+                                <span className='achievements_highlight_block_information'>Instruction doc to JSON convertor</span>
                                 <br></br>
                                 <div className='highlight_block_information_sub'>
                                     Worked on developing a tool for Honeywell, that converts industrial manufacturing instructions documents into 

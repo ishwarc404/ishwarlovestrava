@@ -23,7 +23,7 @@ function Skills() {
               <p className='highlight_block_technical_content'>
                 <span className='highlight_block_technical_content_sub'>Professional</span>: Python, Angular, .NETCore, Typescript.
                 <div className='breakdiv'></div>
-                <span className='highlight_block_technical_content_sub'>Intermediate</span>: ReactJs, VueJs, Flask framework , AWS, C++, MongoDB, & OpenCV.
+                <span className='highlight_block_technical_content_sub'>Intermediate</span>: ReactJs, VueJs, Flask framework, AWS, C++, MongoDB, & OpenCV.
                 <div className='breakdiv'></div>
                 <span className='highlight_block_technical_content_sub'>Basic</span>: Jenkins, ElectronJs, Web automation with Selenium.
               </p>

@@ -32,7 +32,7 @@ function Sidebar(props) {
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue==2 ? 'information-box' : 'information-box-invisible')}>
               <div>
-              Image from the first ultra marathon, the 
+              Image from my first ultra marathon, the 
               <a href='https://www.strava.com/activities/6105334812' target='_blank'> Solang Sky Ultra.</a>
               </div>
             </div>

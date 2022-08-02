@@ -22,6 +22,7 @@ import trophy_video from '../../assets/trophy.mp4';
 import dnf_video from '../../assets/dnf.mp4';
 import segments_video from '../../assets/segments.mp4';
 import stravawall from '../../assets/strava_wall_transparent.png';
+import signal from '../../assets/left_down_signal.png';
 
 var isLoaderActive = true;
 
@@ -435,6 +436,7 @@ function Mystrava() {
       <Discussion noBackground={true}/>
                     
           </div>
+          <img className='signal_image' src={signal}></img>
 
           <Navbar path={6} />
         </div>
