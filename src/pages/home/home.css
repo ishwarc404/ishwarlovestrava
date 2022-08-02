@@ -111,6 +111,18 @@ color: #fc5200;
 }
 
 
+.signal_image {
+    position: fixed; 
+    top: 65vh; 
+    left: 90vw;
+    width: 8vw; 
+}
+@media screen and (max-width: 850px) {
+    .signal_image {
+       display: none;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .bodycontent {
         height: 100vh;

@@ -4,6 +4,7 @@ import './home.css';
 import React, { useState, useEffect } from 'react';
 
 import loadingGif from '../../assets/12fps.gif';
+import signal from '../../assets/right_down_signal.png';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
@@ -33,6 +34,7 @@ function Home(props) {
               Thanks!
             </div>
 
+            <img className='signal_image' src={signal}></img>
             <Sidebar path={1} />
             <Navbar path={1} />
           </div>
