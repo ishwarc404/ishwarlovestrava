@@ -3,6 +3,7 @@ import './skills.css';
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 import Sidebar from '../../common/sidebar/sidebar';
+import Signal from '../../common/signal/signal';
 
 import background from '../../assets/ghepan2.png';
 import Discussion from '../../common/discussion/discussion';
@@ -38,6 +39,7 @@ function Skills() {
               </p>
             </div>
           </div>
+          <Signal path={3} />
           <Sidebar path={3}/>
           <Navbar path={3}/>
         </div>

@@ -3,7 +3,7 @@
     cursor: url('../../../public/assets/badge.svg'), auto;	
     background-color: rgb(247, 247, 250);
     height: 100vh;
-    overflow:visible;
+    overflow:scroll;
     background-image: url('../../../public/assets/heatmaporiginal.png');
     background-repeat: repeat;	
     /* background-size: 2000px 1261.2px; */
@@ -113,10 +113,21 @@ color: #fc5200;
 
 .signal_image {
     position: fixed; 
-    top: 65vh; 
-    left: 90vw;
-    width: 8vw; 
+    top: 55vh; 
+    left: 75vw;
+    width: 35vw; 
 }
+
+.signal_image-2 {
+    position: fixed; 
+    top: 78.7vh; 
+    left: 91.6vw;
+    width: 1vw; 
+    height: 1vw;
+    background-color: #fc5200;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: 850px) {
     .signal_image {
        display: none;
@@ -146,3 +157,5 @@ color: #fc5200;
         padding-left:45vw;
     }
 }
+
+

@@ -10,13 +10,29 @@ import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
 import Sidebar from '../../common/sidebar/sidebar';
+import Signal from '../../common/signal/signal';
 
+var bottomSignalColor = 'rgb(52, 227, 43)';
 function Home(props) {
+  const [, setState] = useState();
+
+  function handleScroll(e){
+    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    if (bottom) { 
+        bottomSignalColor = 'rgb(255, 6, 36)'; //red
+        setState({});
+     }
+     else{
+      bottomSignalColor = 'rgb(52, 227, 43)' //green
+      setState({});
+     }
+  }
+
 
   if (!props.loading) {
     return (
       <div>
-        <div className="Home">
+        <div className="Home" onScroll={handleScroll}>
 
           <Header />
 
@@ -34,7 +50,7 @@ function Home(props) {
               Thanks!
             </div>
 
-            <img className='signal_image' src={signal}></img>
+            <Signal path={1} bottomSignalColor={bottomSignalColor} />
             <Sidebar path={1} />
             <Navbar path={1} />
           </div>
@@ -52,6 +68,7 @@ function Home(props) {
       <div className='d-flex justifty-content-center loadingGifDiv'>
         <img src={loadingGif} className="loadingGif"></img>
       </div>
+      
       </div>
     );
   }

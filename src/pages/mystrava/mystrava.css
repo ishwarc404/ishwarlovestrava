@@ -1,10 +1,11 @@
 .Mystrava{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
-    overflow: scroll;
     /* overflow-x: scroll; */
     /* height: 100vh; */
     background-color: rgb(247, 247, 250);
+    overflow:scroll;
+    overflow-y: scroll;
 }
 
 .bodycontent_mystrava {

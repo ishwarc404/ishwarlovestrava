@@ -23,7 +23,8 @@ import dnf_video from '../../assets/dnf.mp4';
 import segments_video from '../../assets/segments.mp4';
 import stravawall from '../../assets/strava_wall_transparent.png';
 import signal from '../../assets/left_down_signal.png';
-
+import Signal from '../../common/signal/signal';
+import Sidebar from '../../common/sidebar/sidebar';
 var isLoaderActive = true;
 
 var athleteProfileData = {
@@ -105,12 +106,24 @@ function getMonday(d) {
 
 
 
+var bottomSignalColor = 'rgb(52, 227, 43)'; 
 
 function Mystrava() {
   const [, setState] = useState();
 
   const headers = {
     'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
+  }
+
+  function handleScrollRed(){
+    bottomSignalColor = 'rgb(255, 6, 36)'; //red
+    setState({});
+  }
+
+
+  function handleScrollGreen(){
+    bottomSignalColor = 'rgb(52, 227, 43)'; //red
+    setState({});
   }
 
   useEffect(() => {
@@ -430,14 +443,17 @@ function Mystrava() {
             </div>
           </div>
           <div className='strava_wall_div'
-          
+          onMouseEnter={handleScrollRed}
+          onMouseLeave ={handleScrollGreen}
           >
             {/* <div className='strava_wall_image_exit'>EXIT</div> */}
       <Discussion noBackground={true}/>
                     
           </div>
-          <img className='signal_image' src={signal}></img>
+          {/* <img className='signal_image' src={signal}></img> */}
 
+          <Signal path={6} bottomSignalColor={bottomSignalColor} />
+          <Sidebar path={6} />
           <Navbar path={6} />
         </div>
         <div className='bodycontent_mystrava-responsive-parent'>

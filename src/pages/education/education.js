@@ -7,6 +7,7 @@ import Navbar from '../../common/navbar/navbar';
 import Sidebar from '../../common/sidebar/sidebar';
 import background from '../../assets/squiggly6_green3.png';
 import Discussion from '../../common/discussion/discussion';
+import Signal from '../../common/signal/signal';
 
 
 
@@ -101,6 +102,7 @@ function Education(props) {
 
           </div>
         </div>
+        <Signal path={2} />
         <Sidebar path={2} />
         <Navbar path={2} />
       </div>
