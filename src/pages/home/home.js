@@ -16,6 +16,10 @@ var bottomSignalColor = 'rgb(52, 227, 43)';
 function Home(props) {
   const [, setState] = useState();
 
+
+  // useEffect(()=>{
+  // })
+
   function handleScroll(e){
     const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
     if (bottom) { 
