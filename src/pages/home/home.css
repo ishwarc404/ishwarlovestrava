@@ -111,22 +111,7 @@ color: #fc5200;
 }
 
 
-.signal_image {
-    position: fixed; 
-    top: 55vh; 
-    left: 75vw;
-    width: 35vw; 
-}
 
-.signal_image-2 {
-    position: fixed; 
-    top: 78.7vh; 
-    left: 91.6vw;
-    width: 1vw; 
-    height: 1vw;
-    background-color: #fc5200;
-    border-radius: 50%;
-}
 
 @media screen and (max-width: 850px) {
     .signal_image {
