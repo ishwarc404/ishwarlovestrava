@@ -18,7 +18,9 @@ function Sidebar(props) {
   }, [])
 
   return (
-    <div className='sidebar-parent' onMouseOver={() => { isInformationBoxVisible = true; setState({}); }}>
+    <div className='sidebar-parent' onMouseOver={() => { isInformationBoxVisible = true; setState({}); }} onMouseLeave={() => { setTimeout(() => {
+      isInformationBoxVisible = false; setState({}); 
+    }, 5000); }}>
       <div className='side-bar'>
         <div id="home" className={'body_content_info'}>
           <div className='d-flex justify-content-around' >
@@ -27,7 +29,7 @@ function Sidebar(props) {
                 info
               </span>
             </div>
-            <div className={' ' + (isInformationBoxVisible && pathValue == 1 ? 'information-box' : 'information-box-invisible')}>
+            <div className={' ' + (isInformationBoxVisible && pathValue == 1 ? 'information-box' : 'information-box-invisible')} >
               The background is a heatmap of all my activities in Bangalore.
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue == 2 ? 'information-box' : 'information-box-invisible')}>
