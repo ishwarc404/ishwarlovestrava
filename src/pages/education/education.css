@@ -1,8 +1,9 @@
 .Education{
     font-family: 'Maison Neue', sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
+    overflow: hidden;
     height: 100vh;
-    overflow:visible;
+    /* overflow:visible; */
     background-image: url('../../../public/assets/squiggly6_green3.png');
     background-repeat: repeat;	
     /* background-size: 1800px 1061.2px; */

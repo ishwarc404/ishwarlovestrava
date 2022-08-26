@@ -6,7 +6,7 @@
     overflow:visible;
     background-image: url('../../../public/assets/ghepan2.png');
     background-repeat: repeat;	
-    background-size: 1800px 1061.2px;
+    /* background-size: 1800px 1061.2px; */
     background-size: 100vw auto;
 }
    
