@@ -11,7 +11,7 @@ import Signal from '../../common/signal/signal';
 
 
 
-var information = 'Beginning my studies this Fall as a full-time student at Boulder. Specialising in Cloud Computing and Backend systems.';
+var information = 'Beginning my studies this Fall as a full-time student at Boulder. Taking up Algorithms and Data Mining in my first semester. Concurrently working as a bike mechanic at the university bike station and also as a video editor. ';
 
 var isInformationVisible = true;
 var pathValue = 2;
@@ -27,7 +27,7 @@ function Education(props) {
       pathValue = 1;
     }
     else if (data === 'ms') {
-      information = 'Beginning my studies this Fall as a full-time student at Boulder. Specialising in Cloud Computing and Backend systems.';
+      information = 'Beginning my studies this Fall as a full-time student at Boulder. Taking up Algorithms and Data Mining in my first semester. Concurrently working as a bike mechanic at the university bike station and also as a video editor. ';
       isInformationVisible = true;
       pathValue = 2;
     }
