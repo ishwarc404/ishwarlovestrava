@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ishwarlovestrava/static/css/main.0da9e7d8.css",
-    "main.js": "/ishwarlovestrava/static/js/main.4248becc.js",
+    "main.css": "/ishwarlovestrava/static/css/main.02cca6e0.css",
+    "main.js": "/ishwarlovestrava/static/js/main.5ac2356f.js",
     "static/js/787.772d3d10.chunk.js": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
     "static/media/darkmountain9.png": "/ishwarlovestrava/static/media/darkmountain9.a6eac84580f6da6b104c.png",
@@ -14,6 +14,7 @@
     "static/media/translate2.png": "/ishwarlovestrava/static/media/translate2.dd31da05c95d421144c1.png",
     "static/media/img18.png": "/ishwarlovestrava/static/media/img18.d41e5544bb350a17f6da.png",
     "static/media/img21.png": "/ishwarlovestrava/static/media/img21.b191c133a827e62881a6.png",
+    "static/media/kilianjgroupride.png": "/ishwarlovestrava/static/media/kilianjgroupride.f787efab1bf8ccfb1e01.png",
     "static/media/img15.png": "/ishwarlovestrava/static/media/img15.5c5f53cde5af106ca67b.png",
     "static/media/img22.png": "/ishwarlovestrava/static/media/img22.5990d30ea413f608fc9b.png",
     "static/media/img4.png": "/ishwarlovestrava/static/media/img4.20a93fc2e85eee6e3833.png",
@@ -56,12 +57,12 @@
     "static/media/bike.svg": "/ishwarlovestrava/static/media/bike.8c8193b19bf797bff42acd2bf39315c8.svg",
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
-    "main.0da9e7d8.css.map": "/ishwarlovestrava/static/css/main.0da9e7d8.css.map",
-    "main.4248becc.js.map": "/ishwarlovestrava/static/js/main.4248becc.js.map",
+    "main.02cca6e0.css.map": "/ishwarlovestrava/static/css/main.02cca6e0.css.map",
+    "main.5ac2356f.js.map": "/ishwarlovestrava/static/js/main.5ac2356f.js.map",
     "787.772d3d10.chunk.js.map": "/ishwarlovestrava/static/js/787.772d3d10.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0da9e7d8.css",
-    "static/js/main.4248becc.js"
+    "static/css/main.02cca6e0.css",
+    "static/js/main.5ac2356f.js"
   ]
 }
