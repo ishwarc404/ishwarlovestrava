@@ -38,6 +38,11 @@ font-family: 'Maison Neue';
 .feature-1 {
     width: 50vw;
 }
+.feature-2 {
+    width: 70vw;
+    margin-left: 20vw;
+}
+
 .prototypes-title{
     margin-top: 6vw;
     font-size: 2.2vw;
@@ -94,6 +99,25 @@ font-family: 'Maison Neue';
     font-family: 'Shadows Into Light', sans-serif;
 }
 
+.feature-2-info {
+    margin-top: 8vw;
+    font-size: 3vw;
+    font-family: 'Maison Neue', sans-serif;
+}
+
+.feature-2-info-title {
+    margin-top: 4vw;
+    font-size: 3vw;
+    font-family: 'Shadows Into Light', sans-serif;
+}
+
+.feature-2-info-body {
+    font-size: 1vw;
+    font-family: 'Shadows Into Light', sans-serif;
+}
+
+
+
 
 .iphone-1-image-translate-button {
     font-family: 'Maison Neue', sans-serif;
@@ -130,6 +154,22 @@ font-family: 'Maison Neue';
     top: 0;
     left: 0;
 }
+
+
+.iphone-2-prototype{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.iphone-2-image-original {
+    position: absolute;
+    top: 68.5px;
+    left: 25px;
+    width: 250px;
+    height: auto;
+}
+
 
 
 .invisible {
