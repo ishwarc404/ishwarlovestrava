@@ -130,7 +130,8 @@ function SummaryPlot(props) {
               </pattern>
             </defs>
             <rect x="0" width="300px" height={maxHeight} fill="url(#grid)" stroke="gray"></rect>
-            <g className="label-title">
+            <g class="label-title">
+                <text x="-65" y="10" transform="rotate(-90)">HOURS</text>
             </g>
 
             {/* <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">

@@ -61,6 +61,7 @@ var accessToken = '814ab41c4c149fdcc6ff3e22941e1ca2948fd1a4'
 var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
+var latestActivityIdForLink = null;
 
 var userSelectedActivityType = 'Run'
 var mileageData = {
@@ -200,6 +201,34 @@ function Mystrava() {
       }
 
 
+      ////test - seperated out to prevent any sort of async
+      axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${1}&per_page=1`, {
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+        }
+      }).then((response) => {
+      latestActivityId = response.data[0]['id'];
+      latestActivityIdForLink = latestActivityId;
+      //LATEST ACTIVITY DATA
+      axios.get(singleActivityURL + `${latestActivityId}`, {
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+        }
+      }).then((response) => {
+        latestActivity = response.data;
+        // console.log(latestActivity)
+        if (latestActivity['map']) {
+          if (latestActivity['map']['summary_polyline']) {
+            latestActivityPolyline = latestActivity['map']['summary_polyline'];
+          }
+        }
+        setState({});
+      });
+    });
+
+      //////test ends
+
+
       //MAIN LOOPS BEGINS
       for (var i = 0; i < maxActivityPages; i++) {
         //MILEAGE CALCULATION
@@ -211,51 +240,6 @@ function Mystrava() {
             'Authorization': `Bearer ${accessToken}`,
           }
         }).then((response) => {
-
-          // console.log(response.data);
-
-          if (latestActivityFlag) {
-            latestActivityFlag = false;
-            // console.log('insuxe ths, first activity')
-            latestActivityId = response.data[0]['id'];
-            //LATEST ACTIVITY DATA
-            axios.get(singleActivityURL + `${latestActivityId}`, {
-              headers: {
-                'Authorization': `Bearer ${accessToken}`,
-              }
-            }).then((response) => {
-              // console.log('here');
-              // console.log(response.data);
-              latestActivity = response.data;
-              // console.log(latestActivity)
-              if (latestActivity['map']) {
-                if (latestActivity['map']['summary_polyline']) {
-                  latestActivityPolyline = latestActivity['map']['summary_polyline'];
-                  // console.log(latestActivity['map']['summary_polyline']);
-                }
-              }
-              // for (let i = 0; i < latestActivityPolyline.length; i++) {
-              //   latestActivityPolyline[i] = [
-              //     latestActivityPolyline[i][1],
-              //     latestActivityPolyline[i][0]
-              //   ];
-              // }
-
-              // console.log('here: ', polyline.encode(latestActivityPolyline));
-
-              //TEST CODE
-              // let geoJSON = {
-              //   "type": "Feature",
-              //   "geometry": {
-              //     "type": "LineString",
-              //     "coordinates": latestActivityPolyline
-              //   }
-              // };
-
-              setState({});
-            });
-
-          }
 
           totalActivitiesTillDate += response.data.length
           // console.log(totalActivitiesTillDate);
@@ -315,16 +299,7 @@ function Mystrava() {
         });
       }
     });
-    // setInterval(function () {
-    //   if (imageCount > 24) {
-    //     imageCount = 0;
-    //   }
-    //   imageCount++
-    //   console.log(imageCount);
-    //   displayImage = imgs[imageCount];
-    //   console.log(displayImage);
-    //   setState({});
-    // }, 4000);
+
   }, []);
 
 
@@ -380,7 +355,12 @@ function Mystrava() {
                         <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" data-testid="unfilled_kudos"><path d="M15.243 7.182a1.907 1.907 0 00-.532-1.423 2.069 2.069 0 00-1.493-.641H9.863l.454-1.812A2.426 2.426 0 008.064.514h-.513l-.718 2.807L4.97 6.915.412 9.34l2.472 6.424 4.278-2.28h4.785a2.142 2.142 0 002.127-1.976l.084-1.177a1.962 1.962 0 00.712-2.097 1.93 1.93 0 00.373-1.052zM1.664 9.807l2.06-1.1 1.748 4.542-2.061 1.1-1.747-4.542zm12.289-2.038l-.268.254.165.331a.942.942 0 01-.044.903.965.965 0 01-.369.352l-.237.131-.122 1.7a1.123 1.123 0 01-1.129 1.049H6.914l-.552.295-1.748-4.547 1.1-.586 2.033-3.92.567-2.166a1.427 1.427 0 011.032 1.371c0 .071 0 .139-.007.167l-.758 3.016h4.64a1.059 1.059 0 01.764.328.917.917 0 01.26.683.942.942 0 01-.292.639z" fill=""></path></svg>
                         {latestActivity.kudos_count}
                       </div>
+                     
                     </div>
+                    <a target='_blank' href={'https://www.strava.com/activities/'+ latestActivityIdForLink}>
+                        <span class="material-symbols-outlined" >
+                info
+              </span></a>
 
                   </div>
                 </div>
@@ -413,7 +393,7 @@ function Mystrava() {
                   <img className={'information-div-profile-athlete-image-badge' + (isLoaderActive ? ' data-invisble' : ' ')} src={premiumBadge}></img>
                 </div>
                 <div className='information-div-profile-text-container'>
-                  <div><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></div>
+                  <div><a href='https://www.strava.com/athletes/43290018' class='profile_a_tag' target='_blank'><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></a></div>
                   <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
                   <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
 
