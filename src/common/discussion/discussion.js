@@ -32,7 +32,7 @@ function Discussion(props) {
       setState({});
 
       //getting kudos
-      axios.get('https://sheet.best/api/sheets/a41c21aa-1c83-4b4f-a478-549345179b89')
+      axios.get('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71ad')
         .then(response => {
           kudos_counter = response.data.length;
           setState({});
@@ -45,7 +45,7 @@ function Discussion(props) {
         })
 
         //getting comments
-        axios.get('https://sheet.best/api/sheets/20663903-9d53-43a3-beea-43cb136f12f3')
+        axios.get('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312')
         .then(response => {
           userComments = []
           userComments2 = []
@@ -77,7 +77,7 @@ function Discussion(props) {
   function handleSubmit(event) {
     event.preventDefault();
     if (comment.length != 0 || comment != '' || comment != null || comment.length > 200) {
-      axios.post('https://sheet.best/api/sheets/20663903-9d53-43a3-beea-43cb136f12f3', {
+      axios.post('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312', {
         date: Date.now(),
         comment: comment
       })

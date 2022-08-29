@@ -102,12 +102,6 @@
     background-color: rgb(202, 202, 202);
 }
 
-a.profile_a_tag { 
-text-decoration:none; 
-color: black;
-}
-
-
 @media screen and (max-width: 900px) { 
 
     .graph-container {

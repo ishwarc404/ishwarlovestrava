@@ -471,6 +471,16 @@
     /* transition: transform 1s ease 0s; */
 }
 
+a.profile_a_tag { 
+    text-decoration:none; 
+    color: black;
+}
+
+a.profile_a_tag:hover { 
+    color: #007FB6;
+}
+
+
 
 @media screen and (max-width: 600px) { 
     .bodycontent_mystrava {
