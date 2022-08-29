@@ -97,7 +97,7 @@ function Discussion(props) {
   function handleKudosSubmit(event) {
 
     if (!kudos_given_before) {
-      axios.post('https://sheet.best/api/sheets/a41c21aa-1c83-4b4f-a478-549345179b89', {
+      axios.post('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71ad', {
         ip: user_ip_,
         date: Date.now(),
         kudos: 1

@@ -187,8 +187,8 @@ function Acheivements() {
                                 Unfortunately these results were not as useful, as the parameters were highly limited and recordings done in a controlled environment. 
                                 </div>
                                 <br></br>
-                                <a href='https://github.com/ishwarc404/LipReading_CapstoneProject_Phase2'><button className='github_button github_button_without_video' target='_blank'>GitHub - Phase 2</button></a>
-                                <a href='https://github.com/ishwarc404/Lip2Text_CapstoneProject_Phase1'><button className='github_button github_button_without_video' target='_blank'>GitHub - Phase 1</button></a>
+                                <a href='https://github.com/ishwarc404/LipReading_CapstoneProject_Phase2' target='_blank'><button className='github_button github_button_without_video' >GitHub - Phase 2</button></a>
+                                <a href='https://github.com/ishwarc404/Lip2Text_CapstoneProject_Phase1' target='_blank'><button className='github_button github_button_without_video' >GitHub - Phase 1</button></a>
 
                             </div>
                         </div>

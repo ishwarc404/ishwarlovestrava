@@ -86,11 +86,11 @@ function Header() {
             <div className="more_content_bug"><a href='https://docs.google.com/document/d/197UcH4W1h5uKv51FwpsT7BJKtzRQUuYddL2VpjaKw5U/edit?usp=sharing' target='_blank'><span className="">Credits</span></a></div>
             <div className="more_content_bug">
               <a href="mailto:ishwarc404@gmail.com?subject=Ishwar x Strava: Bug Report" target='_blank'>Report a bug!</a></div>
+              <div className="more_content_bug">
+              <a href="https://drive.google.com/file/d/168r0tLMjfZ4TiBMAugkARI1wrKXbcYD5/view?usp=sharing" target='_blank'>README.md</a></div>
             <div className="more_content_bug">
               <a href="https://forms.gle/RB2CDD2vwFDaDvfv9" target='_blank'>Get access to the webpage code.</a></div>
           </div>
-
-
         </div>
       </div>
       <div className={"header_content_4 expandable_menu" + (menuIsOpen ? '' : '_hidden')}>
