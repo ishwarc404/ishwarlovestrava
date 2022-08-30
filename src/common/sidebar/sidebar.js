@@ -31,19 +31,23 @@ function Sidebar(props) {
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue == 1 ? 'information-box' : 'information-box-invisible')} >
               The background is a heatmap of all my activities in Bangalore.
+              <div className='automatic_close_div'>This closes automatically.</div>
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue == 2 ? 'information-box' : 'information-box-invisible')}>
               <div>
                 Image from my first ultra marathon, the
                 <a href='https://www.strava.com/activities/6105334812' target='_blank'> Solang Sky Ultra.</a>
+                <div className='automatic_close_div'>This closes automatically.</div>
               </div>
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue == 3 ? 'information-box' : 'information-box-invisible')}>
               Image from the hike to <a href='https://www.strava.com/activities/5870833129' target='_blank'>Gephan Lake, Himachal Pradesh.
               </a>
+              <div className='automatic_close_div'>This closes automatically.</div>
             </div>
             <div className={' ' + (isInformationBoxVisible && pathValue == 6 ? 'information-box' : 'information-box-invisible')}>
               Live data using Strava's API v3
+              <div className='automatic_close_div'>This closes automatically.</div>
             </div>
           </div>
         </div>

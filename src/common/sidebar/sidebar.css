@@ -53,3 +53,8 @@
         visibility: hidden;
     }
 }
+
+
+.automatic_close_div {
+    font-size: 0.5vw;
+}
