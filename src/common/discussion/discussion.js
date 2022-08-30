@@ -32,7 +32,7 @@ function Discussion(props) {
       setState({});
 
       //getting kudos
-      axios.get('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71ad')
+      axios.get('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71adX')
         .then(response => {
           kudos_counter = response.data.length;
           setState({});
@@ -45,7 +45,7 @@ function Discussion(props) {
         })
 
         //getting comments
-        axios.get('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312')
+        axios.get('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312X')
         .then(response => {
           userComments = []
           userComments2 = []
@@ -77,7 +77,7 @@ function Discussion(props) {
   function handleSubmit(event) {
     event.preventDefault();
     if (comment.length != 0 || comment != '' || comment != null || comment.length > 200) {
-      axios.post('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312', {
+      axios.post('https://sheet.best/api/sheets/543df280-5e35-4d92-b872-3624e364a312X', {
         date: Date.now(),
         comment: comment
       })
@@ -97,7 +97,7 @@ function Discussion(props) {
   function handleKudosSubmit(event) {
 
     if (!kudos_given_before) {
-      axios.post('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71ad', {
+      axios.post('https://sheet.best/api/sheets/a24b66d3-4748-416a-ab2e-04364b0a71adX', {
         ip: user_ip_,
         date: Date.now(),
         kudos: 1
