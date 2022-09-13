@@ -57,7 +57,7 @@ function SummaryPlot(props) {
       mileageData.miles = [];
       mileageData.times = [];
       for (const [key, value] of Object.entries(mileageData['ride_miles'])) {
-        // console.log(mileageData['ride_times']);
+        //totalling it all
         mileageData.miles.push(mileageData['ride_miles'][key].reduce((a, b) => a + b, 0));
         mileageData.times.push(mileageData['ride_times'][key].reduce((a, b) => a + b, 0));
       }
@@ -83,6 +83,11 @@ function SummaryPlot(props) {
     maxHeight = 150 + 'px';
     // mileageData.miles = [0,20000,30000,20000,20000,20000,0,20000,20000]
     //need to reverse this - done
+
+    if(mileageData.miles.reduce((a, b) => { return Math.max(a, b) }) > 40){
+      multiplierVis = 2.0 //to control height of the graph. 
+    }
+    //can also control by normalising but this is also ok
 
     for (var i = mileageData.miles.length - 1; i >= 0; i--) {
       //diving by 1000 because it is in meters
