@@ -51,7 +51,7 @@ var latestActivity = {
 var latestActivityPolyline = '';
 var latestActivityId = 0;
 
-const maxActivityPages = 3; //change this to 3 or 0
+const maxActivityPages = 4; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
