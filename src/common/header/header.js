@@ -44,7 +44,7 @@ function Header() {
             <a className="email_href" href="mailto:ishwarc404@gmail.com?subject=Hi Ishwar!" target='_blank'>email
           </a>
             <span className='seperator_line'> | </span>
-            <a className="email_href" href='https://drive.google.com/file/d/1-zUxpJ4-k8ZJpPXoaKaQdTnvXLMX5PZo/view?usp=sharing' target='_blank'>resume</a>
+            <a className="email_href" href='https://drive.google.com/file/d/17eLbZ4g_vLukQ2C-7QQo_cc0uVFEzfQy/view?usp=sharing' target='_blank'>resume</a>
             <span className='seperator_line'> | </span>
             <a onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
               <span className='more_div' >more</span>
