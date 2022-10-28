@@ -1,5 +1,5 @@
 .Home{
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;	
     background-color: rgb(247, 247, 250);
     height: 100vh;
@@ -13,7 +13,7 @@
 }
 
 .HomeLoader{
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;	
     background-color: rgb(255, 255, 255);
     height: 100vh;

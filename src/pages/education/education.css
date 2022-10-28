@@ -1,5 +1,5 @@
 .Education{
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     cursor: url('../../../public/assets/badge.svg'), auto;
     overflow: hidden;
     height: 100vh;
@@ -142,7 +142,7 @@
     }
 
     .Education{
-        font-family: 'Maison Neue', sans-serif;
+        font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
         height: 100vh;
         overflow:visible;
         background-image: url('../../../public/assets/squiggly6_mobile.png');

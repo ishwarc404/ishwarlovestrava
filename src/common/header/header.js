@@ -41,13 +41,13 @@ function Header() {
         </div>
         <div>
           <div className="header_content_2">
-            <a className="email_href" href="mailto:ishwarc404@gmail.com?subject=Hi Ishwar!" target='_blank'>email
+            <a className="email_href" href="mailto:ishwarc404@gmail.com?subject=Hi Ishwar!" target='_blank'><b>email</b>
           </a>
             <span className='seperator_line'> | </span>
-            <a className="email_href" href='https://drive.google.com/file/d/17eLbZ4g_vLukQ2C-7QQo_cc0uVFEzfQy/view?usp=sharing' target='_blank'>resume</a>
+            <a className="email_href" href='https://drive.google.com/file/d/17eLbZ4g_vLukQ2C-7QQo_cc0uVFEzfQy/view?usp=sharing' target='_blank'><b>resume</b></a>
             <span className='seperator_line'> | </span>
-            <a onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
-              <span className='more_div' >more</span>
+            <a className="email_href" onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
+              <span className='more_div' ><b>more</b></span>
             </a>
           </div>
           <div className="header_content_3">

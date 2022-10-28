@@ -1,4 +1,5 @@
 .App{
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     cursor: url('../public/assets/badge.svg'), auto;	
 }
+

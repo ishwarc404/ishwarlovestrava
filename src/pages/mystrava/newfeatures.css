@@ -12,6 +12,7 @@ font-family: 'Maison Neue';
     margin-bottom: 10vw;
     font-size: 5.5vw;
     width:34vw;
+    font-weight: 500;
 }
 
 .divider-div {
@@ -85,7 +86,7 @@ font-family: 'Maison Neue';
 .feature-1-info {
     margin-top: 8vw;
     font-size: 3vw;
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
 }
 
 .feature-1-info-title {
@@ -102,7 +103,7 @@ font-family: 'Maison Neue';
 .feature-2-info {
     margin-top: 8vw;
     font-size: 3vw;
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
 }
 
 .feature-2-info-title {
@@ -120,7 +121,7 @@ font-family: 'Maison Neue';
 
 
 .iphone-1-image-translate-button {
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     position: absolute;
     top: 147px;
     left: 210px;
@@ -135,7 +136,7 @@ font-family: 'Maison Neue';
 
 
 .iphone-1-image-original-button {
-    font-family: 'Maison Neue', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
     position: absolute;
     top: 147px;
     left: 215px;
