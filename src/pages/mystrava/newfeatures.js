@@ -34,7 +34,7 @@ function NewFeatures() {
               <img  className='arrow-left-image' src={arrow_left}></img>
             </div>
             <div className='feature-1-info-title'>
-            DESCRIPTION TRANSLATION
+            Description translation.
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ function NewFeatures() {
           </div>
           <div className='feature-2-info'>
             <div className='feature-2-info-title'>
-            GROUP RIDES WITH LIVE LOCATION.
+            Group rides with live location.
             </div>
             <div className='feature-2-info-title'>
             So that if you get lost, you can easily re-group. Either ways, you can't keep up with Kilian Jornet. 🐐

@@ -93,6 +93,8 @@ font-family: 'Maison Neue';
     margin-top: 4vw;
     font-size: 3vw;
     font-family: 'Shadows Into Light', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    font-weight: 500;
 }
 
 .feature-1-info-body {
@@ -108,8 +110,10 @@ font-family: 'Maison Neue';
 
 .feature-2-info-title {
     margin-top: 4vw;
-    font-size: 3vw;
+    font-size: 2.8vw;
     font-family: 'Shadows Into Light', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    font-weight: 500;
 }
 
 .feature-2-info-body {
