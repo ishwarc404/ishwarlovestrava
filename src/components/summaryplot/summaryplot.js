@@ -98,18 +98,12 @@ function SummaryPlot(props) {
       // )
 
       var OldMax = Math.max.apply(Math, mileageData.miles)/1000 
-      console.log('MAX VALUE IS:', OldMax)
       var OldMin = 0
       var OldRange = (OldMax - OldMin)  
       var NewMax = 150
       var NewMin = 0
       var NewRange = (NewMax - NewMin)  
       var NewValue = ((((mileageData.miles[i] / 1000) - OldMin) * NewRange) / OldRange) + NewMin
-      console.log('CURR VALUE IS:', mileageData.miles[i]/1000)
-      console.log(NewValue)
-      console.log((mileageData.miles[i] / 1000))
-      console.log('y value is:',150-NewValue)
-      console.log("-------------")
       strokeComponentPoints = strokeComponentPoints + `${x_value},${150-NewValue} `;
       strokePointPositionValues.push(150-NewValue)
 
