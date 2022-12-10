@@ -25,6 +25,7 @@ import stravawall from '../../assets/strava_wall_transparent.png';
 import signal from '../../assets/left_down_signal.png';
 import Signal from '../../common/signal/signal';
 import Sidebar from '../../common/sidebar/sidebar';
+import SegmentStory from './SegmentStory';
 var isLoaderActive = true;
 
 var athleteProfileData = {
@@ -404,6 +405,7 @@ function Mystrava() {
           </div>
 
           <NewFeatures />
+          <SegmentStory/>
 
           <div className='d-flex justify-content-center iphone-divs'>
             <div className='iphone-info-div'>
@@ -426,7 +428,7 @@ function Mystrava() {
           onMouseEnter={handleScrollRed}
           onMouseLeave ={handleScrollGreen}
           >
-            {/* <div className='strava_wall_image_exit'>EXIT</div> */}
+        
       <Discussion noBackground={true}/>
                     
           </div>

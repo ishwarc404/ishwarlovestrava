@@ -1,0 +1,197 @@
+.SegmentStory {
+height: 100vh;
+/* background-image: linear-gradient(rgb(247, 247, 250) 1px,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00,#ffea00, #ffea00); */
+background-color: #ffffff;
+font-family: 'Maison Neue';
+}
+
+.title-new-features-ss {
+    margin: 5vw;
+    margin-bottom: 10vw;
+    font-size: 3.5vw;
+    width:34vw;
+    font-weight: 500;
+}
+
+.intro-text-ss {
+    margin: 5vw;
+    font-size: 1.5vw;
+    width: 50vw;
+    font-weight: 500;
+    margin-bottom: 10vw;
+}
+
+.intro-text-ss-2 {
+    margin: 5vw;
+    font-size: 2.5vw;
+    width: 50vw;
+    font-weight: 500;
+    margin-bottom: 10vw;
+}
+
+.divider-div {
+    margin: 0vw;
+    margin-top: 20vw;
+    height: 10vw;
+    width: 0.2vw;
+    background-color: black;
+}
+
+.love-span {
+    color: rgb(249, 139, 229);
+}
+
+.title-new-features-feat {
+    width:40vw;
+    margin: 5vw;
+
+    margin-left: 7vw;
+    margin-top: 2vw;
+    font-size: 4.5vw;
+}
+
+.feature-1 {
+    width: 50vw;
+}
+.feature-2 {
+    width: 70vw;
+    margin-left: 20vw;
+}
+
+.prototypes-title{
+    margin-top: 6vw;
+    font-size: 2.2vw;
+    margin-left: 9vw;;
+}
+
+.feature-1-info-arrow {
+    margin-top: 5vw;
+
+}
+.arrow-left-image {
+    width: 220px;
+}
+
+.prototypes{
+    margin: 5vw;
+    margin-top: 8vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    /* padding-top: 50px; */
+}
+
+.iphone-1-image-original {
+    position: absolute;
+    top: 68px;
+    left: 22px;
+    width: 255px;
+    height: auto;
+}
+
+.iphone-1-image-translate {
+    position: absolute;
+    top: 68.5px;
+    left: 22px;
+    width: 254.6px;
+    height: auto;
+}
+
+.feature-1-info {
+    margin-top: 8vw;
+    font-size: 3vw;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+}
+
+.feature-1-info-title {
+    margin-top: 4vw;
+    font-size: 3vw;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.feature-1-info-body {
+    font-size: 1vw;
+    font-family: 'Shadows Into Light', sans-serif;
+}
+
+.feature-2-info {
+    margin-top: 8vw;
+    font-size: 3vw;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+}
+
+.feature-2-info-title {
+    margin-top: 4vw;
+    font-size: 2.8vw;
+    font-family: 'Shadows Into Light', sans-serif;
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    font-weight: 500;
+}
+
+.feature-2-info-body {
+    font-size: 1vw;
+    font-family: 'Shadows Into Light', sans-serif;
+}
+
+
+
+
+.iphone-1-image-translate-button {
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    position: absolute;
+    top: 147px;
+    left: 210px;
+    font-size: 10px;
+    color: #757575;
+    /* width: 255px; */
+    height: auto;
+    border: none;
+    background-color: white;
+    
+}
+
+
+.iphone-1-image-original-button {
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    position: absolute;
+    top: 147px;
+    left: 215px;
+    font-size: 10px;
+    color: #757575;
+    /* width: 255px; */
+    height: auto;
+    border: none;
+    background-color: white;
+    
+}
+
+
+.iphone-1-prototype{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+.iphone-2-prototype{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.iphone-2-image-original {
+    position: absolute;
+    top: 68.5px;
+    left: 25px;
+    width: 250px;
+    height: auto;
+}
+
+
+
+.invisible {
+    display: none;
+    visibility: hidden;
+}
