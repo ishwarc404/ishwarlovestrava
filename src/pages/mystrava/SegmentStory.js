@@ -25,7 +25,7 @@ function SegmentStory() {
         </div>
       </div>
       <div className='d-flex justfity-content-start'>
-          <div className='intro-text-ss'>The segments and climbs in Boulder have given me an incredible confidence boost. I remember watching the Strava segment story video on Youtube about Hillary Allen and her journey back from recovery. Green Mountain was a central part of this. The "Church" run have always been the longest and hardest. These generally dip their toes into the ultra distances, and during one of these runs, we planned on summitting Green Mountain 4 times, but I had to drop out after summitting it twice. I'll be back.
+          <div className='intro-text-ss'>The segments and climbs in Boulder have given me an incredible confidence boost. I remember watching the Strava segment story video on Youtube about Hillary Allen and her journey back from injury. Green Mountain was a central part of this. The "Church" run have always been the longest and hardest. These generally dip their toes into the ultra distances, and during one of these runs, we planned on summitting Green Mountain 4 times, but I had to drop out after summitting it twice. I'll be back.
 </div>
           <div className='intro-text-ss-2'>
             Green Mountain Summit Count: 
