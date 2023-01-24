@@ -202,7 +202,7 @@ function Mystrava() {
       }
 
 
-      ////test - seperated out to prevent any sort of async
+      ////test - seperated out to prevent any sort of async, only for latest activity
       axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${1}&per_page=1`, {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
