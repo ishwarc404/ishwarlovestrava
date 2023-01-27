@@ -321,6 +321,7 @@ function Mystrava() {
                 <div className={'loader' + (isLoaderActive ? '' : 'loader-invisible')} ></div>
 
                 <div className='information-div-child' >{isLoaderActive ? '' : totalActivitiesTillDate}</div>
+                <div className='powered-by-api'>Tiles populated by Strava APIv3</div>
               </div>
               <div className='information-div'>
                 <span className='title-total-activities'>HOURS OF MOVEMENT</span>

@@ -44,6 +44,10 @@
     height: 600px;
 } */
 
+.powered-by-api {
+    font-size: 1vw;
+    color: rgb(202, 202, 202);
+}
 .information-div-center-row{
     /* width: 330px; */
     height: 300px;
