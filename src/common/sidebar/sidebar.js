@@ -25,7 +25,7 @@ function Sidebar(props) {
         <div id="home" className={'body_content_info'}>
           <div className='d-flex justify-content-around' >
             <div>
-              <span class="material-symbols-outlined" >
+              <span className="material-symbols-outlined" >
                 info
               </span>
             </div>

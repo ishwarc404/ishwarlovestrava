@@ -360,7 +360,7 @@ function Mystrava() {
                      
                     </div>
                     <a target='_blank' href={'https://www.strava.com/activities/'+ latestActivityIdForLink}>
-                        <span class="material-symbols-outlined" >
+                        <span className="material-symbols-outlined" >
                 info
               </span></a>
 
@@ -390,12 +390,12 @@ function Mystrava() {
                 <SummaryPlot mileageData={mileageData} userSelectedActivityType={userSelectedActivityType} />
               </div>
               <div className='information-div-profile d-flex'>
-                <div class='information-div-image-parent'>
+                <div className='information-div-image-parent'>
                   <img className={'information-div-profile-athlete-image' + (isLoaderActive ? ' data-invisble' : ' ')} src={athleteProfileData['profile']}></img>
                   <img className={'information-div-profile-athlete-image-badge' + (isLoaderActive ? ' data-invisble' : ' ')} src={premiumBadge}></img>
                 </div>
                 <div className='information-div-profile-text-container'>
-                  <div><a href='https://www.strava.com/athletes/43290018' class='profile_a_tag' target='_blank'><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></a></div>
+                  <div><a href='https://www.strava.com/athletes/43290018' className='profile_a_tag' target='_blank'><b>{athleteProfileData['firstname'] + ' ' + athleteProfileData['lastname']}</b></a></div>
                   <div className='information-div-profile-text-location' >{athleteProfileData['city'] + ', ' + athleteProfileData['state']}</div>
                   <div className='information-div-profile-text-bio' >{athleteProfileData['bio']}</div>
 
@@ -444,7 +444,7 @@ function Mystrava() {
 
             <div>
               <div className='information-div-profile d-flex'>
-                <div class='information-div-image-parent'>
+                <div className='information-div-image-parent'>
                   <img className={'information-div-profile-athlete-image' + (isLoaderActive ? ' data-invisble' : ' ')} src={athleteProfileData['profile']}></img>
                   <img className={'information-div-profile-athlete-image-badge' + (isLoaderActive ? ' data-invisble' : ' ')} src={premiumBadge}></img>
                 </div>

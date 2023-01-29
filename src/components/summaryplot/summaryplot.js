@@ -150,7 +150,7 @@ function SummaryPlot(props) {
               </pattern>
             </defs>
             <rect x="0" width="300px" height={maxHeight} fill="url(#grid)" stroke="gray"></rect>
-            <g class="label-title">
+            <g className="label-title">
                 <text x="-65" y="10" transform="rotate(-90)">HOURS</text>
             </g>
 
