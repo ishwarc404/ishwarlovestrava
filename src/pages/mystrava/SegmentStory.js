@@ -30,7 +30,7 @@ function SegmentStory() {
           <div className='intro-text-ss-2'>
             Green Mountain Summit Count: 
             <br/>
-            7
+            9
           </div>
       </div>
     
