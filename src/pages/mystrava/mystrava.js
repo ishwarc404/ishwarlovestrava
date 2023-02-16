@@ -56,8 +56,8 @@ const maxActivityPages = 5; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
-const refreshToken = 'bd8b400a40d972c7e45c69720e41a47f8e661597';
-const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=bd8b400a40d972c7e45c69720e41a47f8e661597&grant_type=refresh_token'
+const refreshToken = '783714b330fe26fa8b6f4f450bb4f46e01d4c6a8';
+const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=783714b330fe26fa8b6f4f450bb4f46e01d4c6a8&grant_type=refresh_token'
 var accessToken = '814ab41c4c149fdcc6ff3e22941e1ca2948fd1a4'
 var imageCount = 0
 var displayImage = imgs[imageCount]
