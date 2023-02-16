@@ -38,6 +38,11 @@ function Signal(props) {
       rightSignalColor =  redColor; //green
       bottomSignalColor = props.bottomSignalColor; //green or red
     }
+    if(pathValue == 7) {
+      leftSignalColor =  greenColor; //green
+      rightSignalColor =  redColor; //green
+      bottomSignalColor = redColor; //green or red
+    }
     setState({});
   },[props.bottomSignalColor])
 

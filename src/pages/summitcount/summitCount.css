@@ -1,0 +1,47 @@
+.SummitCount{
+    font-family: 'Maison Neue', 'Helvetica', Arial, sans-serif;
+    cursor: url('../../../public/assets/badge.svg'), auto;
+    overflow: hidden;
+    height: 100vh;
+    overflow:visible;
+    /* background-size: 1800px 1061.2px; */
+    background-size: 100vw auto;
+}
+   
+.summitbanner {
+    /* width: 60vw; */
+    /* height: 100vh; */
+    opacity: 100%;
+    font-size: 3vw;
+    color: rgb(94, 92, 92);
+    letter-spacing: 10px; 
+    /* background-color: #fff; */
+    padding-top: 15vh;
+    /* padding-left: 5%; */
+    /* border-top: solid 2px #fc5200; */
+
+} 
+
+
+.peaks {
+    /* width: 60vw; */
+    height: 100vh;
+    opacity: 100%;
+    font-size: 3vw;
+    color: rgb(0, 0, 0);
+    /* letter-spacing: 3px;  */
+    /* background-color: #fff; */
+    /* padding-left: 5%; */
+    /* border-top: solid 2px #fc5200; */
+
+} 
+
+.info-display {
+    width: 60vw;
+    /* height: 100vh; */
+    /* font-size: 3vw; */
+    padding-top: 5vw;
+    padding-left: 30vw;
+    /* border-top: solid 2px #fc5200; */
+
+} 

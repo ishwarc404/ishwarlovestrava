@@ -124,6 +124,27 @@
     font-size: 1vw;
      border: none;
     color: #000;
+    /* border-bottom-right-radius: 5px; */
+    /* border-top-right-radius: 5px; */
+    background-color: #FFF;
+    /* color: #97c1a9; */
+    /* height: 20vh; */
+
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px;
+    transition: all .5s ease-in-out;
+    padding-top: 5px;
+
+}
+
+.body_content_7{
+    /* padding-top: 1%; */
+    padding: 0px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1vw;
+     border: none;
+    color: #000;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #FFF;

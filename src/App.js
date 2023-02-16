@@ -8,6 +8,7 @@ import Education from './pages/education/education';
 import Skills from './pages/skills/skills';
 import Achievements from './pages/achievements/achievements';
 import MyStrava from './pages/mystrava/mystrava';
+import SummitCount from './pages/summitcount/summitCount';
 
 
 var firstLoadUp = true;
@@ -17,7 +18,9 @@ function App() {
 
   const [loading, setLoading] = useState(true);
 
+
   useEffect(() => {
+
     const loadData = async () => {
       await new Promise((r) => setTimeout(r,3200));
       setLoading((loading) => { loading = false; });
@@ -38,6 +41,8 @@ function App() {
             <Route path="/skills" element={<Skills/>}/>
             <Route path="/achievements" element={<Achievements/>}/>
             <Route path="/mystrava" element={<MyStrava/>}/>
+            <Route path="/summitCount" element={<SummitCount/>}/>
+            <Route path="/stravalogin" element={<SummitCount/>}/>
         </Routes>
       </Router>
   );

@@ -37,9 +37,9 @@ function Navbar(props) {
       if (newPath == 5) {
         navigate('/mystrava');
       }
-      if (newPath > 5) {
-        navigate('/mystrava');
-        newPath = 5;
+      if (newPath > 6) {
+        navigate('/summitCount');
+        newPath = 7;
       }
     }
     //left
@@ -64,9 +64,9 @@ function Navbar(props) {
       if (newPath == 5) {
         navigate('/achievements');
       }
-      if (newPath > 5) {
-        newPath = 4
-        navigate('/achievements');
+      if (newPath == 6) {
+        newPath = 6
+        navigate('/mystrava');
       }
     }
 
@@ -98,6 +98,11 @@ function Navbar(props) {
         <div id="mystrava" className={'body_content_6 body_content_all' + (pathValue === 6 ? ' orange' : ' ')}>
           <div onClick={() => { navigate("/mystrava"); }}>My Strava</div>
         </div>
+
+        <div id="summitCount" className={'body_content_7 body_content_all' + (pathValue === 7 ? ' orange' : ' ')}>
+          <div onClick={() => { navigate("/summitCount"); }}>Summits</div>
+        </div>
+
       </div>
       <div className='navigation-bar-2 d-flex justify-content-around'>
         <div id="home" className={'body_content_1_responsive body_content_all' + (pathValue === 1 ? ' orange' : ' ')}>
@@ -146,6 +151,8 @@ function Navbar(props) {
             <span className='mystrava_icon_title'>Me</span>
           </div>
         </div>
+
+       
       </div>
     </div>
 
