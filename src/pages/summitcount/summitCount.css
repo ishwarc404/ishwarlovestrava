@@ -9,18 +9,15 @@
 }
    
 .summitbanner {
-    /* width: 60vw; */
-    /* height: 100vh; */
     opacity: 100%;
     font-size: 3vw;
     color: rgb(94, 92, 92);
     letter-spacing: 10px; 
-    /* background-color: #fff; */
     padding-top: 15vh;
-    /* padding-left: 5%; */
-    /* border-top: solid 2px #fc5200; */
+    display: block;
 
 } 
+
 
 
 .peaks {
@@ -29,6 +26,7 @@
     opacity: 100%;
     font-size: 3vw;
     color: rgb(0, 0, 0);
+    display: block;
     /* letter-spacing: 3px;  */
     /* background-color: #fff; */
     /* padding-left: 5%; */
@@ -36,12 +34,137 @@
 
 } 
 
+.peaks-invisible {
+    display: none;
+} 
+
+
 .info-display {
-    width: 60vw;
+    /* width: 60vw; */
     /* height: 100vh; */
     /* font-size: 3vw; */
     padding-top: 5vw;
-    padding-left: 30vw;
+    /* padding-left: 30vw; */
     /* border-top: solid 2px #fc5200; */
 
 } 
+
+
+.loginwithStrava {
+    color: white;
+    background-color: #fc5200;
+    position: relative;
+  
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+
+    overflow: hidden;
+  
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    color: #ecf0f1;
+    font-weight: 600;
+    transition: background-color .3s;
+}
+
+
+.loginwithStrava-invisible {
+    display: none;
+}
+
+
+
+.peak_container_outer {
+    /* padding: 5%; */
+    width: 25vw;
+    margin: 5%;
+    margin-bottom: 0%;
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255,0.85);
+    border-radius: 3px;
+    /* margin-bottom: 70%; */
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.9px);
+      -webkit-backdrop-filter: blur(7.9px);
+      margin:10px;
+      /* border: solid 1px #fff; */
+      /* background-color: rgb(255, 255, 255,0.4); */
+      padding: 1%;
+      border-radius: 1%;
+      text-align: center;
+      transition:all 0.2s;
+      /* margin-bottom:0px; */
+}
+
+.peak_container {
+    /* padding: 5%; */
+    /* width: 25vw; */
+    margin: 5%;
+    margin-bottom: 0%;
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255,0.85);
+    border-radius: 3px;
+    /* margin-bottom: 70%; */
+
+}
+
+
+.peak_container{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    
+}
+
+.peak_container {
+    margin:10px;
+    /* border: solid 1px #fff; */
+    /* background-color: rgb(255, 255, 255,0.4); */
+    padding: 1%;
+    border-radius: 1%;
+    text-align: center;
+    transition:all 0.2s;
+    /* margin-bottom:0px; */
+}
+
+.peak_name {
+    margin:15px;
+    /* margin-top:5%; */
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.peakinfo {
+    /* padding: 5%; */
+    width: 45vw;
+    margin: 5%;
+    margin-bottom: 0%;
+    margin-top: 5vh;
+    background-color: rgb(255, 255, 255,0.85);
+    border-radius: 3px;
+    /* margin-bottom: 70%; */
+      /* From https://css.glass */
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(7.9px);
+      -webkit-backdrop-filter: blur(7.9px);
+      margin:10px;
+      /* border: solid 1px #fff; */
+      /* background-color: rgb(255, 255, 255,0.4); */
+      padding: 1%;
+      border-radius: 1%;
+      text-align: center;
+      transition:all 0.2s;
+      /* margin-bottom:0px; */
+
+}

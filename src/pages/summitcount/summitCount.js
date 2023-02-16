@@ -4,18 +4,36 @@ import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
 import Sidebar from '../../common/sidebar/sidebar';
 import Signal from '../../common/signal/signal';
-
+import axios from "axios";
 import background from '../../assets/ghepan2.png';
 import Discussion from '../../common/discussion/discussion';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'
+import React, { useState } from 'react';
 
+var isOAuthDone = false
+var greenMtSegments = ["30545810", "30546062", "30546055", "7492562"]
+var greenMtCount = 0
 
-function SummitCount(props) {
+function SummitCount() {
 
+  const [, setState] = useState();
   const location = useLocation();
   var userAuthToken = ""
 
+
+  function segmentCount(segmentID){
+    var segmentURL = `https://www.strava.com/api/v3/segment_efforts?segment_id=${segmentID}`
+    axios.get(segmentURL, {
+      headers: {
+        'Authorization': `Bearer ${userAuthToken}`,
+      }
+    }).then((response) => {
+      console.log(response)
+      greenMtCount += response.length
+      setState({});
+  });
+  }
 
   function cleanUpAuthToken(str) {
     return str.split("&")[1].slice(5);
@@ -25,16 +43,11 @@ function SummitCount(props) {
     const redirectUrl = "http://localhost:3000/stravalogin";
     const scope = "read"
     window.location = `http://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=${redirectUrl}/exchange_token&scope=${scope}`
-    // popup.closed
-    // if (popup) {
-    //   popup.onClose = function () { console.log(popup.opener.location) }
-    // }
-    // // console.log(popup.location)
-    // window.location = `http://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=${redirectUrl}/exchange_token&scope=${scope}`;
-    // const stravaAuthToken = cleanUpAuthToken(location.search);
-    // alert(stravaAuthToken);
   }
 
+  function clicked(val) {
+
+  }
   useEffect(() => {
     let oauthurl = ""
     if (location.state) {
@@ -42,6 +55,12 @@ function SummitCount(props) {
         oauthurl = location.state.href
         const stravaAuthToken = cleanUpAuthToken(oauthurl);
         userAuthToken = stravaAuthToken;
+        isOAuthDone = true;
+        setState({});
+        for(var i=0; i< greenMtSegments.length;i++){
+          segmentCount(greenMtSegments[i])
+        }
+        setState({});
       }
     }
   }, [])
@@ -50,15 +69,30 @@ function SummitCount(props) {
     <div>
       <div className="SummitCount">
         <Header />
-        <div className=''>
-          <div className='summitbanner d-flex justify-content-center'>
+        <div className=' summitbanner d-flex justify-content-center'>
+          <div>
             <p>SUMMITS</p>
           </div>
+        </div>
+        <div>
+          <div className='info-display'>
+            <button className={'' + (isOAuthDone ? 'loginwithStrava-invisible' : 'loginwithStrava')} onClick={handleLogin}>Login with Strava</button></div>
           <div className='d-flex justify-content-center'>
-            <div className='peaks'>
-              Green Mountain
+            <div className={'d-flex justify-content-center' + (isOAuthDone ? 'peaks' : 'peaks-invisible')}>
+              <div className='peak_container_outer'>
+                <div className={'d-flex justify-content-start peak_container'}
+                  onClick={() => { clicked(1) }}>
+                  <span className='peak_name'>Green Mountain</span>
+                </div>
+                <div className={'d-flex justify-content-start peak_container'}
+                  onClick={() => { clicked(2) }}>
+                  <span className='peak_name'>South Boulder Peak</span>
+                </div>
+              </div>
+              <div className='peakinfo'>
+                INFO {greenMtCount}
+              </div>
             </div>
-            <div className='info-display'><button onClick={handleLogin}>Connect with Strava</button></div>
           </div>
           <Signal path={7} />
           <Sidebar path={7} />
