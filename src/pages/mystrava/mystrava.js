@@ -56,8 +56,8 @@ const maxActivityPages = 5; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
-const refreshToken = '783714b330fe26fa8b6f4f450bb4f46e01d4c6a8';
-const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=783714b330fe26fa8b6f4f450bb4f46e01d4c6a8&grant_type=refresh_token'
+const refreshToken = '4e66afee4416c157ba4452861edcf50c7674d629';
+const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=4e66afee4416c157ba4452861edcf50c7674d629&grant_type=refresh_token'
 var accessToken = '814ab41c4c149fdcc6ff3e22941e1ca2948fd1a4'
 var imageCount = 0
 var displayImage = imgs[imageCount]
@@ -113,9 +113,9 @@ var bottomSignalColor = 'rgb(52, 227, 43)';
 function Mystrava() {
   const [, setState] = useState();
 
-  const headers = {
-    'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
-  }
+  // const headers = {
+  //   'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
+  // }
 
   function handleScrollRed(){
     bottomSignalColor = 'rgb(255, 6, 36)'; //red
