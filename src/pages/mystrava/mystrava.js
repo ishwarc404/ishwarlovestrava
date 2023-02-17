@@ -56,8 +56,15 @@ const maxActivityPages = 5; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
-// const refreshToken = 'c7d75b54c367cd8b11c68aa490c923c40ec633a4';
-const refreshURL = "https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&grant_type=refresh_token"
+
+//THERE ARE TWO REFRESH TOKENS! ONE WITH MORE POWER, WE GOTTA AUTHENTICATE FIRST HERE:
+//https://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=read_all,activity:read_all
+//WE USE THIS TO GET CODE, THEN GET REFRESH TOKEN USING POST HERE 'https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&code=<CODEENTER>&grant_type=authorization_code'
+//, THEN USE THAT TO GET ACCESS CODE
+
+// const refreshURL = "https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&grant_type=refresh_token"
+const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c5246811c4f2f0c60ff41831355892a639a6b4c0&grant_type=refresh_token'
+
 var accessToken = ''
 var imageCount = 0
 var displayImage = imgs[imageCount]
