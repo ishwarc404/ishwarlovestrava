@@ -22,17 +22,34 @@ function SummitCount() {
   var userAuthToken = ""
 
 
-  function segmentCount(segmentID){
+  function getRefreshTokenandAccessToken(authToken) {
+    URL = `https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&code=${authToken}&grant_type=authorization_code`
+    axios.post(URL, {
+    }).then((response) => {
+      var clientRefreshToken = response.data['refresh_token'];
+      var clientAccessToken = response.data['access_token'];
+      console.log(clientRefreshToken)
+      console.log(clientAccessToken)
+      //GETTING ATHLETE PROFILE DATA
+      for (var i = 0; i < greenMtSegments.length; i++) {
+        segmentCount(clientAccessToken, greenMtSegments[i])
+      }
+      setState({});
+    });
+  }
+
+
+  function segmentCount(clientAccessToken,segmentID) {
     var segmentURL = `https://www.strava.com/api/v3/segment_efforts?segment_id=${segmentID}`
     axios.get(segmentURL, {
       headers: {
-        'Authorization': `Bearer ${userAuthToken}`,
+        'Authorization': `Bearer ${clientAccessToken}`,
       }
     }).then((response) => {
       console.log(response)
       greenMtCount += response.length
       setState({});
-  });
+    });
   }
 
   function cleanUpAuthToken(str) {
@@ -41,7 +58,7 @@ function SummitCount() {
 
   function handleLogin() {
     const redirectUrl = "http://localhost:3000/stravalogin";
-    const scope = "read"
+    const scope = "read,activity:read_all"
     window.location = `http://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=${redirectUrl}/exchange_token&scope=${scope}`
   }
 
@@ -55,12 +72,8 @@ function SummitCount() {
         oauthurl = location.state.href
         const stravaAuthToken = cleanUpAuthToken(oauthurl);
         userAuthToken = stravaAuthToken;
+        getRefreshTokenandAccessToken(userAuthToken)
         isOAuthDone = true;
-        setState({});
-        for(var i=0; i< greenMtSegments.length;i++){
-          segmentCount(greenMtSegments[i])
-        }
-        setState({});
       }
     }
   }, [])
