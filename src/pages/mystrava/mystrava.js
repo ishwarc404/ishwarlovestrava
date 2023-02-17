@@ -404,7 +404,7 @@ function Mystrava() {
           </div>
           <div className='d-flex justify-content-center'>
             <span className='apierrordiv'>
-            Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
+            02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
             </span>
           </div>
 
