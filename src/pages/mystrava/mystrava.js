@@ -57,7 +57,7 @@ const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
 // const refreshToken = 'c7d75b54c367cd8b11c68aa490c923c40ec633a4';
-const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&grant_type=refresh_token'
+const refreshURL = "https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&grant_type=refresh_token"
 var accessToken = ''
 var imageCount = 0
 var displayImage = imgs[imageCount]
@@ -169,9 +169,10 @@ function Mystrava() {
 
     axios.post(refreshURL, {
     }).then((response) => {
-      // console.log(response.data);
+      
       accessToken = response.data['access_token'];
-
+      // alert(accessToken);
+      // setState({});
 
       //GETTING ATHLETE PROFILE DATA
       axios.get(athleteDataURL, {
