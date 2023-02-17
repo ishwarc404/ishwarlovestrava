@@ -524,3 +524,13 @@ a.profile_a_tag:hover {
         height: fit-content;
     }
 }
+
+
+.apierrordiv {
+    width: fit-content;
+    background-color: #fc5200;
+    padding: 5px;
+    color: white;
+    border-radius: 4px;
+    font-size: 10px;
+}

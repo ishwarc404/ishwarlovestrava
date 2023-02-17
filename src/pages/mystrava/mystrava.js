@@ -311,8 +311,6 @@ function Mystrava() {
         <Header />
 
         <div className='bodycontent_mystrava'>
-
-
           <div className='d-flex justify-content-center stats-div'>
             <div className='first-col'>
               <div className='information-div'>
@@ -404,6 +402,11 @@ function Mystrava() {
             </div>
 
           </div>
+          <div className='d-flex justify-content-center'>
+            <span className='apierrordiv'>
+            Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
+            </span>
+          </div>
 
           <NewFeatures />
           <SegmentStory/>
@@ -438,7 +441,9 @@ function Mystrava() {
           <Signal path={6} bottomSignalColor={bottomSignalColor} />
           <Sidebar path={6} />
           <Navbar path={6} />
+        
         </div>
+        
         <div className='bodycontent_mystrava-responsive-parent'>
           <div className='d-flex justify-content-center bodycontent_mystrava-responsive'>
 
