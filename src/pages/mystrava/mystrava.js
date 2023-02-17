@@ -56,9 +56,15 @@ const maxActivityPages = 5; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
-const refreshToken = '783714b330fe26fa8b6f4f450bb4f46e01d4c6a8';
-const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=453c72ddb9de476feab5816537fbd884184b7ced&refresh_token=783714b330fe26fa8b6f4f450bb4f46e01d4c6a8&grant_type=refresh_token'
-var accessToken = '814ab41c4c149fdcc6ff3e22941e1ca2948fd1a4'
+//THERE ARE TWO REFRESH TOKENS! ONE WITH MORE POWER, WE GOTTA AUTHENTICATE FIRST HERE:
+//https://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=http://localhost/exchange_token&approval_prompt=force&scope=read_all,activity:read_all
+//WE USE THIS TO GET CODE, THEN GET REFRESH TOKEN USING POST HERE 'https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&code=<CODEENTER>&grant_type=authorization_code'
+//, THEN USE THAT TO GET ACCESS CODE
+
+// const refreshURL = "https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c7d75b54c367cd8b11c68aa490c923c40ec633a4&grant_type=refresh_token"
+const refreshURL = 'https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&refresh_token=c5246811c4f2f0c60ff41831355892a639a6b4c0&grant_type=refresh_token'
+
+var accessToken = ''
 var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
@@ -113,9 +119,9 @@ var bottomSignalColor = 'rgb(52, 227, 43)';
 function Mystrava() {
   const [, setState] = useState();
 
-  const headers = {
-    'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
-  }
+  // const headers = {
+  //   'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
+  // }
 
   function handleScrollRed(){
     bottomSignalColor = 'rgb(255, 6, 36)'; //red
@@ -170,6 +176,8 @@ function Mystrava() {
     axios.post(refreshURL, {
     }).then((response) => {
       accessToken = response.data['access_token'];
+      // alert(accessToken);
+      // setState({});
       //GETTING ATHLETE PROFILE DATA
       axios.get(athleteDataURL, {
         headers: {
@@ -308,8 +316,6 @@ function Mystrava() {
         <Header />
 
         <div className='bodycontent_mystrava'>
-
-
           <div className='d-flex justify-content-center stats-div'>
             <div className='first-col'>
               <div className='information-div'>
@@ -401,6 +407,11 @@ function Mystrava() {
             </div>
 
           </div>
+          {/* <div className='d-flex justify-content-center'>
+            <span className='apierrordiv'>
+            02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
+            </span>
+          </div> */}
 
           <NewFeatures />
           <SegmentStory/>
@@ -435,7 +446,9 @@ function Mystrava() {
           <Signal path={6} bottomSignalColor={bottomSignalColor} />
           <Sidebar path={6} />
           <Navbar path={6} />
+        
         </div>
+        
         <div className='bodycontent_mystrava-responsive-parent'>
           <div className='d-flex justify-content-center bodycontent_mystrava-responsive'>
 
