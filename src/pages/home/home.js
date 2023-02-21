@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 import loadingGif from '../../assets/12fps.gif';
 import signal from '../../assets/right_down_signal.png';
+import { useNavigate } from 'react-router-dom';
 
 import Header from '../../common/header/header';
 import Navbar from '../../common/navbar/navbar';
@@ -15,6 +16,7 @@ import Signal from '../../common/signal/signal';
 var bottomSignalColor = 'rgb(52, 227, 43)';
 function Home(props) {
   const [, setState] = useState();
+  let navigate = useNavigate();
 
   function handleScroll(e){
     const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
@@ -28,6 +30,14 @@ function Home(props) {
      }
   }
 
+  useEffect(()=>{ 
+    if(window.location.pathname == "/stravaloginmystrava/exchange_token"){
+      navigate('/mystrava', {state: {
+        href: window.location.href
+    }});
+    }
+  
+  },[])
 
   if (!props.loading) {
     return (

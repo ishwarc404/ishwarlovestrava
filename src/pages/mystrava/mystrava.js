@@ -10,7 +10,7 @@ import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
 import SummaryPlot from '../../components/summaryplot/summaryplot';
 import NewFeatures from './newfeatures';
-
+import { useLocation } from 'react-router-dom'
 import runimage from '../../assets/run.svg';
 import bikeimage from '../../assets/bike.svg';
 import swimimage from '../../assets/swim.svg';
@@ -118,7 +118,7 @@ var bottomSignalColor = 'rgb(52, 227, 43)';
 
 function Mystrava() {
   const [, setState] = useState();
-
+  const location = useLocation();
   ///OAUTH FEATURE TEST CODE BEGINS
   ///OAUTH FEATURE TEST CODE BEGINS
   ///OAUTH FEATURE TEST CODE BEGINS
@@ -174,7 +174,7 @@ function Mystrava() {
       }
 
 
-      ////test - seperated out to prevent any sort of async, only for latest activity
+      ////seperated out to prevent any sort of async, only for latest activity
       axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${1}&per_page=1`, {
         headers: {
           'Authorization': `Bearer ${clientAccessToken}`,
@@ -199,7 +199,40 @@ function Mystrava() {
       });
     });
 
-      //////test ends
+      //RESET ALL!
+      athleteStatsData = {};
+      totalActivitiesTillDate = 0;
+      totalHoursTillDate = 0;
+      userActivityCount = {};
+      userKudosRecievedCount = 0;
+      latestActivity = {
+        'name': null,
+        'elapsed_time': null,
+        'sport_type': null,
+        'kudos_count': null,
+        'description': null,
+        'total_photo_count': null,
+        'photos': null,
+        'map': {
+          'summary_polyline': 'testing'
+        }
+      }
+      latestActivityId = 0;
+      mileageData = {
+        maxMileage: 100,
+        miles: [], //this will be the final reduced mileages 
+        times: [], //this will be the final reduced mileages 
+  
+        run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+        weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      }
+      previousMondays = []
+      setState({});
 
 
       //MAIN LOOPS BEGINS
@@ -342,6 +375,19 @@ function Mystrava() {
     }
     previousMondays = []
 
+
+    //////TEST CODE////
+    if (location.state) {
+      if (location.state.href) {
+        var oauthurl = location.state.href
+        const stravaAuthToken = cleanUpAuthTokenOAUTH(oauthurl);
+        var clientAuthToken = stravaAuthToken;
+        alert('here');
+        getRefreshTokenandAccessTokenOAUTH(clientAuthToken)
+        // isOAuthDone = true;
+      }
+    }
+    ///////////////////
 
     axios.post(refreshURL, {
     }).then((response) => {
