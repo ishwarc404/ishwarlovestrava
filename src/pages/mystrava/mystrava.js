@@ -70,7 +70,7 @@ var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
 var latestActivityIdForLink = null;
-
+var apiErrorOccured = false;
 var userSelectedActivityType = 'Run'
 var mileageData = {
   maxMileage: 100,
@@ -189,7 +189,12 @@ function Mystrava() {
       }).then((response) => {
         athleteProfileData = response.data;
         setState({});
-      });
+      })
+      .catch(function (error) {
+        console.log("API ERROR OCCURED, PLEASE TRY AFTER SOME TIME")
+        apiErrorOccured = true;
+        setState({});
+      });;
 
 
       var currentEpoch = new Date().getTime();
