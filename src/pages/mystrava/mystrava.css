@@ -534,3 +534,8 @@ a.profile_a_tag:hover {
     border-radius: 4px;
     font-size: 10px;
 }
+
+.apierrordiv-invisible {
+    display: none;
+    visibility: hidden;
+}

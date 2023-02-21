@@ -188,6 +188,7 @@ function Mystrava() {
         }
       }).then((response) => {
         athleteProfileData = response.data;
+        apiErrorOccured = false;
         setState({});
       })
       .catch(function (error) {
@@ -415,11 +416,11 @@ function Mystrava() {
             </div>
 
           </div>
-          {/* <div className='d-flex justify-content-center'>
-            <span className='apierrordiv'>
-            02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
+          <div className='d-flex justify-content-center'>
+            <span className={'' + (apiErrorOccured ? 'apierrordiv' : 'apierrordiv-invisible')}>
+            Tiles unpopulated due to API erorr. Please try again after some time.
             </span>
-          </div> */}
+          </div>
 
           <NewFeatures />
           <SegmentStory/>
