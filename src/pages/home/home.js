@@ -36,6 +36,11 @@ function Home(props) {
         href: window.location.href
     }});
     }
+    if(window.location.pathname.includes("stravalogoutmystrava")){
+      navigate('/mystrava', {state: {
+        href: "stravalogoutmystrava"
+    }});
+    }
   
   },[])
 

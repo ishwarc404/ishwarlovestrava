@@ -343,7 +343,7 @@ function Mystrava() {
       weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
     }
     previousMondays = []
-    window.location = "/mystrava"
+    window.location = "/stravalogoutmystrava"
     setState({});
   }
 
@@ -412,13 +412,16 @@ function Mystrava() {
 
     //////TEST CODE////
     if (location.state) {
-      if (location.state.href) {
+      if (location.state.href != "stravalogoutmystrava" ) {
         var oauthurl = location.state.href
         const stravaAuthToken = cleanUpAuthTokenOAUTH(oauthurl);
         var clientAuthToken = stravaAuthToken;
         getRefreshTokenandAccessTokenOAUTH(clientAuthToken)
         // isOAuthDone = true;
         isClientLoggedIn = true;
+      }
+      else {
+        isClientLoggedIn = false;
       }
     }
     ///////////////////
