@@ -549,3 +549,7 @@ a.profile_a_tag:hover {
     background-color: #fc5200;
     color: #ecf0f1;
   }
+.apierrordiv-invisible {
+    display: none;
+    visibility: hidden;
+}

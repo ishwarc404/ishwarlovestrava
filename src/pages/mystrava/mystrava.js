@@ -72,8 +72,7 @@ var imageCount = 0
 var displayImage = imgs[imageCount]
 var latestActivityFlag = true;
 var latestActivityIdForLink = null;
-
-
+var apiErrorOccured = false;
 var userSelectedActivityType = 'Run'
 var mileageData = {
   maxMileage: 100,
@@ -442,8 +441,14 @@ function Mystrava() {
         }
       }).then((response) => {
         athleteProfileData = response.data;
+        apiErrorOccured = false;
         setState({});
-      });
+      })
+      .catch(function (error) {
+        console.log("API ERROR OCCURED, PLEASE TRY AFTER SOME TIME")
+        apiErrorOccured = true;
+        setState({});
+      });;
 
 
       var currentEpoch = new Date().getTime();
@@ -672,6 +677,9 @@ function Mystrava() {
             {/* <span className='apierrordiv'>
             02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
             </span> */}
+            <span className={'' + (apiErrorOccured ? 'apierrordiv' : 'apierrordiv-invisible')}>
+            Tiles unpopulated due to API erorr. Please try again after some time.
+            </span>
           </div>
 
           <NewFeatures />
