@@ -135,7 +135,6 @@ function Mystrava() {
   ///OAUTH FEATURE TEST CODE BEGINS
   function getRefreshTokenandAccessTokenOAUTH(authToken) {
           isClientLoggedIn = true
-          alert("logged in");
           //RESET ALL!
           athleteStatsData = {};
           totalActivitiesTillDate = 0;
@@ -308,6 +307,45 @@ function Mystrava() {
   function cleanUpAuthTokenOAUTH(str) {
     return str.split("&")[1].slice(5);
   };
+
+  function handleLogoutOAUTH(){
+    isClientLoggedIn = false;
+    //RESET ALL!
+    athleteStatsData = {};
+    totalActivitiesTillDate = 0;
+    totalHoursTillDate = 0;
+    userActivityCount = {};
+    userKudosRecievedCount = 0;
+    latestActivity = {
+      'name': null,
+      'elapsed_time': null,
+      'sport_type': null,
+      'kudos_count': null,
+      'description': null,
+      'total_photo_count': null,
+      'photos': null,
+      'map': {
+        'summary_polyline': 'testing'
+      }
+    }
+    latestActivityId = 0;
+    mileageData = {
+      maxMileage: 100,
+      miles: [], //this will be the final reduced mileages 
+      times: [], //this will be the final reduced mileages 
+
+      run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+    }
+    previousMondays = []
+    window.location = "/mystrava"
+    setState({});
+  }
 
   function handleLoginOAUTH() {
     const redirectUrl = "http://localhost:3000/stravaloginmystrava";
@@ -523,7 +561,7 @@ function Mystrava() {
     });
 
   }
-  }, []);
+  }, [isClientLoggedIn]);
 
 
   return (
@@ -626,6 +664,7 @@ function Mystrava() {
           </div>
           <div className='d-flex justify-content-center'>
           <button className='loginwithStrava' onClick={handleLoginOAUTH}>Login with Strava</button>
+          <button className='loginwithStrava' onClick={handleLogoutOAUTH}>Logout</button>
 
             {/* <span className='apierrordiv'>
             02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
