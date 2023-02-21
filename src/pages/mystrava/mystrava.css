@@ -538,7 +538,7 @@ a.profile_a_tag:hover {
 .loginwithStrava {
     margin: 10px auto;
     padding: 8px;
-  
+    font-size: 0.8vw;
     overflow: hidden;
   
     border-width: 0;
@@ -549,6 +549,13 @@ a.profile_a_tag:hover {
     background-color: #fc5200;
     color: #ecf0f1;
   }
+
+  .loginwithStrava-invisible {
+    visibility: hidden;
+    display: none;
+  }
+
+
 .apierrordiv-invisible {
     display: none;
     visibility: hidden;

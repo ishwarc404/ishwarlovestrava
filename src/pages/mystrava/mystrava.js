@@ -184,7 +184,12 @@ function Mystrava() {
       }).then((response) => {
         athleteProfileData = response.data;
         setState({});
-      });
+      })
+      .catch(function (error) {
+        console.log("API ERROR OCCURED, PLEASE TRY AFTER SOME TIME")
+        apiErrorOccured = true;
+        setState({});
+      });;;
 
 
       var currentEpoch = new Date().getTime();
@@ -671,12 +676,12 @@ function Mystrava() {
 
           </div>
           <div className='d-flex justify-content-center'>
-          <button className='loginwithStrava' onClick={handleLoginOAUTH}>Login with Strava</button>
-          <button className='loginwithStrava' onClick={handleLogoutOAUTH}>Logout</button>
+          <button className={'' + (isClientLoggedIn ? 'loginwithStrava-invisible' : 'loginwithStrava')} onClick={handleLoginOAUTH}>Login with Strava to view your stats</button>
+          <button className={'' + (isClientLoggedIn ? 'loginwithStrava' : 'loginwithStrava-invisible')} onClick={handleLogoutOAUTH}>Logout</button>
+          </div>
 
-            {/* <span className='apierrordiv'>
-            02/16/2023: Currently facing issues with API authentication due to loss of read access while development. Trying to fix ASAP!
-            </span> */}
+
+          <div className='d-flex justify-content-center'>
             <span className={'' + (apiErrorOccured ? 'apierrordiv' : 'apierrordiv-invisible')}>
             Tiles unpopulated due to API erorr. Please try again after some time.
             </span>
