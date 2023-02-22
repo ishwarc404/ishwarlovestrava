@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ishwarlovestrava/static/css/main.9d61593e.css",
-    "main.js": "/ishwarlovestrava/static/js/main.53e00f89.js",
+    "main.js": "/ishwarlovestrava/static/js/main.0c2ef680.js",
     "static/js/651.7a3d4d9a.chunk.js": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js",
     "static/media/greenmountain_group.png": "/ishwarlovestrava/static/media/greenmountain_group.575b63354b04413ef81f.png",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
@@ -59,11 +59,11 @@
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
     "main.9d61593e.css.map": "/ishwarlovestrava/static/css/main.9d61593e.css.map",
-    "main.53e00f89.js.map": "/ishwarlovestrava/static/js/main.53e00f89.js.map",
+    "main.0c2ef680.js.map": "/ishwarlovestrava/static/js/main.0c2ef680.js.map",
     "651.7a3d4d9a.chunk.js.map": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9d61593e.css",
-    "static/js/main.53e00f89.js"
+    "static/js/main.0c2ef680.js"
   ]
 }
