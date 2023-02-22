@@ -10,7 +10,7 @@ import Navbar from '../../common/navbar/navbar';
 import Discussion from '../../common/discussion/discussion';
 import SummaryPlot from '../../components/summaryplot/summaryplot';
 import NewFeatures from './newfeatures';
-
+import { useLocation } from 'react-router-dom'
 import runimage from '../../assets/run.svg';
 import bikeimage from '../../assets/bike.svg';
 import swimimage from '../../assets/swim.svg';
@@ -26,7 +26,9 @@ import signal from '../../assets/left_down_signal.png';
 import Signal from '../../common/signal/signal';
 import Sidebar from '../../common/sidebar/sidebar';
 import SegmentStory from './SegmentStory';
+
 var isLoaderActive = true;
+var isClientLoggedIn = false
 
 var athleteProfileData = {
   lastname: '',
@@ -114,15 +116,252 @@ function getMonday(d) {
 }
 
 
-
 var bottomSignalColor = 'rgb(52, 227, 43)'; 
 
 function Mystrava() {
   const [, setState] = useState();
+  const location = useLocation();
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  ///OAUTH FEATURE TEST CODE BEGINS
+  function getRefreshTokenandAccessTokenOAUTH(authToken) {
+          isClientLoggedIn = true
+          //RESET ALL!
+          athleteStatsData = {};
+          totalActivitiesTillDate = 0;
+          totalHoursTillDate = 0;
+          userActivityCount = {};
+          userKudosRecievedCount = 0;
+          latestActivity = {
+            'name': null,
+            'elapsed_time': null,
+            'sport_type': null,
+            'kudos_count': null,
+            'description': null,
+            'total_photo_count': null,
+            'photos': null,
+            'map': {
+              'summary_polyline': 'testing'
+            }
+          }
+          latestActivityId = 0;
+          mileageData = {
+            maxMileage: 100,
+            miles: [], //this will be the final reduced mileages 
+            times: [], //this will be the final reduced mileages 
+      
+            run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+            weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+          }
+          previousMondays = []
+    
+    URL = `https://www.strava.com/oauth/token?client_id=89361&client_secret=4a5ec7c37ec0e2381f2bb695d931242cff11edbb&code=${authToken}&grant_type=authorization_code`
+    axios.post(URL, {
+    }).then((response) => {
+      var clientRefreshToken = response.data['refresh_token'];
+      var clientAccessToken = response.data['access_token'];
+      console.log(clientRefreshToken)
+      console.log(clientAccessToken)
+      //GETTING CLIENT ATHLETE PROFILE DATA - SAME CODE AS BELOW- COPYING IT NOW FOR EASE OF USE
+      //GETTING ATHLETE PROFILE DATA
+      axios.get(athleteDataURL, {
+        headers: {
+          'Authorization': `Bearer ${clientAccessToken}`,
+        }
+      }).then((response) => {
+        athleteProfileData = response.data;
+        setState({});
+      })
+      .catch(function (error) {
+        console.log("API ERROR OCCURED, PLEASE TRY AFTER SOME TIME")
+        apiErrorOccured = true;
+        setState({});
+      });;;
 
-  // const headers = {
-  //   'Authorization': 'Bearer 597e89ece16a36c9021de4aca8a10b46085e5929'
-  // }
+
+      var currentEpoch = new Date().getTime();
+      var currentEpochInDate = new Date(currentEpoch);
+
+      var tenWeeksPriorEpoch = currentEpoch - 6048000000;
+      var tenWeeksPriorEpochInDate = new Date(tenWeeksPriorEpoch)
+
+      //need to get epochs of all prev 10 mondays
+      var currentWeekMonday = getMonday(currentEpoch);
+      previousMondays.push(currentWeekMonday)
+      // console.log(new Date(currentWeekMonday));
+      for (var i = 1; i < 10; i++) {
+        //run 9 times
+        var prevMonday = currentWeekMonday - (604800000 * i);
+        previousMondays.push(prevMonday);
+        // console.log(new Date(prevMonday));
+      }
+
+
+      ////seperated out to prevent any sort of async, only for latest activity
+      axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${1}&per_page=1`, {
+        headers: {
+          'Authorization': `Bearer ${clientAccessToken}`,
+        }
+      }).then((response) => {
+      latestActivityId = response.data[0]['id'];
+      latestActivityIdForLink = latestActivityId;
+      //LATEST ACTIVITY DATA
+      axios.get(singleActivityURL + `${latestActivityId}`, {
+        headers: {
+          'Authorization': `Bearer ${clientAccessToken}`,
+        }
+      }).then((response) => {
+        latestActivity = response.data;
+        // console.log(latestActivity)
+        if (latestActivity['map']) {
+          if (latestActivity['map']['summary_polyline']) {
+            latestActivityPolyline = latestActivity['map']['summary_polyline'];
+          }
+        }
+        setState({});
+      });
+    });
+
+
+      //MAIN LOOPS BEGINS
+      for (var i = 0; i < maxActivityPages; i++) {
+        //MILEAGE CALCULATION
+        //CURRENT EPOCH -  in milliseconds
+
+        //ALL ACTIVITY DATA
+        axios.get(`https://www.strava.com/api/v3/athlete/activities?before=${currentEpoch}&page=${i + 1}&per_page=200`, {
+          headers: {
+            'Authorization': `Bearer ${clientAccessToken}`,
+          }
+        }).then((response) => {
+
+          totalActivitiesTillDate += response.data.length
+          // console.log(totalActivitiesTillDate);
+          athleteStatsData = response.data;
+          // console.log(response.data);
+
+          for (var k = 0; k < athleteStatsData.length; k++) {
+
+            totalHoursTillDate += athleteStatsData[k]['elapsed_time'];
+            userKudosRecievedCount += athleteStatsData[k]['kudos_count'];
+
+            if (!userActivityCount[athleteStatsData[k]['type']]) {
+              userActivityCount[athleteStatsData[k]['type']] = 1;
+            } else {
+              userActivityCount[athleteStatsData[k]['type']] += 1;
+            }
+
+            //MILEAGE CALCULATION
+            var activityDate = new Date(athleteStatsData[k]['start_date']);
+            // console.log(activityDate);
+            // console.log(tenWeeksPriorEpochInDate);
+            // console.log("------");
+            if (activityDate >= tenWeeksPriorEpochInDate) {
+              // console.log('yes!');
+              //IT IS IN THE 10 WEEK RANGE
+              //ADD IT'S STATS TO THE MILEAGE OBJECT
+              var weekValue = null;
+              var tempSetVal = true;
+              for (var z = 0; z < 10; z++) {
+                if (activityDate > previousMondays[z] && tempSetVal) {
+                  //activity belongs to that week
+                  weekValue = z + 1;
+                  tempSetVal = false;
+                  if (athleteStatsData[k]['type'] === 'Run') {
+                    mileageData.run_miles[weekValue].push(athleteStatsData[k]['distance']);
+                    // console.log(mileageData.run_miles);
+                    mileageData.run_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                  if (athleteStatsData[k]['type'] === 'Ride') {
+                    mileageData.ride_miles[weekValue].push(athleteStatsData[k]['distance']);
+                    mileageData.ride_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                  if (athleteStatsData[k]['type'] === 'WeightTraining') {
+                    mileageData.weight_training_times[weekValue].push(athleteStatsData[k]['elapsed_time']);
+                  }
+                }
+                //or else it is checked with the next week.
+              }
+            }
+          }
+          isLoaderActive = false;
+          setState({});
+        });
+      }
+
+
+      //////////////////
+      setState({});
+    });
+  }
+
+  function cleanUpAuthTokenOAUTH(str) {
+    return str.split("&")[1].slice(5);
+  };
+
+  function handleLogoutOAUTH(){
+    isClientLoggedIn = false;
+    //RESET ALL!
+    athleteStatsData = {};
+    totalActivitiesTillDate = 0;
+    totalHoursTillDate = 0;
+    userActivityCount = {};
+    userKudosRecievedCount = 0;
+    latestActivity = {
+      'name': null,
+      'elapsed_time': null,
+      'sport_type': null,
+      'kudos_count': null,
+      'description': null,
+      'total_photo_count': null,
+      'photos': null,
+      'map': {
+        'summary_polyline': 'testing'
+      }
+    }
+    latestActivityId = 0;
+    mileageData = {
+      maxMileage: 100,
+      miles: [], //this will be the final reduced mileages 
+      times: [], //this will be the final reduced mileages 
+
+      run_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      run_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_miles: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      ride_elevation: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+      weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
+    }
+    previousMondays = []
+    window.location = "/stravalogoutmystrava"
+    setState({});
+  }
+
+  function handleLoginOAUTH() {
+    const redirectUrl = "http://localhost:3000/stravaloginmystrava";
+    const scope = "read,activity:read_all"
+    window.location = `http://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=${redirectUrl}/exchange_token&scope=${scope}`
+  }
+
+
+
+
+  ///OAUTH FEATURE TEST CODE ENDS
+
 
   function handleScrollRed(){
     bottomSignalColor = 'rgb(255, 6, 36)'; //red
@@ -137,6 +376,7 @@ function Mystrava() {
 
   useEffect(() => {
 
+    
     isLoaderActive = true;
 
     //RESET ALL!
@@ -174,6 +414,24 @@ function Mystrava() {
     previousMondays = []
 
 
+    //////TEST CODE////
+    if (location.state) {
+      if (location.state.href != "stravalogoutmystrava" ) {
+        var oauthurl = location.state.href
+        const stravaAuthToken = cleanUpAuthTokenOAUTH(oauthurl);
+        var clientAuthToken = stravaAuthToken;
+        getRefreshTokenandAccessTokenOAUTH(clientAuthToken)
+        // isOAuthDone = true;
+        isClientLoggedIn = true;
+      }
+      else {
+        isClientLoggedIn = false;
+      }
+    }
+    ///////////////////
+    
+
+    if(isClientLoggedIn == false){
     axios.post(refreshURL, {
     }).then((response) => {
       
@@ -315,7 +573,8 @@ function Mystrava() {
       }
     });
 
-  }, []);
+  }
+  }, [isClientLoggedIn]);
 
 
   return (
@@ -416,6 +675,12 @@ function Mystrava() {
             </div>
 
           </div>
+          <div className='d-flex justify-content-center'>
+          <button className={'' + (isClientLoggedIn ? 'loginwithStrava-invisible' : 'loginwithStrava')} onClick={handleLoginOAUTH}>Login with Strava to view your stats</button>
+          <button className={'' + (isClientLoggedIn ? 'loginwithStrava' : 'loginwithStrava-invisible')} onClick={handleLogoutOAUTH}>Logout</button>
+          </div>
+
+
           <div className='d-flex justify-content-center'>
             <span className={'' + (apiErrorOccured ? 'apierrordiv' : 'apierrordiv-invisible')}>
             Tiles unpopulated due to API erorr. Please try again after some time.

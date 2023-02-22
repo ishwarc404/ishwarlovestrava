@@ -535,6 +535,27 @@ a.profile_a_tag:hover {
     font-size: 10px;
 }
 
+.loginwithStrava {
+    margin: 10px auto;
+    padding: 8px;
+    font-size: 0.8vw;
+    overflow: hidden;
+  
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    
+    background-color: #fc5200;
+    color: #ecf0f1;
+  }
+
+  .loginwithStrava-invisible {
+    visibility: hidden;
+    display: none;
+  }
+
+
 .apierrordiv-invisible {
     display: none;
     visibility: hidden;
