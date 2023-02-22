@@ -352,7 +352,7 @@ function Mystrava() {
   }
 
   function handleLoginOAUTH() {
-    const redirectUrl = "http://localhost:3000/stravaloginmystrava";
+    const redirectUrl = "http://ishwarc404.github.io/ishwarlovestrava/stravaloginmystrava";
     const scope = "read,activity:read_all"
     window.location = `http://www.strava.com/oauth/authorize?client_id=89361&response_type=code&redirect_uri=${redirectUrl}/exchange_token&scope=${scope}`
   }
