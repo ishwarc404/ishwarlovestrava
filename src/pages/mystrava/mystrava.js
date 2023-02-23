@@ -26,6 +26,7 @@ import signal from '../../assets/left_down_signal.png';
 import Signal from '../../common/signal/signal';
 import Sidebar from '../../common/sidebar/sidebar';
 import SegmentStory from './SegmentStory';
+import mydata from './mydata';
 
 var isLoaderActive = true;
 var isClientLoggedIn = false
@@ -569,6 +570,25 @@ function Mystrava() {
           }
           isLoaderActive = false;
           setState({});
+
+          //lets store all of this data somewhere online
+          // mydata.latestActivityId = latestActivityId;
+          // mydata.data['athleteProfileData'] = athleteProfileData;
+          // mydata.data['athleteStatsData'] = athleteStatsData;
+          // mydata.data['totalActivitiesTillDate'] = totalActivitiesTillDate;
+          // mydata.data['totalHoursTillDate'] = totalHoursTillDate;
+          // mydata.data['latestActivity'] = latestActivity;
+          // mydata.data['mileageData'] = mileageData;
+        //   axios.put("https://api.jsonbin.io/v3/b/63f65563c0e7653a057c971b", JSON.stringify(mydata), {
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //     "X-Master-Key" : "$2b$10$sBckZTunpNsmdwc0xPC5z.52q0gtCaWifXquNDipFBGY3d9ZF/pgS"
+        // }
+        // }).then((response) => {
+        //   alert(response);
+        // });
+
+
         });
       }
     });
@@ -613,8 +633,8 @@ function Mystrava() {
                   <div className='information-div-child-lots'>
                     <div><b>{isLoaderActive ? '' : latestActivity.name}</b></div>
                     <div>{isLoaderActive ? '' : latestActivity.description}</div>
-                    <div>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)} </div>
-                    <div>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"} </div>
+                    <div><b>{isLoaderActive ? '' : convertSeconds(latestActivity.elapsed_time)}</b></div>
+                    <div><b>{isLoaderActive ? '' : parseFloat(latestActivity.distance / 1000).toFixed(1) + " km"}</b></div>
                     {/* <div>{console.log(latestActivityPolyline)}</div> */}
                     <div className='d-flex'>
                       <i>{isLoaderActive ? '' : latestActivity.sport_type}</i>
