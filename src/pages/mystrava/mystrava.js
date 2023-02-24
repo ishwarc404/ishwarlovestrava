@@ -703,7 +703,7 @@ function Mystrava() {
 
           <div className='d-flex justify-content-center'>
             <span className={'' + (apiErrorOccured ? 'apierrordiv' : 'apierrordiv-invisible')}>
-            Tiles unpopulated due to API erorr. Please try again after some time.
+            Tiles unpopulated due to API erorr. Please try again after some time ~ 15 mins, generally to refresh API call limit. P.S; If you work at Strava, can you please upgrade my API limit :) 
             </span>
           </div>
 
