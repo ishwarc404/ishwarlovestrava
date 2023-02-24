@@ -38,8 +38,6 @@ function App() {
             <Route path="/skills" element={<Skills/>}/>
             <Route path="/achievements" element={<Achievements/>}/>
             <Route path="/mystrava" element={<MyStrava/>}/>
-            <Route path="/*" element={<Home loading={loading}/>}/>
-            <Route element={<Home loading={loading}/>} />
         </Routes>
       </Router>
   );
