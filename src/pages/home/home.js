@@ -48,7 +48,7 @@ function Home(props) {
             }
           });
         }
-        else if (window.location.has.includes("stravalogoutmystrava")) {
+        else if (window.location.hash.includes("stravalogoutmystrava")) {
           navigate('/mystrava', {
             state: {
               href: "stravalogoutmystrava"
