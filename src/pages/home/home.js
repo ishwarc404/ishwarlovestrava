@@ -31,13 +31,14 @@ function Home(props) {
   }
 
   useEffect(()=>{ 
-    if(window.location.pathname == "/stravaloginmystrava/exchange_token"){
+    if(window.location.hash.includes("stravaloginmystrava/exchange_token")){
       console.log('User logged in!')
       navigate('/mystrava', {state: {
-        href: window.location.href
+        href: window.location.href,
+        hash: window.location.hash
     }});
     }
-    if(window.location.pathname.includes("stravalogoutmystrava")){
+    if(window.location.has.includes("stravalogoutmystrava")){
       navigate('/mystrava', {state: {
         href: "stravalogoutmystrava"
     }});
