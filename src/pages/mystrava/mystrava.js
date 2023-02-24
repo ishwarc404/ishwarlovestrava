@@ -134,6 +134,7 @@ function Mystrava() {
   ///OAUTH FEATURE TEST CODE BEGINS
   ///OAUTH FEATURE TEST CODE BEGINS
   function getRefreshTokenandAccessTokenOAUTH(authToken) {
+          console.log('Test', authToken);
           isClientLoggedIn = true
           //RESET ALL!
           athleteStatsData = {};
@@ -348,7 +349,7 @@ function Mystrava() {
       weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
     }
     previousMondays = []
-    window.location = "/#/stravalogoutmystrava"
+    window.location = "ishwarlovestrava/#/stravalogoutmystrava"
     setState({});
   }
 
