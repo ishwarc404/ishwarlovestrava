@@ -32,6 +32,7 @@ function Home(props) {
 
   useEffect(()=>{ 
     if(window.location.pathname == "/stravaloginmystrava/exchange_token"){
+      console.log('User logged in!')
       navigate('/mystrava', {state: {
         href: window.location.href
     }});
