@@ -46,6 +46,8 @@ function Header() {
             <span className='seperator_line'> | </span>
             <a className="email_href" href='https://drive.google.com/file/d/17eLbZ4g_vLukQ2C-7QQo_cc0uVFEzfQy/view?usp=sharing' target='_blank'><b>resume</b></a>
             <span className='seperator_line'> | </span>
+            <a className="email_href" href='https://drive.google.com/file/d/1OYUn0skL_g_H6eywLp4pI0iawLpLvBHR/view?usp=share_link' target='_blank'><b>coverletter</b></a>
+            <span className='seperator_line'> | </span>
             <a className="email_href" onClick={() => { moreIsOpen = !moreIsOpen; setState({}); }}>
               <span className='more_div' ><b>more</b></span>
             </a>

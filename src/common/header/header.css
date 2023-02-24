@@ -37,21 +37,21 @@
 }
 
 .ishwar_image{
-    width:110px;
+    width:80px;
 }
 .x_image{
     padding-left: 10px;
     padding-right: 10px;
-    width:35px;
+    width:30px;
 }
 .strava_image{
-    width:110px;
+    width:80px;
 }
 .header_content_2
 {
     padding-right: 30px;
-    padding-top: 1vh;
-    font-size: 25px;
+    padding-top: 2vh;
+    font-size: 20px;
 }
 
 .header_content_3 {
