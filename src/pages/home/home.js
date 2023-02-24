@@ -18,33 +18,47 @@ function Home(props) {
   const [, setState] = useState();
   let navigate = useNavigate();
 
-  function handleScroll(e){
+  function handleScroll(e) {
     const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
-    if (bottom) { 
-        bottomSignalColor = 'rgb(255, 6, 36)'; //red
-        setState({});
-     }
-     else{
+    if (bottom) {
+      bottomSignalColor = 'rgb(255, 6, 36)'; //red
+      setState({});
+    }
+    else {
       bottomSignalColor = 'rgb(52, 227, 43)' //green
       setState({});
-     }
+    }
   }
 
-  useEffect(()=>{ 
-    if(window.location.hash.includes("stravaloginmystrava/exchange_token")){
-      console.log('User logged in!')
-      navigate('/mystrava', {state: {
-        href: window.location.href,
-        hash: window.location.hash
-    }});
+  useEffect(() => {
+    if (window.location) {
+      if (window.location.hash) {
+        if (window.location.hash.includes("stravaloginmystrava/exchange_token")) {
+          console.log('User logged in!')
+          console.log({
+            state: {
+              href: window.location.href,
+              hash: window.location.hash
+            }
+          })
+          navigate('/mystrava', {
+            state: {
+              href: window.location.href,
+              hash: window.location.hash
+            }
+          });
+        }
+        else if (window.location.has.includes("stravalogoutmystrava")) {
+          navigate('/mystrava', {
+            state: {
+              href: "stravalogoutmystrava"
+            }
+          });
+        }
+      }
     }
-    if(window.location.has.includes("stravalogoutmystrava")){
-      navigate('/mystrava', {state: {
-        href: "stravalogoutmystrava"
-    }});
-    }
-  
-  },[])
+
+  }, [])
 
   if (!props.loading) {
     return (
@@ -60,7 +74,7 @@ function Home(props) {
                 at Strava.</span>
               <br></br>
               <span className='header_content_all'>
-              I’d love to show you why I’d be a great fit at STRAVA and as part of your <span className='highlight_block'><b>ENGINEERING TEAM.</b></span>
+                I’d love to show you why I’d be a great fit at STRAVA and as part of your <span className='highlight_block'><b>ENGINEERING TEAM.</b></span>
               </span>
               <br></br>
               <br></br>
@@ -82,10 +96,10 @@ function Home(props) {
   else {
     return (
       <div className='HomeLoader'>
-      <div className='d-flex justifty-content-center loadingGifDiv'>
-        <img src={loadingGif} className="loadingGif"></img>
-      </div>
-      
+        <div className='d-flex justifty-content-center loadingGifDiv'>
+          <img src={loadingGif} className="loadingGif"></img>
+        </div>
+
       </div>
     );
   }
