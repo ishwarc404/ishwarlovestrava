@@ -349,7 +349,7 @@ function Mystrava() {
       weight_training_times: { 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: [], 9: [], 10: [] },
     }
     previousMondays = []
-    window.location = "ishwarlovestrava/#/stravalogoutmystrava"
+    window.location = "#/stravalogoutmystrava"
     setState({});
   }
 
@@ -696,10 +696,10 @@ function Mystrava() {
             </div>
 
           </div>
-          <div className='d-flex justify-content-center'>
+          {/* <div className='d-flex justify-content-center'>
           <button className={'' + (isClientLoggedIn ? 'loginwithStrava-invisible' : 'loginwithStrava')} onClick={handleLoginOAUTH}>Login with Strava to view your stats</button>
           <button className={'' + (isClientLoggedIn ? 'loginwithStrava' : 'loginwithStrava-invisible')} onClick={handleLogoutOAUTH}>Logout</button>
-          </div>
+          </div> */}
 
 
           <div className='d-flex justify-content-center'>
