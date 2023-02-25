@@ -60,7 +60,7 @@
 }
 
 .quiz-graph-dot, .quiz-graph-start-dot{
-    fill: white;
+    fill: #f2cdba;
     stroke-width: 2;
     stroke: #fc5200; 
     z-index: 100; 
