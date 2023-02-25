@@ -4,8 +4,8 @@
     /* overflow-x: scroll; */
     /* height: 100vh; */
     background-color: rgb(247, 247, 250);
-    overflow:scroll;
-    overflow-y: scroll;
+    /* overflow:scroll; */
+    overflow:hidden;
 }
 
 .bodycontent_mystrava {
