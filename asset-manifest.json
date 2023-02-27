@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ishwarlovestrava/static/css/main.effee856.css",
-    "main.js": "/ishwarlovestrava/static/js/main.2c31af20.js",
+    "main.css": "/ishwarlovestrava/static/css/main.8edde4f1.css",
+    "main.js": "/ishwarlovestrava/static/js/main.edf908a0.js",
     "static/js/651.7a3d4d9a.chunk.js": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js",
     "static/media/greenmountain_group.png": "/ishwarlovestrava/static/media/greenmountain_group.575b63354b04413ef81f.png",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
@@ -58,12 +58,12 @@
     "static/media/bike.svg": "/ishwarlovestrava/static/media/bike.8c8193b19bf797bff42acd2bf39315c8.svg",
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
-    "main.effee856.css.map": "/ishwarlovestrava/static/css/main.effee856.css.map",
-    "main.2c31af20.js.map": "/ishwarlovestrava/static/js/main.2c31af20.js.map",
+    "main.8edde4f1.css.map": "/ishwarlovestrava/static/css/main.8edde4f1.css.map",
+    "main.edf908a0.js.map": "/ishwarlovestrava/static/js/main.edf908a0.js.map",
     "651.7a3d4d9a.chunk.js.map": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.effee856.css",
-    "static/js/main.2c31af20.js"
+    "static/css/main.8edde4f1.css",
+    "static/js/main.edf908a0.js"
   ]
 }
