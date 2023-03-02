@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ishwarlovestrava/static/css/main.1f0a0b06.css",
-    "main.js": "/ishwarlovestrava/static/js/main.8a76d024.js",
+    "main.css": "/ishwarlovestrava/static/css/main.0e61b612.css",
+    "main.js": "/ishwarlovestrava/static/js/main.73888679.js",
     "static/js/651.7a3d4d9a.chunk.js": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js",
     "static/media/greenmountain_group.png": "/ishwarlovestrava/static/media/greenmountain_group.575b63354b04413ef81f.png",
     "static/media/trophy.mp4": "/ishwarlovestrava/static/media/trophy.02a7a2d59940f6b1738b.mp4",
@@ -40,7 +40,9 @@
     "static/media/img8.png": "/ishwarlovestrava/static/media/img8.9f3c0ae13163d206268c.png",
     "static/media/translate1.jpg": "/ishwarlovestrava/static/media/translate1.524547f42e596919bd47.jpg",
     "static/media/img3.png": "/ishwarlovestrava/static/media/img3.ecbf88891ed1b2f3ce96.png",
+    "static/media/usage1.jpg": "/ishwarlovestrava/static/media/usage1.03d3d9e0f5b13d2fabd2.jpg",
     "static/media/12fps.gif": "/ishwarlovestrava/static/media/12fps.86333e4ddc235cfc38f4.gif",
+    "static/media/usage2.jpg": "/ishwarlovestrava/static/media/usage2.6bb432c22a9b1e918274.jpg",
     "static/media/Instagram_logo.svg.png": "/ishwarlovestrava/static/media/Instagram_logo.svg.9207edd918cb282b66cb.png",
     "static/media/kudos_background.png": "/ishwarlovestrava/static/media/kudos_background.463a0524cbd66730877d.png",
     "static/media/iphone.png": "/ishwarlovestrava/static/media/iphone.63d4020876d111c5776c.png",
@@ -58,12 +60,12 @@
     "static/media/bike.svg": "/ishwarlovestrava/static/media/bike.8c8193b19bf797bff42acd2bf39315c8.svg",
     "static/media/badge.svg": "/ishwarlovestrava/static/media/badge.5114676759c281ea126f.svg",
     "static/media/weight_training.svg": "/ishwarlovestrava/static/media/weight_training.65bab07c92b6b442ef29e6922893299e.svg",
-    "main.1f0a0b06.css.map": "/ishwarlovestrava/static/css/main.1f0a0b06.css.map",
-    "main.8a76d024.js.map": "/ishwarlovestrava/static/js/main.8a76d024.js.map",
+    "main.0e61b612.css.map": "/ishwarlovestrava/static/css/main.0e61b612.css.map",
+    "main.73888679.js.map": "/ishwarlovestrava/static/js/main.73888679.js.map",
     "651.7a3d4d9a.chunk.js.map": "/ishwarlovestrava/static/js/651.7a3d4d9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f0a0b06.css",
-    "static/js/main.8a76d024.js"
+    "static/css/main.0e61b612.css",
+    "static/js/main.73888679.js"
   ]
 }
