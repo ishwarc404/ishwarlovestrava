@@ -50,10 +50,13 @@ var latestActivity = {
   'kudos_count': null,
   'description': null,
   'total_photo_count': null,
-  'photos': null
+  'photos': null,
+  'athlete_count': null,
 }
 var latestActivityPolyline = '';
 var latestActivityId = 0;
+
+var groupActivityCount = 0;
 
 const maxActivityPages = 5; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
@@ -264,6 +267,10 @@ function Mystrava() {
               userActivityCount[athleteStatsData[k]['type']] = 1;
             } else {
               userActivityCount[athleteStatsData[k]['type']] += 1;
+            }
+
+            if(athleteStatsData[k]['athlete_count'] > 0){
+              groupActivityCount += 1;
             }
 
             //MILEAGE CALCULATION
@@ -532,6 +539,10 @@ function Mystrava() {
               userActivityCount[athleteStatsData[k]['type']] += 1;
             }
 
+            if(athleteStatsData[k]['athlete_count'] > 1){
+              groupActivityCount += 1
+            }
+
             //MILEAGE CALCULATION
             var activityDate = new Date(athleteStatsData[k]['start_date']);
             // console.log(activityDate);
@@ -695,6 +706,10 @@ function Mystrava() {
             </div>
 
           </div>
+            {/* <div className='d-flex justify-content-center'>
+              <span>Group activities: {groupActivityCount}</span>
+          </div> */}
+          
           {/* <div className='d-flex justify-content-center'>
           <button className={'' + (isClientLoggedIn ? 'loginwithStrava-invisible' : 'loginwithStrava')} onClick={handleLoginOAUTH}>Login with Strava to view your stats</button>
           <button className={'' + (isClientLoggedIn ? 'loginwithStrava' : 'loginwithStrava-invisible')} onClick={handleLogoutOAUTH}>Logout</button>
