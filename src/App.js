@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     const loadData = async () => {
-      await new Promise((r) => setTimeout(r,3200));
+      await new Promise((r) => setTimeout(r,1880));
       setLoading((loading) => { loading = false; });
       firstLoadUp = false;
     };
