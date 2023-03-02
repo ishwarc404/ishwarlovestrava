@@ -561,3 +561,19 @@ a.profile_a_tag:hover {
     display: none;
     visibility: hidden;
 }
+
+
+.usageImage1 {
+    border-radius: 2%;
+    margin: 20px;
+}
+
+.usageImage2 {
+    border-radius: 2%;
+    margin: 20px;
+}
+
+.usagedivs {
+    margin-top: 10vw;
+    margin-top: 10vw;
+}

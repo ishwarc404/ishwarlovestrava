@@ -21,6 +21,9 @@ import iphone from '../../assets/iphone.png';
 import trophy_video from '../../assets/trophy.mp4';
 import dnf_video from '../../assets/dnf.mp4';
 import segments_video from '../../assets/segments.mp4';
+import usageImage1 from '../../assets/usage1.jpg';
+import usageImage2 from '../../assets/usage2.jpg';
+
 import stravawall from '../../assets/strava_wall_transparent.png';
 import signal from '../../assets/left_down_signal.png';
 import Signal from '../../common/signal/signal';
@@ -742,6 +745,19 @@ function Mystrava() {
               <video className='iphone-3-video' src={segments_video} loop={true} autoPlay={true} playsInline></video>
             </div>
           </div>
+
+          <div>
+            <div className='d-flex justify-content-center usagedivs'>
+            `<div className='segments-title' >Borderline addicted to the app :)</div>
+            </div>
+            <div className='d-flex justify-content-center' >
+            <div><img className='usageImage1' src={usageImage1} width="300"></img></div>
+            <div> <img className='usageImage2' src={usageImage2} width="300"></img></div>
+          </div>
+          </div>
+
+
+
           <div className='strava_wall_div'
           onMouseEnter={handleScrollRed}
           onMouseLeave ={handleScrollGreen}
