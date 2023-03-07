@@ -11,7 +11,7 @@ import Signal from '../../common/signal/signal';
 
 
 
-var information = 'Beginning my studies this Fall as a full-time student at Boulder. Taking up Algorithms and Data Mining in my first semester. Concurrently working as a bike mechanic at the university bike station and also as a video editor. ';
+var information = 'A full-time graduate student, residing in Boulder, CO. Opted for courses such as Fundamentals of SWE, Algorithms, OOAD, CV, and Data Mining. Concurrently employed as a bike mechanic at the University bike station and also, a video editor for the university\'s distant learning courses. ';
 
 var isInformationVisible = true;
 var pathValue = 2;
@@ -27,7 +27,7 @@ function Education(props) {
       pathValue = 1;
     }
     else if (data === 'ms') {
-      information = 'Beginning my studies this Fall as a full-time student at Boulder. Taking up Algorithms and Data Mining in my first semester. Concurrently working as a bike mechanic at the university bike station and also as a video editor. ';
+      information = 'A full-time graduate student, residing in Boulder, CO. Opted for courses such as Fundamentals of SWE, Algorithms, OOAD, CV, and Data Mining. Concurrently employed as a bike mechanic at the University bike station and also, a video editor for the university\'s distant learning courses. ';
       isInformationVisible = true;
       pathValue = 2;
     }

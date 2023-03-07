@@ -748,7 +748,7 @@ function Mystrava() {
 
           <div>
             <div className='d-flex justify-content-center usagedivs'>
-            `<div className='segments-title' >Borderline addicted to the app :)</div>
+            `<div className='segments-title' >Borderline addicted. ~ Avid user.</div>
             </div>
             <div className='d-flex justify-content-center' >
             <div><img className='usageImage1' src={usageImage1} width="300"></img></div>
