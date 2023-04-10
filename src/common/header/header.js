@@ -2,7 +2,6 @@ import './header.css';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
-
 import ishwarname from '../../assets/ishwar.png';
 import xletter from '../../assets/x.png';
 import strava from '../../assets/b&w.png';

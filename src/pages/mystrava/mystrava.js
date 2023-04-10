@@ -61,7 +61,7 @@ var latestActivityId = 0;
 
 var groupActivityCount = 0;
 
-const maxActivityPages = 5; //change this to 3 or 0
+const maxActivityPages = 6; //change this to 3 or 0
 const baseURL = "https://www.strava.com/api/v3/athletes/43290018/stats";
 const athleteDataURL = "https://www.strava.com/api/v3/athlete";
 const singleActivityURL = "https://www.strava.com/api/v3/activities/"
